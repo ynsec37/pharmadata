@@ -26,7 +26,9 @@ def _():
         # page at <site-root>/notebooks/<stem>/index.html, so location is a real
         # URL — unlike islands mode where the Pyodide worker runs from a blob:
         # URL. The wheel sits one directory up, next to the notebooks.
-        wheel_url = str(js_URL("../pharmadata-0.0.0-py3-none-any.whl", js_location.href))
+        wheel_url = str(
+            js_URL.new("../pharmadata-0.0.0-py3-none-any.whl", js_location.href)
+        )
 
         # GitHub Pages serves the wheel with Content-Encoding: gzip. Fetch it
         # directly with js.fetch and decompress if the body is still compressed.
