@@ -28,15 +28,28 @@ def _():
         # on release; micropip reads the real version from the wheel METADATA.
         wheel_url = f"{base}/notebooks/pharmadata-0.0.0-py3-none-any.whl"
 
-        # GitHub Pages serves the wheel with Content-Encoding: gzip. Pyodide's
-        # pyfetch returns the still-compressed bytes, which breaks zipfile.
-        # Request identity encoding and fall back to gzip decompression.
-        resp = await pyfetch(wheel_url, headers={"Accept-Encoding": "identity"})  # noqa: F704
-        wheel_bytes = await resp.bytes()
-        if wheel_bytes[:2] == b"\x1f\x8b":
+        # GitHub Pages serves the wheel with Content-Encoding: gzip. Fetch it
+        # directly with js.fetch (bypassing pyfetch's Request wrapper) and
+        # decompress if the body is still gzip-compressed.
+        from js import fetch as js_fetch  # type: ignore[import-not-found]
+
+        js_resp = await js_fetch(wheel_url)  # noqa: F704
+        wheel_bytes = (await js_resp.arrayBuffer()).to_bytes()
+        ce = js_resp.headers.get("content-encoding") or ""
+        first16 = wheel_bytes[:16].hex(" ")
+        is_gzip = wheel_bytes[:2] == b"\x1f\x8b"
+        if is_gzip:
             wheel_bytes = gzip.decompress(wheel_bytes)
-        if not zipfile.is_zipfile(io.BytesIO(wheel_bytes)):
-            raise RuntimeError("pharmadata wheel is not a valid zip after download")
+        is_zip = zipfile.is_zipfile(io.BytesIO(wheel_bytes))
+        mo.md(
+            f"**debug**: status={js_resp.status} size={len(wheel_bytes)} "
+            f"ce={ce!r} gzip={is_gzip} zip={is_zip} first16={first16}"
+        )
+        if not is_zip:
+            raise RuntimeError(
+                f"pharmadata wheel is not a valid zip "
+                f"(status={js_resp.status} ce={ce!r} gzip={is_gzip})"
+            )
 
         wheel_path = "/tmp/pharmadata-0.0.0-py3-none-any.whl"
         with open(wheel_path, "wb") as f:
