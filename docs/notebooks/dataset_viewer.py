@@ -47,8 +47,8 @@ def _():
         )
         if not is_zip:
             raise RuntimeError(
-                f"pharmadata wheel is not a valid zip "
-                f"(status={js_resp.status} ce={ce!r} gzip={is_gzip})"
+                f"wheel invalid: url={wheel_url!r} status={js_resp.status} "
+                f"ce={ce!r} gzip={is_gzip} href={href!r}"
             )
 
         wheel_path = "/tmp/pharmadata-0.0.0-py3-none-any.whl"
