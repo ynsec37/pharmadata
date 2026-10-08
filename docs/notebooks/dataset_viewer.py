@@ -18,8 +18,8 @@ def _():
         import zipfile
 
         import micropip  # type: ignore[import-not-found]
-        from js import fetch as js_fetch  # type: ignore[import-not-found]
         from js import location as js_location  # type: ignore[import-not-found]
+        from pyodide.http import pyfetch  # type: ignore[import-not-found]
 
         # marimo's html-wasm export runs Pyodide inside a blob: Web Worker, so
         # location.href is a blob URL and location.origin is all we know. The
@@ -32,26 +32,23 @@ def _():
             f"{origin}/pharmadata/notebooks/{wheel_name}",
             f"{origin}/notebooks/{wheel_name}",
         ]
-        js_resp = None
-        wheel_url = ""
+        resp = None
         for candidate in candidates:
-            js_resp = await js_fetch(candidate)  # noqa: F704
-            if js_resp.status == 200:
-                wheel_url = candidate
+            resp = await pyfetch(candidate)  # noqa: F704
+            if resp.status == 200:
                 break
-        if js_resp is None or js_resp.status != 200:
-            raise RuntimeError(
-                f"pharmadata wheel not found (tried {candidates})"
-            )
+        if resp is None or resp.status != 200:
+            raise RuntimeError(f"pharmadata wheel not found (tried {candidates})")
 
-        # GitHub Pages serves the wheel with Content-Encoding: gzip. Fetch it
-        # directly with js.fetch and decompress if the body is still compressed.
-        wheel_bytes = (await js_resp.arrayBuffer()).to_bytes()
+        # GitHub Pages serves the wheel with Content-Encoding: gzip. pyfetch
+        # returns the decompressed body (browser handles content-encoding); if
+        # the bytes are still gzip-compressed, decompress them.
+        wheel_bytes = await resp.bytes()
         if wheel_bytes[:2] == b"\x1f\x8b":
             wheel_bytes = gzip.decompress(wheel_bytes)
         if not zipfile.is_zipfile(io.BytesIO(wheel_bytes)):
             raise RuntimeError(
-                f"pharmadata wheel is not a valid zip (status={js_resp.status})"
+                f"pharmadata wheel is not a valid zip (status={resp.status})"
             )
 
         wheel_path = "/tmp/pharmadata-0.0.0-py3-none-any.whl"
