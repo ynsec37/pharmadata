@@ -17,7 +17,7 @@ jobs:
     env:
       # R loads R_LIBS_USER whatever the working directory, so the locked library
       # reaches Quarto, which starts its R from a copy under tmp/.
-      R_LIBS_USER: ${{ runner.temp }}/rlib
+      R_LIBS_USER: /tmp/rlib
     steps:
       - uses: actions/checkout@v7
 

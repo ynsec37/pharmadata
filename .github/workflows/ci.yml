@@ -58,9 +58,9 @@ jobs:
     env:
       # The locked R library must be on R's default search path: great-docs runs
       # Quarto, which starts its R in a scratch dir with no project .Rprofile.
-      R_LIBS_USER: ${{ runner.temp }}/rlib
+      R_LIBS_USER: /tmp/rlib
       # Tell renv (and setup-renv) to install into that same path.
-      RENV_PATHS_LIBRARY: ${{ runner.temp }}/rlib
+      RENV_PATHS_LIBRARY: /tmp/rlib
       # knitr (engine: knitr) runs {python} chunks via reticulate; the jupyter
       # engine uses QUARTO_PYTHON.  Point both at the venv interpreter that has
       # polars and pharmadata installed (uv sync --group docs creates .venv).

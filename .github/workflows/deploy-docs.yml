@@ -19,8 +19,8 @@ jobs:
     name: Build docs site
     runs-on: ubuntu-latest
     env:
-      R_LIBS_USER: ${{ runner.temp }}/rlib
-      RENV_PATHS_LIBRARY: ${{ runner.temp }}/rlib
+      R_LIBS_USER: /tmp/rlib
+      RENV_PATHS_LIBRARY: /tmp/rlib
     steps:
       - uses: actions/checkout@v7
 
