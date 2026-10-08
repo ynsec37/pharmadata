@@ -18,21 +18,34 @@ def _():
         import zipfile
 
         import micropip  # type: ignore[import-not-found]
-        from js import URL as js_URL  # type: ignore[import-not-found]
         from js import fetch as js_fetch  # type: ignore[import-not-found]
         from js import location as js_location  # type: ignore[import-not-found]
 
-        # In iframe (html-wasm) mode this notebook runs inside a standalone HTML
-        # page at <site-root>/notebooks/<stem>/index.html, so location is a real
-        # URL — unlike islands mode where the Pyodide worker runs from a blob:
-        # URL. The wheel sits one directory up, next to the notebooks.
-        wheel_url = str(
-            js_URL.new("../pharmadata-0.0.0-py3-none-any.whl", js_location.href)
-        )
+        # marimo's html-wasm export runs Pyodide inside a blob: Web Worker, so
+        # location.href is a blob URL and location.origin is all we know. The
+        # wheel lives at <site-root>/notebooks/pharmadata-0.0.0-py3-none-any.whl;
+        # try the likely site-root paths against the worker's origin and keep the
+        # first that serves the wheel.
+        origin = str(js_location.origin)
+        wheel_name = "pharmadata-0.0.0-py3-none-any.whl"
+        candidates = [
+            f"{origin}/pharmadata/notebooks/{wheel_name}",
+            f"{origin}/notebooks/{wheel_name}",
+        ]
+        js_resp = None
+        wheel_url = ""
+        for candidate in candidates:
+            js_resp = await js_fetch(candidate)  # noqa: F704
+            if js_resp.status == 200:
+                wheel_url = candidate
+                break
+        if js_resp is None or js_resp.status != 200:
+            raise RuntimeError(
+                f"pharmadata wheel not found (tried {candidates})"
+            )
 
         # GitHub Pages serves the wheel with Content-Encoding: gzip. Fetch it
         # directly with js.fetch and decompress if the body is still compressed.
-        js_resp = await js_fetch(wheel_url)  # noqa: F704
         wheel_bytes = (await js_resp.arrayBuffer()).to_bytes()
         if wheel_bytes[:2] == b"\x1f\x8b":
             wheel_bytes = gzip.decompress(wheel_bytes)
