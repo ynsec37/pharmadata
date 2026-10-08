@@ -13,15 +13,35 @@ def _():
     import sys
 
     if sys.platform == "emscripten":
+        import gzip
+        import io
+        import zipfile
+
         import micropip  # type: ignore[import-not-found]
         from js import location as js_location  # type: ignore[import-not-found]
+        from pyodide.http import pyfetch  # type: ignore[import-not-found]
 
         # The page and the wheel share the <origin>/<base>/notebooks/ directory.
         href = str(js_location.href)
         base = href.rsplit("/notebook", 1)[0] if "/notebook" in href else str(js_location.origin)
         # The filename uses a fixed 0.0.0 version so the URL never needs updating
         # on release; micropip reads the real version from the wheel METADATA.
-        await micropip.install(f"{base}/notebooks/pharmadata-0.0.0-py3-none-any.whl")  # noqa: F704
+        wheel_url = f"{base}/notebooks/pharmadata-0.0.0-py3-none-any.whl"
+
+        # GitHub Pages serves the wheel with Content-Encoding: gzip. Pyodide's
+        # pyfetch returns the still-compressed bytes, which breaks zipfile.
+        # Request identity encoding and fall back to gzip decompression.
+        resp = await pyfetch(wheel_url, headers={"Accept-Encoding": "identity"})  # noqa: F704
+        wheel_bytes = await resp.bytes()
+        if wheel_bytes[:2] == b"\x1f\x8b":
+            wheel_bytes = gzip.decompress(wheel_bytes)
+        if not zipfile.is_zipfile(io.BytesIO(wheel_bytes)):
+            raise RuntimeError("pharmadata wheel is not a valid zip after download")
+
+        wheel_path = "/tmp/pharmadata-0.0.0-py3-none-any.whl"
+        with open(wheel_path, "wb") as f:
+            f.write(wheel_bytes)
+        await micropip.install(f"file://{wheel_path}")  # noqa: F704
         # zoneinfo needs the IANA tz database; Pyodide ships it as the "tzdata"
         # package, which must be loaded before any tz-aware datetime is touched.
         await micropip.install("tzdata")  # noqa: F704
