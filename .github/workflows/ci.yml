@@ -46,7 +46,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: uv sync --all-groups
-      - run: uv run pytest --cov --cov-report=term-missing --cov-report=xml --cov-fail-under=90
+      # build/docs tests need the data pipeline (fetch + R export); they are
+      # exercised by the docs job. The sdist subset skips them.
+      - run: uv run pytest -m "not build and not docs" --cov --cov-report=term-missing --cov-report=xml --cov-fail-under=90
       - uses: codecov/codecov-action@v5
         with:
           files: ./coverage.xml
@@ -81,6 +83,12 @@ jobs:
         run: Rscript data-raw/tests/testthat.R
       # great-docs needs Quarto to render .qmd pages; official Posit action.
       - uses: quarto-dev/quarto-actions/setup@v2
+      # Build the raw inputs the shipped data is regenerated from. Without
+      # these, 03_build_data.py's validate() refuses to run.
+      - name: Fetch upstream sources
+        run: uv run python data-raw/01_fetch_sources.py
+      - name: Export raw datasets
+        run: Rscript data-raw/02_export_data.R
       # Regenerate everything 03_build_data owns and require a clean diff: anything that
       # drifted from its source fails here instead of shipping stale.
       - name: Generated data + docs match their sources

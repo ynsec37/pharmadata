@@ -34,6 +34,10 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
+      # Build the raw inputs the shipped data is regenerated from.
+      - run: uv run python data-raw/01_fetch_sources.py
+      - run: Rscript data-raw/02_export_data.R
+
       - run: uv run python data-raw/03_build_data.py
       - run: uv run python data-raw/05_build_dataset_qmd.py
 
