@@ -18,37 +18,25 @@ def _():
         import zipfile
 
         import micropip  # type: ignore[import-not-found]
+        from js import URL as js_URL  # type: ignore[import-not-found]
+        from js import fetch as js_fetch  # type: ignore[import-not-found]
         from js import location as js_location  # type: ignore[import-not-found]
-        from pyodide.http import pyfetch  # type: ignore[import-not-found]
 
-        # The page and the wheel share the <origin>/<base>/notebooks/ directory.
-        href = str(js_location.href)
-        base = href.rsplit("/notebook", 1)[0] if "/notebook" in href else str(js_location.origin)
-        # The filename uses a fixed 0.0.0 version so the URL never needs updating
-        # on release; micropip reads the real version from the wheel METADATA.
-        wheel_url = f"{base}/notebooks/pharmadata-0.0.0-py3-none-any.whl"
+        # In iframe (html-wasm) mode this notebook runs inside a standalone HTML
+        # page at <site-root>/notebooks/<stem>/index.html, so location is a real
+        # URL — unlike islands mode where the Pyodide worker runs from a blob:
+        # URL. The wheel sits one directory up, next to the notebooks.
+        wheel_url = str(js_URL("../pharmadata-0.0.0-py3-none-any.whl", js_location.href))
 
         # GitHub Pages serves the wheel with Content-Encoding: gzip. Fetch it
-        # directly with js.fetch (bypassing pyfetch's Request wrapper) and
-        # decompress if the body is still gzip-compressed.
-        from js import fetch as js_fetch  # type: ignore[import-not-found]
-
+        # directly with js.fetch and decompress if the body is still compressed.
         js_resp = await js_fetch(wheel_url)  # noqa: F704
         wheel_bytes = (await js_resp.arrayBuffer()).to_bytes()
-        ce = js_resp.headers.get("content-encoding") or ""
-        first16 = wheel_bytes[:16].hex(" ")
-        is_gzip = wheel_bytes[:2] == b"\x1f\x8b"
-        if is_gzip:
+        if wheel_bytes[:2] == b"\x1f\x8b":
             wheel_bytes = gzip.decompress(wheel_bytes)
-        is_zip = zipfile.is_zipfile(io.BytesIO(wheel_bytes))
-        mo.md(
-            f"**debug**: status={js_resp.status} size={len(wheel_bytes)} "
-            f"ce={ce!r} gzip={is_gzip} zip={is_zip} first16={first16}"
-        )
-        if not is_zip:
+        if not zipfile.is_zipfile(io.BytesIO(wheel_bytes)):
             raise RuntimeError(
-                f"wheel invalid: url={wheel_url!r} status={js_resp.status} "
-                f"ce={ce!r} gzip={is_gzip} href={href!r}"
+                f"pharmadata wheel is not a valid zip (status={js_resp.status})"
             )
 
         wheel_path = "/tmp/pharmadata-0.0.0-py3-none-any.whl"

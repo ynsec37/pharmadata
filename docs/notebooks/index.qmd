@@ -10,4 +10,4 @@ datasets, choose the columns and the number of rows, and browse the result.
 The viewer installs the `pharmadata` package wheel via `micropip` and loads
 datasets through its public API — the same data the package ships.
 
-{{< marimo file="dataset_viewer.py" show-code="false" >}}
+{{< marimo file="dataset_viewer.py" mode="iframe" height="700px" show-code="false" >}}
