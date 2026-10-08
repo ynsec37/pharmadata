@@ -57,7 +57,7 @@ def _():
         wheel_path = "/tmp/pharmadata-0.0.0-py3-none-any.whl"
         with open(wheel_path, "wb") as f:
             f.write(wheel_bytes)
-        await micropip.install(f"file://{wheel_path}")  # noqa: F704
+        await micropip.install(wheel_path)  # noqa: F704
         # zoneinfo needs the IANA tz database; Pyodide ships it as the "tzdata"
         # package, which must be loaded before any tz-aware datetime is touched.
         await micropip.install("tzdata")  # noqa: F704
