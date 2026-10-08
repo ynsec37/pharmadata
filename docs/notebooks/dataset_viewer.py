@@ -13,16 +13,13 @@ def _():
     import sys
 
     if sys.platform == "emscripten":
-        import gzip
-        import zipfile
-
         import micropip  # type: ignore[import-not-found]
-        import pyodide  # type: ignore[import-not-found]
-        from js import (  # type: ignore[import-not-found]
-            Uint8Array,
-            fetch as js_fetch,
-            location as js_location,
-        )
+        from js import location as js_location  # type: ignore[import-not-found]
+        from pyodide.http import pyfetch  # type: ignore[import-not-found]
+
+        # Dependencies with C extensions are provided as Pyodide packages;
+        # tzdata is pure-python. Install them before unpacking the wheel.
+        await micropip.install(["polars", "pyarrow", "tzdata"])  # noqa: F704
 
         # marimo's html-wasm export runs Pyodide inside a blob: Web Worker, so
         # location.href is a blob URL and location.origin is all we know. The
@@ -37,35 +34,20 @@ def _():
         ]
         resp = None
         for candidate in candidates:
-            resp = await js_fetch(candidate)  # noqa: F704
+            resp = await pyfetch(candidate)  # noqa: F704
             if resp.status == 200:
                 break
         if resp is None or resp.status != 200:
             raise RuntimeError(f"pharmadata wheel not found (tried {candidates})")
 
-        # Get the body as a Uint8Array. The browser auto-decompresses
-        # Content-Encoding: gzip, so this is the raw wheel bytes.
-        ab = await resp.arrayBuffer()  # noqa: F704
-        u8 = Uint8Array.new(ab)
+        # unpack_archive() unzips the wheel directly from the JS ArrayBuffer,
+        # bypassing Python bytes conversion which corrupts large (>few MB)
+        # buffers. Then add the unpacked dir to sys.path so imports resolve.
+        import sys as _sys
 
-        # If the body is still gzip-compressed (some Pyodide builds don't
-        # auto-decompress), inflate it.
-        if u8.length > 2 and u8[0] == 0x1F and u8[1] == 0x8B:
-            raw = gzip.decompress(u8.to_bytes())
-            u8 = Uint8Array.new(bytearray(raw))
-
-        # Write the Uint8Array directly to the Emscripten filesystem. Going
-        # through Python bytes (ArrayBuffer.to_bytes()) corrupts large buffers,
-        # so we bypass it and let FS.writeFile copy from the JS buffer.
-        wheel_path = "/tmp/pharmadata-0.0.0-py3-none-any.whl"
-        pyodide.FS.writeFile(wheel_path, u8)
-        if not zipfile.is_zipfile(wheel_path):
-            raise RuntimeError(f"pharmadata wheel is not a valid zip")
-
-        await micropip.install(wheel_path)  # noqa: F704
-        # zoneinfo needs the IANA tz database; Pyodide ships it as the "tzdata"
-        # package, which must be loaded before any tz-aware datetime is touched.
-        await micropip.install("tzdata")  # noqa: F704
+        pkg_dir = "/tmp/pharmadata_pkg"
+        await resp.unpack_archive(extract_dir=pkg_dir)  # noqa: F704
+        _sys.path.insert(0, pkg_dir)
     from pharmadata import cdiscpilotadam, cdiscpilotsdtm, pharmaverseadam, pharmaversesdtm
 
     COLLECTIONS = [pharmaverseadam, pharmaversesdtm, cdiscpilotadam, cdiscpilotsdtm]
