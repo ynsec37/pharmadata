@@ -32,7 +32,7 @@ jobs:
 
       # Keyed on the lockfile: a hit is the same library, a miss is a restore.
       - name: Cache the locked R library
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ${{ env.R_LIBS_USER }}
           key: r-${{ runner.os }}-${{ hashFiles('renv.lock') }}
