@@ -6432,6 +6432,301 @@
    }
   }
  },
+ "adlb_neuro": {
+  "label": "Laboratory Analysis for Neuroscience",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
+  "n_rows": 185,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "Identifier Variables for BDS Datasets"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "Identifier Variables for BDS Datasets"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRT01P": {
+    "label": "Planned Treatment for Period 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRT01A": {
+    "label": "Actual Treatment for Period 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": "ADSL Treatment Timing Variables"
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": "ADSL Treatment Timing Variables"
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": "Timing Variables for BDS Datasets"
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "Timing Variables for BDS Datasets"
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "Timing Variables for BDS Datasets"
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "Timing Variables for BDS Datasets"
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "AVALC": {
+    "label": "Analysis Value (C)",
+    "type": "String",
+    "mandatory": "No",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "ANRLO": {
+    "label": "Analysis Normal Range Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANRHI": {
+    "label": "Analysis Normal Range Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "BASEC": {
+    "label": "Baseline Value (C)",
+    "type": "String",
+    "mandatory": "No",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "BASETYPE": {
+    "label": "Baseline Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "PCHG": {
+    "label": "Percent Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "Flag Variables for BDS Datasets"
+   },
+   "ANL01FL": {
+    "label": "Analysis Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL02FL": {
+    "label": "Analysis Flag 02",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ONTRTFL": {
+    "label": "On Treatment Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "Flag Variables for BDS Datasets"
+   },
+   "ASEQ": {
+    "label": "Analysis Sequence Number",
+    "type": "Int32",
+    "mandatory": "No",
+    "role": "Identifier Variables for BDS Datasets"
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBORNRLO": {
+    "label": "Reference Range Lower Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBORNRHI": {
+    "label": "Reference Range Upper Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTNRLO": {
+    "label": "Reference Range Lower Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTNRHI": {
+    "label": "Reference Range Upper Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
  "adlbhy": {
   "label": "Analysis of Lab Hy's Law",
   "structure": "One or more records per subject per analysis parameter per analysis timepoint",

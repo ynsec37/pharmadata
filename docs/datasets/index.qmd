@@ -4,11 +4,11 @@ title: Datasets
 
 # Datasets
 
-137 datasets across 4 collections, loaded as polars DataFrames.
+138 datasets across 4 collections, loaded as polars DataFrames.
 
 ## ADaM (pharmaverse)
 
-30 datasets from [pharmaverseadam](https://github.com/pharmaverse/pharmaverseadam).
+31 datasets from [pharmaverseadam](https://github.com/pharmaverse/pharmaverseadam).
 
 | Dataset | Label | Rows | Columns |
 |:--|:--|--:|--:|
@@ -25,6 +25,7 @@ title: Datasets
 | [adis_vaccine](pharmaverseadam/adis_vaccine.html) | Immunogenicity Specimen Assessments | 64 | 103 |
 | [adlb](pharmaverseadam/adlb.html) | Laboratory Analysis | 83,652 | 115 |
 | [adlb_metabolic](pharmaverseadam/adlb_metabolic.html) | Laboratory Analysis for Metabolic | 371 | 43 |
+| [adlb_neuro](pharmaverseadam/adlb_neuro.html) | Laboratory Analysis for Neuroscience | 185 | 48 |
 | [adlbhy](pharmaverseadam/adlbhy.html) | Analysis of Lab Hy's Law | 251 | 14 |
 | [admh](pharmaverseadam/admh.html) | Medical History Analysis | 1,818 | 114 |
 | [adnv_neuro](pharmaverseadam/adnv_neuro.html) | Nervous System Analysis Dataset | 30 | 43 |

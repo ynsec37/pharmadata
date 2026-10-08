@@ -1201,6 +1201,64 @@ Variables:
 - `WSTCIR` (Float64): Waist Circumference (cm)
 """
 adlb_metabolic_meta: Final[DatasetMeta]
+adlb_neuro: Final[DataFrame]
+"""Laboratory Analysis for Neuroscience
+
+185 rows x 48 columns.
+Structure: One or more records per subject per analysis parameter per analysis visit.
+
+Variables:
+
+- `STUDYID` (String): Study Identifier
+- `USUBJID` (String): Unique Subject Identifier
+- `DOMAIN` (String): Domain Abbreviation
+- `TRT01P` (String): Planned Treatment for Period 01
+- `TRT01A` (String): Actual Treatment for Period 01
+- `TRTSDT` (Date): Date of First Exposure to Treatment
+- `TRTEDT` (Date): Date of Last Exposure to Treatment
+- `ADT` (Date): Analysis Date
+- `ADY` (Float64): Analysis Relative Day
+- `AVISIT` (String): Analysis Visit
+- `AVISITN` (Float64): Analysis Visit (N)
+- `PARAM` (String): Parameter
+- `PARAMCD` (String): Parameter Code
+- `PARAMN` (Float64): Parameter (N)
+- `AVAL` (Float64): Analysis Value
+- `AVALC` (String): Analysis Value (C)
+- `ANRLO` (Float64): Analysis Normal Range Lower Limit
+- `ANRHI` (Float64): Analysis Normal Range Upper Limit
+- `BASE` (Float64): Baseline Value
+- `BASEC` (String): Baseline Value (C)
+- `BASETYPE` (String): Baseline Type
+- `CHG` (Float64): Change from Baseline
+- `PCHG` (Float64): Percent Change from Baseline
+- `ABLFL` (String): Baseline Record Flag
+- `ANL01FL` (String): Analysis Flag 01
+- `ANL02FL` (String): Analysis Flag 02
+- `ONTRTFL` (String): On Treatment Record Flag
+- `ASEQ` (Int32): Analysis Sequence Number
+- `LBSEQ` (Int32): Sequence Number
+- `LBTESTCD` (String): Lab Test or Examination Short Name
+- `LBTEST` (String): Lab Test or Examination Name
+- `LBCAT` (String): Category for Lab Test
+- `LBORRES` (String): Result or Finding in Original Units
+- `LBORRESU` (String): Original Units
+- `LBORNRLO` (String): Reference Range Lower Limit in Orig Unit
+- `LBORNRHI` (String): Reference Range Upper Limit in Orig Unit
+- `LBSTRESC` (String): Character Result/Finding in Std Format
+- `LBSTRESN` (Float64): Numeric Result/Finding in Standard Units
+- `LBSTRESU` (String): Standard Units
+- `LBSTNRLO` (Float64): Reference Range Lower Limit-Std Units
+- `LBSTNRHI` (Float64): Reference Range Upper Limit-Std Units
+- `LBNRIND` (String): Reference Range Indicator
+- `LBBLFL` (String): Baseline Flag
+- `VISITNUM` (Float64): Visit Number
+- `VISIT` (String): Visit Name
+- `VISITDY` (Float64): Planned Study Day of Visit
+- `LBDTC` (String): Date/Time of Specimen Collection
+- `LBDY` (Float64): Study Day of Specimen Collection
+"""
+adlb_neuro_meta: Final[DatasetMeta]
 adlbhy: Final[DataFrame]
 """Analysis of Lab Hy's Law
 
