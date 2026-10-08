@@ -1,0 +1,67 @@
+# Great Docs configuration for pharmadata.
+
+display_name: pharmadata
+parser: numpy
+dynamic: false
+
+# Build marimo notebook islands and a `--mode edit` WASM export per notebook.
+marimo: true
+
+freeze: auto
+
+# Keep the hand-written docs/changelog.md.
+changelog:
+  enabled: false
+
+attribution: true
+
+# Omit SKILL.md and the homepage "Skills" link.
+skill:
+  enabled: false
+
+# Theme
+accent_color: "#0a7d91"
+navbar_color:
+  light: "#ffffff"
+  dark: "#000000"
+navbar_style: null
+dark_mode_toggle: true
+github_style: icon
+back_to_top: true
+
+# Site
+repo: https://github.com/ynsec37/pharmadata
+
+# Hide the homepage metadata "AI / Agents" and "Developers" blocks (no toggle).
+site:
+  css:
+    - assets/gd-meta-hide.css
+    - assets/gd-cell-output.css
+
+# Rename the hardcoded Reference sidebar group "Constants" to "Datasets".
+include_in_header:
+  - text: <script>document.head.appendChild(Object.assign(document.createElement('script'),{src:(document.querySelector('meta[name="quarto:offset"]')||{content:''}).content+'assets/gd-rename-labels.js'}));</script>
+
+navbar_order:
+  - User Guide
+  - Datasets
+  - Examples
+  - Notebook
+  - Reference
+  - Resources
+
+homepage: index
+
+# great-docs auto-detects this file at docs/great-docs.yml; all paths below
+# are relative to docs/.
+user_guide: user_guide
+
+sections:
+  - title: Datasets
+    dir: datasets
+  - title: Examples
+    dir: examples
+  - title: Notebook
+    dir: notebooks
+  - title: Resources
+    dir: resources

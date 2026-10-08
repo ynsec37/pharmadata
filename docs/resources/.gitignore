@@ -1,0 +1,5 @@
+/.quarto/
+**/*.quarto_ipynb
+# Quarto render output from .qmd pages (source is committed, output is not)
+*.html
+*_files/

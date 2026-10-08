@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+
+# uv. .python-version is committed (pins Python to 3.14).
+# R. renv.lock is the contract; renv restores into R_LIBS_USER.
+/.Rprofile
+/renv/
+
+# Regenerable intermediate data
+data-raw/raw/
+data-raw/sources/
+
+# Docs build output
+/_site/
+/docs/_site/
+/docs/site/
+/docs/_quarto/
+/docs/.cache/
+
+# Test / lint / type / coverage caches
+.pytest_cache/
+pytest-of-*/
+.ruff_cache/
+.mypy_cache/
+.uv-cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Great Docs output and the WASM viewer wheel (built locally)
+great-docs/
+docs/notebooks/__marimo__/
+docs/notebooks/*.whl
+greatdocs_build.log
+.quarto/
+docs/_quarto.yml
+docs/objects.json
+docs/render.log
+
+# Throwaway probes and render logs
+tmp/
+
+# Tool caches and temp files redirected into the workspace
+.cache/
+.tmp/
+
+# Great Docs versioned-build artifacts
+_great_docs_build/
+.great-docs-build/
+.great-docs-cache/
+.great-docs/
+
+/.quarto/
+**/*.quarto_ipynb
+
+# rig proj sync output (machine-specific); shim lives in .rvenvlib
+/.rvenv/
+
+# Trae IDE state and plan documents
+.trae/

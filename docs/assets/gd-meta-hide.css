@@ -1,0 +1,8 @@
+/* Hide the homepage metadata sidebar's "AI / Agents" and "Developers" blocks.
+   great-docs emits these margin sections unconditionally (the llms.txt links
+   and the authors block have no config toggle). The margin renders as
+   .column-margin wrapping per-section <section id="..."> elements. */
+.column-margin #ai-agents,
+.column-margin #developers {
+  display: none;
+}

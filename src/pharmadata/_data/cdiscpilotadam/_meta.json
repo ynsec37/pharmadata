@@ -1,0 +1,3140 @@
+{
+ "adadas": {
+  "label": "ADAS-Cog Analysis",
+  "structure": "one record per subject per parameter per analysis visit per analysis date",
+  "n_rows": 12463,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEGR1": {
+    "label": "Pooled Site Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ITTFL": {
+    "label": "Intent-to-Treat Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "EFFFL": {
+    "label": "Efficacy Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PCHG": {
+    "label": "Percent Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Record Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DTYPE": {
+    "label": "Derivation Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWRANGE": {
+    "label": "Analysis Window Valid Relative Range",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWTARGET": {
+    "label": "Analysis Window Target",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWTDIFF": {
+    "label": "Analysis Window Diff from Target",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWLO": {
+    "label": "Analysis Window Beginning Timepoint",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWHI": {
+    "label": "Analysis Window Ending Timepoint",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWU": {
+    "label": "Analysis Window Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adae": {
+  "label": "Adverse Events Analysis Dataset",
+  "structure": "one record per subject per adverse event",
+  "n_rows": 1191,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "ASTDT": {
+    "label": "Analysis Start Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "ASTDTF": {
+    "label": "Analysis Start Date Imputation Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ASTDY": {
+    "label": "Analysis Start Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AENDT": {
+    "label": "Analysis End Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "AENDY": {
+    "label": "Analysis End Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADURN": {
+    "label": "AE Duration (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADURU": {
+    "label": "AE Duration Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AETERM": {
+    "label": "Reported Term for the Adverse Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AELLT": {
+    "label": "Lowest Level Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AELLTCD": {
+    "label": "Lowest Level Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEDECOD": {
+    "label": "Dictionary-Derived Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEPTCD": {
+    "label": "Preferred Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEHLT": {
+    "label": "High Level Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEHLTCD": {
+    "label": "High Level Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEHLGT": {
+    "label": "High Level Group Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEHLGTCD": {
+    "label": "High Level Group Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEBODSYS": {
+    "label": "Body System or Organ Class",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESOC": {
+    "label": "Primary System Organ Class",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESOCCD": {
+    "label": "Primary System Organ Class Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESEV": {
+    "label": "Severity/Intensity",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESER": {
+    "label": "Serious Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESCAN": {
+    "label": "Involves Cancer",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESCONG": {
+    "label": "Congenital Anomaly or Birth Defect",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESDISAB": {
+    "label": "Persist or Signif Disability/Incapacity",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESDTH": {
+    "label": "Results in Death",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESHOSP": {
+    "label": "Requires or Prolongs Hospitalization",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESLIFE": {
+    "label": "Is Life Threatening",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESOD": {
+    "label": "Occurred with Overdose",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEREL": {
+    "label": "Causality",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEACN": {
+    "label": "Action Taken with Study Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AEOUT": {
+    "label": "Outcome of Adverse Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AESEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEMFL": {
+    "label": "Treatment Emergent Analysis Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AOCCFL": {
+    "label": "1st Occurrence of Any AE Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AOCCSFL": {
+    "label": "1st Occurrence of SOC Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AOCCPFL": {
+    "label": "1st Occurrence of Preferred Term Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AOCC02FL": {
+    "label": "1st Occurrence 02 Flag for Serious",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AOCC03FL": {
+    "label": "1st Occurrence 03 Flag for Serious SOC",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AOCC04FL": {
+    "label": "1st Occurrence 04 Flag for Serious PT",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "CQ01NAM": {
+    "label": "Customized Query 01 Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AOCC01FL": {
+    "label": "1st Occurrence 01 Flag for CQ01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adcibc": {
+  "label": "CIBIC+ Analysis",
+  "structure": "one record per subject per parameter per analysis visit per analysis date",
+  "n_rows": 730,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEGR1": {
+    "label": "Pooled Site Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ITTFL": {
+    "label": "Intent-to-Treat Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "EFFFL": {
+    "label": "Efficacy Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Record Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DTYPE": {
+    "label": "Derivation Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWRANGE": {
+    "label": "Analysis Window Valid Relative Range",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWTARGET": {
+    "label": "Analysis Window Target",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWTDIFF": {
+    "label": "Analysis Window Diff from Target",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWLO": {
+    "label": "Analysis Window Beginning Timepoint",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWHI": {
+    "label": "Analysis Window Ending Timepoint",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWU": {
+    "label": "Analysis Window Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adlbc": {
+  "label": "Analysis Dataset Lab Blood Chemistry",
+  "structure": "one record per subject per parameter per analysis visit",
+  "n_rows": 37132,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DSRAEFL": {
+    "label": "Discontinued due to AE?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARCAT1": {
+    "label": "Parameter Category 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1LO": {
+    "label": "Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1HI": {
+    "label": "Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1LO": {
+    "label": "Ratio to Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1HI": {
+    "label": "Ratio to Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1LO": {
+    "label": "Base Ratio to Analysis Range 1 Lower Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1HI": {
+    "label": "Base Ratio to Analysis Range 1 Upper Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ALBTRVAL": {
+    "label": "Amount Threshold Range",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANRIND": {
+    "label": "Analysis Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "BNRIND": {
+    "label": "Baseline Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AENTMTFL": {
+    "label": "Last value in treatment visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adlbcpv": {
+  "label": "Analysis Dataset Lab Blood Chemistry (Previous Visit)",
+  "structure": "one record per subject per parameter per analysis visit",
+  "n_rows": 37132,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DSRAEFL": {
+    "label": "Discontinued due to AE?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARCAT1": {
+    "label": "Parameter Category 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1LO": {
+    "label": "Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1HI": {
+    "label": "Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1LO": {
+    "label": "Ratio to Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1HI": {
+    "label": "Ratio to Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1LO": {
+    "label": "Base Ratio to Analysis Range 1 Lower Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1HI": {
+    "label": "Base Ratio to Analysis Range 1 Upper Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ALBTRVAL": {
+    "label": "Amount Threshold Range",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANRIND": {
+    "label": "Analysis Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "BNRIND": {
+    "label": "Baseline Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AENTMTFL": {
+    "label": "Last value in treatment visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adlbh": {
+  "label": "Analysis Dataset Lab Hematology",
+  "structure": "one record per subject per parameter per analysis visit",
+  "n_rows": 24966,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DSRAEFL": {
+    "label": "Discontinued due to AE?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARCAT1": {
+    "label": "Parameter Category 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1LO": {
+    "label": "Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1HI": {
+    "label": "Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1LO": {
+    "label": "Ratio to Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1HI": {
+    "label": "Ratio to Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1LO": {
+    "label": "Base Ratio to Analysis Range 1 Lower Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1HI": {
+    "label": "Base Ratio to Analysis Range 1 Upper Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ALBTRVAL": {
+    "label": "Amount Threshold Range",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANRIND": {
+    "label": "Analysis Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "BNRIND": {
+    "label": "Baseline Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AENTMTFL": {
+    "label": "Last value in treatment visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adlbhpv": {
+  "label": "Analysis Dataset Lab Hematology (Previous Visit)",
+  "structure": "one record per subject per parameter per analysis visit",
+  "n_rows": 24966,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DSRAEFL": {
+    "label": "Discontinued due to AE?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARCAT1": {
+    "label": "Parameter Category 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1LO": {
+    "label": "Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1HI": {
+    "label": "Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1LO": {
+    "label": "Ratio to Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1HI": {
+    "label": "Ratio to Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1LO": {
+    "label": "Base Ratio to Analysis Range 1 Lower Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1HI": {
+    "label": "Base Ratio to Analysis Range 1 Upper Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ALBTRVAL": {
+    "label": "Amount Threshold Range",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANRIND": {
+    "label": "Analysis Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "BNRIND": {
+    "label": "Baseline Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AENTMTFL": {
+    "label": "Last value in treatment visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adlbhy": {
+  "label": "Analysis Dataset Lab Hy's Law",
+  "structure": "one record per subject per parameter per analysis visit",
+  "n_rows": 9954,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DSRAEFL": {
+    "label": "Discontinued due to AE?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMTYP": {
+    "label": "Parameter Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARCAT1": {
+    "label": "Parameter Category 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1LO": {
+    "label": "Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "A1HI": {
+    "label": "Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1LO": {
+    "label": "Ratio to Analysis Range 1 Lower Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "R2A1HI": {
+    "label": "Ratio to Analysis Range 1 Upper Limit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1LO": {
+    "label": "Base Ratio to Analysis Range 1 Lower Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BR2A1HI": {
+    "label": "Base Ratio to Analysis Range 1 Upper Lim",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SHIFT1": {
+    "label": "Shift 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SHIFT1N": {
+    "label": "Shift 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CRIT1": {
+    "label": "Analysis Criterion 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "CRIT1FL": {
+    "label": "Criterion 1 Evaluation Result Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "CRIT1FN": {
+    "label": "Criterion 1 Evaluation Result Flag (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adnpix": {
+  "label": "NPI-X Item Analysis Data",
+  "structure": "one record per subject per parameter per analysis visit per analysis date",
+  "n_rows": 31140,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEGR1": {
+    "label": "Pooled Site Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ITTFL": {
+    "label": "Intent-to-Treat Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "EFFFL": {
+    "label": "Efficacy Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMTYP": {
+    "label": "Parameter Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PCHG": {
+    "label": "Percent Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DTYPE": {
+    "label": "Derivation Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWRANGE": {
+    "label": "Analysis Window Valid Relative Range",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWTARGET": {
+    "label": "Analysis Window Target",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWTDIFF": {
+    "label": "Analysis Window Diff from Target",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWLO": {
+    "label": "Analysis Window Beginning Timepoint",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWHI": {
+    "label": "Analysis Window Ending Timepoint",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AWU": {
+    "label": "Analysis Window Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adsl": {
+  "label": "Subject-Level Analysis",
+  "structure": "one record per subject",
+  "n_rows": 254,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEGR1": {
+    "label": "Pooled Site Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRT01P": {
+    "label": "Planned Treatment for Period 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRT01PN": {
+    "label": "Planned Treatment for Period 01 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRT01A": {
+    "label": "Actual Treatment for Period 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRT01AN": {
+    "label": "Actual Treatment for Period 01 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTDURD": {
+    "label": "Total Treatment Duration (Days)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVGDD": {
+    "label": "Avg Daily Dose (as planned)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "CUMDOSE": {
+    "label": "Cumulative Dose (as planned)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEU": {
+    "label": "Age Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ETHNIC": {
+    "label": "Ethnicity",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ITTFL": {
+    "label": "Intent-To-Treat Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "EFFFL": {
+    "label": "Efficacy Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP8FL": {
+    "label": "Completers of Week 8 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP16FL": {
+    "label": "Completers of Week 16 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "COMP24FL": {
+    "label": "Completers of Week 24 Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DISCONFL": {
+    "label": "Did the Subject Discontinue the Study?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DSRAEFL": {
+    "label": "Discontinued due to AE?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DTHFL": {
+    "label": "Subject Died?",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "BMIBL": {
+    "label": "Baseline BMI (kg/m^2)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BMIBLGR1": {
+    "label": "Pooled Baseline BMI Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "HEIGHTBL": {
+    "label": "Baseline Height (cm)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "WEIGHTBL": {
+    "label": "Baseline Weight (kg)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "EDUCLVL": {
+    "label": "Years of Education",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "DISONSDT": {
+    "label": "Date of Onset of Disease",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "DURDIS": {
+    "label": "Duration of Disease (Months)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "DURDSGR1": {
+    "label": "Pooled Disease Duration Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT1DT": {
+    "label": "Date of Visit 1",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "RFSTDTC": {
+    "label": "Subject Reference Start Date/Time",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RFENDTC": {
+    "label": "Subject Reference End Date/Time",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISNUMEN": {
+    "label": "End of Trt Visit (Vis 12 or Early Term.)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RFENDT": {
+    "label": "Date of Discontinuation/Completion",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "DCDECOD": {
+    "label": "Standardized Disposition Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "EOSSTT": {
+    "label": "End of Study Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "DCSREAS": {
+    "label": "Reason for Discontinuation from Study",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "MMSETOT": {
+    "label": "MMSE Total",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "adtte": {
+  "label": "AE Time To 1st Derm. Event Analysis",
+  "structure": "one record per subject per parameter",
+  "n_rows": 254,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTDUR": {
+    "label": "Duration of treatment (days)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "STARTDT": {
+    "label": "Time to Event Origin Date for Subject",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "CNSR": {
+    "label": "Censor",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "EVNTDESC": {
+    "label": "Event or Censoring Description",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SRCDOM": {
+    "label": "Source Domain",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SRCVAR": {
+    "label": "Source Variable",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SRCSEQ": {
+    "label": "Source Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ },
+ "advs": {
+  "label": "Vital Signs Analysis Dataset",
+  "structure": "one record per subject per parameter per analysis visit per analysis timepoint",
+  "n_rows": 32139,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1": {
+    "label": "Pooled Age Group 1",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AGEGR1N": {
+    "label": "Pooled Age Group 1 (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "RACEN": {
+    "label": "Race (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "SAFFL": {
+    "label": "Safety Population Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTSDT": {
+    "label": "Date of First Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTEDT": {
+    "label": "Date of Last Exposure to Treatment",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTP": {
+    "label": "Planned Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTPN": {
+    "label": "Planned Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTA": {
+    "label": "Actual Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "TRTAN": {
+    "label": "Actual Treatment (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMCD": {
+    "label": "Parameter Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAM": {
+    "label": "Parameter",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARAMN": {
+    "label": "Parameter (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADT": {
+    "label": "Analysis Date",
+    "type": "Date",
+    "mandatory": "No",
+    "role": null
+   },
+   "ADY": {
+    "label": "Analysis Relative Day",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ATPTN": {
+    "label": "Analysis Timepoint (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ATPT": {
+    "label": "Analysis Timepoint",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISIT": {
+    "label": "Analysis Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVISITN": {
+    "label": "Analysis Visit (N)",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "AVAL": {
+    "label": "Analysis Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASE": {
+    "label": "Baseline Value",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "BASETYPE": {
+    "label": "Baseline Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "CHG": {
+    "label": "Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "PCHG": {
+    "label": "Percent Change from Baseline",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "VSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": null
+   },
+   "ANL01FL": {
+    "label": "Analysis Flag 01",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "ABLFL": {
+    "label": "Baseline Record Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   }
+  }
+ }
+}

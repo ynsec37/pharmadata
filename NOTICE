@@ -1,0 +1,139 @@
+This product bundles software and data that originate from other projects.
+The Apache License, Version 2.0 applies to this product as a whole; the
+notices below identify what is third-party and under what terms it may be
+redistributed.
+
+--------------------------------------------------------------------------------
+1. Upstream R packages (code, data and documentation)
+--------------------------------------------------------------------------------
+
+Derived from:
+
+  * pharmaverseadam - "ADaM Test Data for the 'Pharmaverse' Family of
+    Packages", taken from an upstream development version
+    https://github.com/pharmaverse/pharmaverseadam
+    shipped as the pharmadata.pharmaverseadam collection
+  * pharmaversesdtm - "SDTM Test Data for the 'Pharmaverse' Family of
+    Packages", taken from an upstream development version
+    https://github.com/pharmaverse/pharmaversesdtm
+    shipped as the pharmadata.pharmaversesdtm collection
+
+Both upstream packages are also published on CRAN. This product has its own
+version (0.1.0) that does not identify an upstream release; data-raw/export
+scripts read the upstream sources, so running them against your own checkout
+reproduces these inputs without the shipped parquet files.
+
+Both are licensed under the Apache License, Version 2.0 or later (their
+DESCRIPTION files declare `License: Apache License (>= 2)` and
+`License: Apache License (>= 2.0)` respectively), and their copyright
+holders - the entries with role "cph" in the Authors@R field of their
+DESCRIPTION files - are:
+
+  Copyright Cytel Inc.
+  Copyright F. Hoffmann-La Roche AG
+  Copyright GlaxoSmithKline LLC
+
+The ADaM datasets come from the admiral template scripts
+(https://github.com/pharmaverse/admiral, Apache-2.0) applied to the SDTM
+datasets above. Their labels, types, mandatory flags and roles come from
+`pharmaverseadam/inst/extdata/adams-specs.json`, drawn from the CDISC ADaM
+Implementation Guide.
+
+Changes made by this product (per Apache-2.0 Section4(b)):
+
+  * `.rda` -> Parquet conversion, plus per-dataset metadata tables
+    exported alongside (the pharmaverseadam and pharmaversesdtm collections);
+  * bytes that are invalid UTF-8 in the upstream `.rda` (for example the
+    0x92 right single quotation mark in the `ts` dataset) are re-decoded as
+    CP1252, and an empty character is exported as a Parquet null - the missing
+    value it stands for. No other value is edited;
+  * column labels and roles are additionally embedded in the Parquet files as
+    Arrow field metadata, and a merged `_meta.json` plus generated IDE stubs and
+    MkDocs documentation are added.
+
+--------------------------------------------------------------------------------
+2. The CDISC pilot submission packages, redistributed directly
+--------------------------------------------------------------------------------
+
+The pharmadata.cdiscpilotadam and pharmadata.cdiscpilotsdtm collections are
+built from two archives published by the PHUSE Scripts repository:
+
+  * data/adam/cdiscpilot_update1.zip
+  * data/sdtm/cdiscpilot_update2.zip
+    https://github.com/phuse-org/phuse-scripts
+
+They are the CDISC SDTM/ADaM Pilot Project's own submission packages as updated
+by the PHUSE Test Data Factory working group (the repository's
+`data/sdtm/README.md` names those updates). The PHUSE Scripts repository is
+licensed under the MIT (Expat) licence, names no copyright holder, and is in its
+`LICENSE.md`. The data inside the archives is CDISC's; section 3 records the
+terms it carries.
+
+Changes made by this product (per Apache-2.0 Section4(b)):
+
+  * SAS transport files (`.xpt`) -> Parquet conversion, and the per-dataset
+    metadata tables are exported alongside (the cdiscpilotadam and cdiscpilotsdtm
+    collections, sharing a common helper);
+  * a blank character is exported as a Parquet null, the missing value it stands
+    for: the SAS transport format has no missing character value, so a text
+    variable a record does not use is written there as an empty string;
+  * the dataset label, the structure, the mandatory flags and the roles are read
+    from the Define-XML 2.0 each archive ships, and the column labels from the
+    transport files' own variable labels with the Define-XML as fallback;
+  * those labels and roles are additionally embedded in the Parquet files as
+    Arrow field metadata, and a merged `_meta.json` plus generated IDE stubs and
+    MkDocs documentation are added.
+
+No other data value is edited: the conversion is a container change, and the
+metadata published beside the data is the one the submission package itself
+records.
+
+--------------------------------------------------------------------------------
+3. The CDISC pilot project data at the root of the chain
+--------------------------------------------------------------------------------
+
+Both routes above lead back to the CDISC SDTM/ADaM Pilot Project, whose files are
+published at
+
+  https://github.com/cdisc-org/sdtm-adam-pilot-project
+
+and that repository states a Terms of Use for the data, of which the following
+conditions travel with any redistribution:
+
+  * attribution back to CDISC is required, and users must not be misled about
+    the origin of the data;
+  * the data may not be sublicensed or distributed for a fee;
+  * the data may not be used to compete with CDISC, or in any manner that
+    violates a law or regulation;
+  * the data is provided "AS IS", without warranties of any kind, and CDISC
+    disclaims the currency, accuracy, relevance and completeness of it.
+
+This product is distributed free of charge, attributes CDISC as the source of the
+underlying data, and makes no claim that the data is fit for any regulatory or
+analytical purpose: it is synthetic test data for exercising software.
+
+Note that the pilot project's Terms of Use also ask that the data not be
+"disassembled, reverse engineered, decompiled, modified, or altered". The
+upstream pharmaverse packages already rework it, and this product's Parquet
+conversion is a format change that reads a blank character as the missing value
+it stands for. If a stricter reading of that clause matters to your use case, the
+regeneration programs in `data-raw/` rebuild the same datasets from the upstream
+sources without shipping Parquet files.
+
+--------------------------------------------------------------------------------
+4. CDISC standards documentation
+--------------------------------------------------------------------------------
+
+CDISC standards and Implementation Guides are copyrighted by CDISC, which grants
+open public use of its published standards (https://www.cdisc.org/). This product
+reproduces the variable names, labels, mandatory flags and roles recorded in the
+upstream specs and Define-XML files; it does not reproduce the Implementation
+Guide documents themselves.
+
+--------------------------------------------------------------------------------
+5. No endorsement
+--------------------------------------------------------------------------------
+
+Cytel, F. Hoffmann-La Roche AG, GlaxoSmithKline LLC, CDISC, PHUSE and the
+pharmaverse initiative are not affiliated with this product and do not endorse it.
+The datasets carry no real subject data: they are simulated test data.

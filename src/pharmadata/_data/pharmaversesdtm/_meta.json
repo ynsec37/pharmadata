@@ -1,0 +1,7518 @@
+{
+ "ae": {
+  "label": "Adverse Events",
+  "structure": null,
+  "n_rows": 1191,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AESPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AETERM": {
+    "label": "Reported Term for the Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AELLT": {
+    "label": "Lowest Level Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AELLTCD": {
+    "label": "Lowest Level Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEDECOD": {
+    "label": "Dictionary-Derived Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEPTCD": {
+    "label": "Preferred Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLT": {
+    "label": "High Level Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLTCD": {
+    "label": "High Level Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLGT": {
+    "label": "High Level Group Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLGTCD": {
+    "label": "High Level Group Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEBODSYS": {
+    "label": "Body System or Organ Class",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEBDSYCD": {
+    "label": "Body System or Organ Class Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AESOC": {
+    "label": "Primary System Organ Class",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESOCCD": {
+    "label": "Primary System Organ Class Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AESEV": {
+    "label": "Severity/Intensity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESER": {
+    "label": "Serious Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEACN": {
+    "label": "Action Taken with Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEREL": {
+    "label": "Causality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEOUT": {
+    "label": "Outcome of Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESCAN": {
+    "label": "Involves Cancer",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESCONG": {
+    "label": "Congenital Anomaly or Birth Defect",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESDISAB": {
+    "label": "Persist or Signif Disability/Incapacity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESDTH": {
+    "label": "Results in Death",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESHOSP": {
+    "label": "Requires or Prolongs Hospitalization",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESLIFE": {
+    "label": "Is Life Threatening",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESOD": {
+    "label": "Occurred with Overdose",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESTDTC": {
+    "label": "Start Date/Time of Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEENDTC": {
+    "label": "End Date/Time of Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESTDY": {
+    "label": "Study Day of Start of Adverse Event",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEENDY": {
+    "label": "Study Day of End of Adverse Event",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ae_ophtha": {
+  "label": "Adverse Events for Ophthalmology",
+  "structure": null,
+  "n_rows": 1191,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AESPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AETERM": {
+    "label": "Reported Term for the Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AELLT": {
+    "label": "Lowest Level Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AELLTCD": {
+    "label": "Lowest Level Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEDECOD": {
+    "label": "Dictionary-Derived Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEPTCD": {
+    "label": "Preferred Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLT": {
+    "label": "High Level Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLTCD": {
+    "label": "High Level Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLGT": {
+    "label": "High Level Group Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEHLGTCD": {
+    "label": "High Level Group Term Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEBODSYS": {
+    "label": "Body System or Organ Class",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEBDSYCD": {
+    "label": "Body System or Organ Class Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AESOC": {
+    "label": "Primary System Organ Class",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESOCCD": {
+    "label": "Primary System Organ Class Code",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AESEV": {
+    "label": "Severity/Intensity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESER": {
+    "label": "Serious Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEACN": {
+    "label": "Action Taken with Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEREL": {
+    "label": "Causality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEOUT": {
+    "label": "Outcome of Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESCAN": {
+    "label": "Involves Cancer",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESCONG": {
+    "label": "Congenital Anomaly or Birth Defect",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESDISAB": {
+    "label": "Persist or Signif Disability/Incapacity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESDTH": {
+    "label": "Results in Death",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESHOSP": {
+    "label": "Requires or Prolongs Hospitalization",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESLIFE": {
+    "label": "Is Life Threatening",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESOD": {
+    "label": "Occurred with Overdose",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESTDTC": {
+    "label": "Start Date/Time of Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AEENDTC": {
+    "label": "End Date/Time of Adverse Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AESTDY": {
+    "label": "Study Day of Start of Adverse Event",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AEENDY": {
+    "label": "Study Day of End of Adverse Event",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AELAT": {
+    "label": "Laterality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AELOC": {
+    "label": "Location",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ag_neuro": {
+  "label": "Procedure Agents Dataset-neuro",
+  "structure": null,
+  "n_rows": 68,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "AGTRT": {
+    "label": "Reported Agent Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGCAT": {
+    "label": "Category for Agent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGDOSE": {
+    "label": "Dose per Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGDOSEU": {
+    "label": "Dose Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGROUTE": {
+    "label": "Route of Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGLNKID": {
+    "label": "Link ID",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGSTDTC": {
+    "label": "Start Date/Time of Agent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "be": {
+  "label": "Biospecimen Events",
+  "structure": null,
+  "n_rows": 43,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BESEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "BEREFID": {
+    "label": "Reference ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BELNKID": {
+    "label": "Link Identifier",
+    "type": "Boolean",
+    "mandatory": null,
+    "role": null
+   },
+   "BETERM": {
+    "label": "Reported Term for the Biospecimen Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BECAT": {
+    "label": "Category for Biospecimen Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BELOC": {
+    "label": "Anatomical Location of Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "BEDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BESTDTC": {
+    "label": "Start Date/Time of Biospecimen Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BEENDTC": {
+    "label": "End Date/Time of Biospecimen Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ce_vaccine": {
+  "label": "Clinical Events for Vaccine",
+  "structure": null,
+  "n_rows": 44,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CESEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "CELNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CELNKGRP": {
+    "label": "Link Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CETERM": {
+    "label": "Reported Term for the Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEDECOD": {
+    "label": "Dictionary-Derived Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CELAT": {
+    "label": "Laterality of Location of Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CELOC": {
+    "label": "Location of Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CECAT": {
+    "label": "Category for Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CESCAT": {
+    "label": "Subcategory for Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEPRESP": {
+    "label": "Clinical Event Pre-Specified",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEOCCUR": {
+    "label": "Clinical Event Occurrence",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CESEV": {
+    "label": "Severity/Intensity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEREL": {
+    "label": "Causality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEOUT": {
+    "label": "Outcome of Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEDTC": {
+    "label": "Date/Time of Event Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CESTDTC": {
+    "label": "Start Date/Time of Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEENDTC": {
+    "label": "End Date/Time of Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEDUR": {
+    "label": "Duration of Clinical Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CETPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CETPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "CETPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CERFTDTC": {
+    "label": "Date/Time of Reference Time Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEEVINTX": {
+    "label": "Evaluation Interval Text",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CESTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CEREASND": {
+    "label": "Reason Clinical Event Not Collected",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "cm": {
+  "label": "Concomitant Medication",
+  "structure": null,
+  "n_rows": 7510,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "CMSPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMTRT": {
+    "label": "Reported Name of Drug, Med, or Therapy",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMDECOD": {
+    "label": "Standardized Medication Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMINDC": {
+    "label": "Indication",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMCLAS": {
+    "label": "Medication Class",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMDOSE": {
+    "label": "Dose per Administration",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "CMDOSU": {
+    "label": "Dose Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMDOSFRQ": {
+    "label": "Dosing Frequency per Interval",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMROUTE": {
+    "label": "Route of Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "CMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMSTDTC": {
+    "label": "Start Date/Time of Medication",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMENDTC": {
+    "label": "End Date/Time of Medication",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "CMSTDY": {
+    "label": "Study Day of Start of Medication",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "CMENDY": {
+    "label": "Study Day of End of Medication",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "CMENRTPT": {
+    "label": "End Relative to Reference Time Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "dm": {
+  "label": "Demography",
+  "structure": null,
+  "n_rows": 306,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFSTDTC": {
+    "label": "Subject Reference Start Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFENDTC": {
+    "label": "Subject Reference End Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXSTDTC": {
+    "label": "Date/Time of First Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXENDTC": {
+    "label": "Date/Time of Last Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFICDTC": {
+    "label": "Date/Time of Informed Consent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFPENDTC": {
+    "label": "Date/Time of End of Participation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHDTC": {
+    "label": "Date/Time of Death",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHFL": {
+    "label": "Subject Death Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BRTHDTC": {
+    "label": "Date/Time of Birth",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AGEU": {
+    "label": "Age Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ETHNIC": {
+    "label": "Ethnicity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMCD": {
+    "label": "Actual Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARM": {
+    "label": "Description of Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "COUNTRY": {
+    "label": "Country",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDY": {
+    "label": "Study Day of Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMNRS": {
+    "label": "Reason Arm and/or Actual Arm is Null",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMUD": {
+    "label": "Description of Unplanned Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "dm_metabolic": {
+  "label": "Demographic Dataset-metabolic",
+  "structure": null,
+  "n_rows": 5,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFSTDTC": {
+    "label": "Subject Reference Start Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFENDTC": {
+    "label": "Subject Reference End Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXSTDTC": {
+    "label": "Date/Time of First Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXENDTC": {
+    "label": "Date/Time of Last Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFICDTC": {
+    "label": "Date/Time of Informed Consent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFPENDTC": {
+    "label": "Date/Time of End of Participation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHDTC": {
+    "label": "Date/Time of Death",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHFL": {
+    "label": "Subject Death Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BRTHDTC": {
+    "label": "Date/Time of Birth",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AGEU": {
+    "label": "Age Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ETHNIC": {
+    "label": "Ethnicity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMCD": {
+    "label": "Actual Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARM": {
+    "label": "Description of Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "COUNTRY": {
+    "label": "Country",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDY": {
+    "label": "Study Day of Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMNRS": {
+    "label": "Reason Arm and/or Actual Arm is Null",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMUD": {
+    "label": "Description of Unplanned Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "dm_neuro": {
+  "label": "Demographic Dataset-neuro",
+  "structure": null,
+  "n_rows": 15,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFSTDTC": {
+    "label": "Subject Reference Start Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFENDTC": {
+    "label": "Subject Reference End Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXSTDTC": {
+    "label": "Date/Time of First Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXENDTC": {
+    "label": "Date/Time of Last Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFICDTC": {
+    "label": "Date/Time of Informed Consent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFPENDTC": {
+    "label": "Date/Time of End of Participation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHDTC": {
+    "label": "Date/Time of Death",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHFL": {
+    "label": "Subject Death Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BRTHDTC": {
+    "label": "Date/Time of Birth",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AGEU": {
+    "label": "Age Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ETHNIC": {
+    "label": "Ethnicity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMCD": {
+    "label": "Actual Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARM": {
+    "label": "Description of Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "COUNTRY": {
+    "label": "Country",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDY": {
+    "label": "Study Day of Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMNRS": {
+    "label": "Reason Arm and/or Actual Arm is Null",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMUD": {
+    "label": "Description of Unplanned Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "dm_peds": {
+  "label": "Demographic Dataset-pediatrics",
+  "structure": null,
+  "n_rows": 5,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFSTDTC": {
+    "label": "Subject Reference Start Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFENDTC": {
+    "label": "Subject Reference End Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXSTDTC": {
+    "label": "Date/Time of First Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXENDTC": {
+    "label": "Date/Time of Last Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFICDTC": {
+    "label": "Date/Time of Informed Consent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFPENDTC": {
+    "label": "Date/Time of End of Participation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHDTC": {
+    "label": "Date/Time of Death",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHFL": {
+    "label": "Subject Death Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BRTHDTC": {
+    "label": "Date/Time of Birth",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AGEU": {
+    "label": "Age Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ETHNIC": {
+    "label": "Ethnicity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMCD": {
+    "label": "Actual Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARM": {
+    "label": "Description of Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "COUNTRY": {
+    "label": "Country",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDY": {
+    "label": "Study Day of Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMNRS": {
+    "label": "Reason Arm and/or Actual Arm is Null",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMUD": {
+    "label": "Description of Unplanned Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "dm_vaccine": {
+  "label": "Demographics for Vaccine",
+  "structure": null,
+  "n_rows": 2,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFSTDTC": {
+    "label": "Subject Reference Start Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFENDTC": {
+    "label": "Subject Reference End Date/Time",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXSTDTC": {
+    "label": "Date/Time of First Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFXENDTC": {
+    "label": "Date/Time of Last Study Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFICDTC": {
+    "label": "Date/Time of Informed Consent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RFPENDTC": {
+    "label": "Date/Time of End of Participation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHDTC": {
+    "label": "Date/Time of Death",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DTHFL": {
+    "label": "Subject Death Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "INVID": {
+    "label": "Investigator Identifier",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "INVNAM": {
+    "label": "Investigator Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "BRTHDTC": {
+    "label": "Date/Time of Birth",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "AGEU": {
+    "label": "Age Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ETHNIC": {
+    "label": "Ethnicity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMCD": {
+    "label": "Actual Arm Code",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARM": {
+    "label": "Description of Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "COUNTRY": {
+    "label": "Country",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DMDY": {
+    "label": "Study Day of Collection",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "ARMNRS": {
+    "label": "Reason Arm and/or Actual Arm is Null",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMUD": {
+    "label": "Description of Unplanned Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ds": {
+  "label": "Disposition",
+  "structure": null,
+  "n_rows": 850,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "DSSPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DSTERM": {
+    "label": "Reported Term for the Disposition Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DSDECOD": {
+    "label": "Standardized Disposition Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DSCAT": {
+    "label": "Category for Disposition Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DSDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DSSTDTC": {
+    "label": "Start Date/Time of Disposition Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DSSTDY": {
+    "label": "Study Day of Start of Disposition Event",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "eg": {
+  "label": "Electrocardiogram",
+  "structure": null,
+  "n_rows": 26717,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EGTESTCD": {
+    "label": "ECG Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGTEST": {
+    "label": "ECG Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EGSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGLOC": {
+    "label": "Location of Vital Signs Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EGDTC": {
+    "label": "Date/Time of Measurements",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGDY": {
+    "label": "Study Day of Vital Signs",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EGTPT": {
+    "label": "Planned Time Point Number",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGTPTNUM": {
+    "label": "Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EGELTM": {
+    "label": "Planned Elapsed Time from Time Point Ref",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EGTPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ex": {
+  "label": "Exposure",
+  "structure": null,
+  "n_rows": 591,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXTRT": {
+    "label": "Name of Actual Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSE": {
+    "label": "Dose per Administration",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSU": {
+    "label": "Dose Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSFRM": {
+    "label": "Dose Form",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSFRQ": {
+    "label": "Dosing Frequency per Interval",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXROUTE": {
+    "label": "Route of Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSTDTC": {
+    "label": "Start Date/Time of Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXENDTC": {
+    "label": "End Date/Time of Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSTDY": {
+    "label": "Study Day of Start of Treatment",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXENDY": {
+    "label": "Study Day of End of Treatment",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ex_ophtha": {
+  "label": "Exposure for Ophthalmology",
+  "structure": null,
+  "n_rows": 591,
+  "columns": {
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXTRT": {
+    "label": "Name of Actual Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSE": {
+    "label": "Dose per Administration",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSU": {
+    "label": "Dose Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSFRM": {
+    "label": "Dose Form",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSFRQ": {
+    "label": "Dose Frequency per Interval",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXROUTE": {
+    "label": "Route of Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXLOC": {
+    "label": "Location of Dose Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXLAT": {
+    "label": "Laterality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSTDTC": {
+    "label": "Start Date/Time of Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXENDTC": {
+    "label": "End Date/Time of Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSTDY": {
+    "label": "Study Day of Start of Treatment",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXENDY": {
+    "label": "Study Day of End of Treatment",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ex_vaccine": {
+  "label": "Exposures for Vaccine",
+  "structure": null,
+  "n_rows": 4,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXLNKGRP": {
+    "label": "Link Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXLNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXTRT": {
+    "label": "Name of Actual Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXCAT": {
+    "label": "Category of Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSE": {
+    "label": "Dose per Administration",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSU": {
+    "label": "Dose Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXDOSFRM": {
+    "label": "Dose Form",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXROUTE": {
+    "label": "Route of Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXLOC": {
+    "label": "Location of Dose Administration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXLAT": {
+    "label": "Laterality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXSTDTC": {
+    "label": "Start Date/Time of Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EXENDTC": {
+    "label": "End Date/Time of Treatment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "face_vaccine": {
+  "label": "Findings About Clinical Events for Vaccine",
+  "structure": null,
+  "n_rows": 307,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FASEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "FALNKGRP": {
+    "label": "Link Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FALAT": {
+    "label": "Laterality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FALNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FALOC": {
+    "label": "Location of the Finding About",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FATESTCD": {
+    "label": "Findings About Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FATEST": {
+    "label": "Findings About Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FAOBJ": {
+    "label": "Object of the Observation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FACAT": {
+    "label": "Category for Findings About",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FASCAT": {
+    "label": "Subcategory for Findings About",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FAEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FAORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FAORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FADTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FADY": {
+    "label": "Study Day of Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "FATPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FATPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "FATPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FARFTDTC": {
+    "label": "Date/Time of Reference Time Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FAEVLINT": {
+    "label": "Evaluation Interval",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FAEVINTX": {
+    "label": "Evaluation Interval Text",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FASTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FAREASND": {
+    "label": "Reason Not Performed",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FASTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "FASTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "FASTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "is_ada": {
+  "label": "Immunogenicity Specimen Assessments for ADA",
+  "structure": null,
+  "n_rows": 691,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "ISTESTCD": {
+    "label": "Immunogenicity Test/Exam Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISTEST": {
+    "label": "Immunogenicity Test or Examination Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISBDAGNT": {
+    "label": "Binding Agent",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISCAT": {
+    "label": "Category for Immunogenicity Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISORRES": {
+    "label": "Results or Findings in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTRESN": {
+    "label": "Numeric Results/Findings in Std. Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISREASND": {
+    "label": "Reason Not Done",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISNAM": {
+    "label": "Vendor Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSPEC": {
+    "label": "Specimen Type",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISLLOQ": {
+    "label": "Lower Limit of Quantitation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISDY": {
+    "label": "Study Day of Visit/Collection/Exam",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "ISTPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISTPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "is_vaccine": {
+  "label": "Immunogenicity Specimen Assessments for Vaccine",
+  "structure": null,
+  "n_rows": 16,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "ISTESTCD": {
+    "label": "Immunogenicity Test/Exam Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISTEST": {
+    "label": "Immunogenicity Test or Exam Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISCAT": {
+    "label": "Category for Immunogenicity Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISREASND": {
+    "label": "Reason Not Done",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISNAM": {
+    "label": "Vendor Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISSPEC": {
+    "label": "Specimen Type",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISMETHOD": {
+    "label": "Method of Test or Examination",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISLLOQ": {
+    "label": "Lower Limit of Quantitation",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISDY": {
+    "label": "Study Day of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ISULOQ": {
+    "label": "Upper Limit of Quantitation",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "lb": {
+  "label": "Laboratory Measurements",
+  "structure": null,
+  "n_rows": 59580,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORNRLO": {
+    "label": "Reference Range Lower Limit in Orig Unit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORNRHI": {
+    "label": "Reference Range Upper Limit in Orig Unit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTNRLO": {
+    "label": "Reference Range Lower Limit-Std Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTNRHI": {
+    "label": "Reference Range Upper Limit-Std Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "lb_metabolic": {
+  "label": "Laboratory Measurements Dataset-metabolic",
+  "structure": null,
+  "n_rows": 309,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORNRLO": {
+    "label": "Reference Range Lower Limit in Orig Unit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORNRHI": {
+    "label": "Reference Range Upper Limit in Orig Unit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTNRLO": {
+    "label": "Reference Range Lower Limit-Std Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTNRHI": {
+    "label": "Reference Range Upper Limit-Std Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBFAST": {
+    "label": "Fasting Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "lb_neuro": {
+  "label": "Laboratory Test Dataset-neuro",
+  "structure": null,
+  "n_rows": 151,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORNRLO": {
+    "label": "Reference Range Lower Limit in Orig Unit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORNRHI": {
+    "label": "Reference Range Upper Limit in Orig Unit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTNRLO": {
+    "label": "Reference Range Lower Limit-Std Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTNRHI": {
+    "label": "Reference Range Upper Limit-Std Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "lb_onco_pcwg3": {
+  "label": "Laboratory Measurements (PSA) for Oncology",
+  "structure": null,
+  "n_rows": 41,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "mb": {
+  "label": "Microbiology Specimen",
+  "structure": null,
+  "n_rows": 18,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "MBGRPID": {
+    "label": "Group ID",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "MBREFID": {
+    "label": "Reference ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBLNKGRP": {
+    "label": "Link Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBTESTCD": {
+    "label": "Microbiology Test or Finding Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBTEST": {
+    "label": "Microbiology Test or Finding Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBTSTDTL": {
+    "label": "Measurement, Test or Examination Detail",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBRSLSCL": {
+    "label": "Result Scale",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBSPEC": {
+    "label": "Specimen Material Type",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBLOC": {
+    "label": "Specimen Collection Location",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MBMETHOD": {
+    "label": "Method of Test or Examination",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "MBDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "mh": {
+  "label": "Medical History",
+  "structure": null,
+  "n_rows": 1818,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "MHSPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHTERM": {
+    "label": "Reported Term for the Medical History",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHLLT": {
+    "label": "Lowest Level Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHDECOD": {
+    "label": "Dictionary-Derived Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHHLT": {
+    "label": "High Level Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHHLGT": {
+    "label": "High Level Group Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHCAT": {
+    "label": "Category for Medical History",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHBODSYS": {
+    "label": "Body System or Organ Class",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHSEV": {
+    "label": "Severity/Intensity",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "MHDTC": {
+    "label": "Date/Time of History Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHSTDTC": {
+    "label": "Start Date/Time of Medical History Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHDY": {
+    "label": "Study Day of History Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "MHENDTC": {
+    "label": "End Date/Time of Medical History Event",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHPRESP": {
+    "label": "Medical History Event Pre-Specified",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHOCCUR": {
+    "label": "Medical History Occurrence",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHSTRTPT": {
+    "label": "Start Relative to Reference Time Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHENRTPT": {
+    "label": "End Relative to Reference Time Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHSTTPT": {
+    "label": "Start Reference Time Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHENTPT": {
+    "label": "End Reference Time Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHENRF": {
+    "label": "End Relative to Reference Period",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MHSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ms": {
+  "label": "Microbiology Susceptibility",
+  "structure": null,
+  "n_rows": 47,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "MSREFID": {
+    "label": "Reference ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NHOID": {
+    "label": "Non-host Organism ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSGRPID": {
+    "label": "Group ID",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "MSLNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSTESTCD": {
+    "label": "Short Name of Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSTEST": {
+    "label": "Name of Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSAGENT": {
+    "label": "Agent Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSCONC": {
+    "label": "Agent Concentration",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSCONCU": {
+    "label": "Agent Concentration Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSSPEC": {
+    "label": "Specimen Material Type",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSLOC": {
+    "label": "Location Used for the Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "MSMETHOD": {
+    "label": "Method of Test or Examination",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "MSDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "nv_neuro": {
+  "label": "Neurological Assessment Dataset-neuro",
+  "structure": null,
+  "n_rows": 98,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "NVLNKID": {
+    "label": "Link ID",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "NVTESTCD": {
+    "label": "Short Name of Nervous System Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVTEST": {
+    "label": "Name of Nervous System Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVCAT": {
+    "label": "Category for Nervous System Test",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVLOC": {
+    "label": "Location Used for the Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVMETHOD": {
+    "label": "Method of Test or Examination",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVNAM": {
+    "label": "Vendor Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "NVSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "NVDY": {
+    "label": "Study Day of Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "NVLOBXFL": {
+    "label": "Last Observation Before Exposure Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "oe_ophtha": {
+  "label": "Ophthalmic Examinations for Ophthalmology",
+  "structure": null,
+  "n_rows": 26852,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OESEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "OECAT": {
+    "label": "Category for Ophthalmic Test or Exam",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OESCAT": {
+    "label": "Subcategory for Ophthalmic Test or Exam",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OEDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "OESTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "OESTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OEORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OETEST": {
+    "label": "Name of Ophthalmic Test or Examination",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OETESTCD": {
+    "label": "Short Name of Ophthalmic Test or Exam",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OETSTDTL": {
+    "label": "Ophthalmic Test or Exam Detail",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OELAT": {
+    "label": "Laterality",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OELOC": {
+    "label": "Location Used for the Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OEDY": {
+    "label": "Study Day of Visit/Collection/Exam",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "OEMETHOD": {
+    "label": "Method of Test or Examination",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OEORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OESTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OESTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OETPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "OETPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "pc": {
+  "label": "Pharmacokinetic Concentrations",
+  "structure": null,
+  "n_rows": 4572,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "PCTESTCD": {
+    "label": "Pharmacokinetic Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCTEST": {
+    "label": "Pharmacokinetic Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "PCSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCNAM": {
+    "label": "Vendor Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCSPEC": {
+    "label": "Specimen Material Type",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCLLOQ": {
+    "label": "Lower Limit of Quantitation",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "PCDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCDY": {
+    "label": "Actual Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "PCTPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PCTPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "pp": {
+  "label": "Pharmacokinetic Parameters",
+  "structure": null,
+  "n_rows": 2688,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PPSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "PPTESTCD": {
+    "label": "Parameter Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PPTEST": {
+    "label": "Parameter Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PPCAT": {
+    "label": "Parameter Category",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PPORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "PPORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PPSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "PPSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "PPSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PPSPEC": {
+    "label": "Specimen Material Type",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "PPRFDTC": {
+    "label": "Date/Time of Reference Point",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "qs_metabolic": {
+  "label": "Questionnaire Dataset-metabolic",
+  "structure": null,
+  "n_rows": 966,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "QSCAT": {
+    "label": "Category for Questionnaire",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSTEST": {
+    "label": "Questionnaire Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSTESTCD": {
+    "label": "Questionnaire Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "qs_ophtha": {
+  "label": "Questionnaire for Ophthalmology",
+  "structure": null,
+  "n_rows": 348,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "QSTESTCD": {
+    "label": "Question Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSTEST": {
+    "label": "Question Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSCAT": {
+    "label": "Category of Question",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSCAT": {
+    "label": "Subcategory for Question",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSORRES": {
+    "label": "Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSTRESN": {
+    "label": "Numeric Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSDRVFL": {
+    "label": "Derived Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "rs_onco_ca125": {
+  "label": "Disease Response (GCIG)",
+  "structure": null,
+  "n_rows": 66,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTESTCD": {
+    "label": "Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTEST": {
+    "label": "Assessment Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSCAT": {
+    "label": "Category for Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDTC": {
+    "label": "Date/Time of Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "rs_onco_imwg": {
+  "label": "Disease Response (IMWG)",
+  "structure": null,
+  "n_rows": 65,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "RSLNKGRP": {
+    "label": "Link Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTESTCD": {
+    "label": "Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTEST": {
+    "label": "Assessment Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSCAT": {
+    "label": "Category for Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTAT": {
+    "label": "Completion Status",
+    "type": "Boolean",
+    "mandatory": null,
+    "role": null
+   },
+   "RSREASND": {
+    "label": "Reason Not Done",
+    "type": "Boolean",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDTC": {
+    "label": "Date/Time of Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDY": {
+    "label": "Study Day of Assessment",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "rs_onco_irecist": {
+  "label": "Disease Response (iRECIST) for Oncology",
+  "structure": null,
+  "n_rows": 376,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "RSLNKGRP": {
+    "label": "Link Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTESTCD": {
+    "label": "Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTEST": {
+    "label": "Assessment Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSCAT": {
+    "label": "Category for Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSREASND": {
+    "label": "Reason Not Done",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVALID": {
+    "label": "Evaluator Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSACPTFL": {
+    "label": "Accepted Record Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDTC": {
+    "label": "Date/Time of Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDY": {
+    "label": "Study Day of Assessment",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "rs_onco_lymphoma": {
+  "label": "Disease Response (Lymphoma Lugano 2014)",
+  "structure": null,
+  "n_rows": 68,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTESTCD": {
+    "label": "Response Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTEST": {
+    "label": "Response Assessment Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSCAT": {
+    "label": "Category for Response Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSMETHOD": {
+    "label": "undocumented field",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSCAT": {
+    "label": "undocumented field",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSORRES": {
+    "label": "Response Assessment Original Result",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTRESC": {
+    "label": "Response Assessment Result in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDTC": {
+    "label": "Date/Time of Response Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDY": {
+    "label": "Study Day of Response Assessment",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "rs_onco": {
+  "label": "Disease Response for Oncology",
+  "structure": null,
+  "n_rows": 5808,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "RSLNKGRP": {
+    "label": "Link Group",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTESTCD": {
+    "label": "Response Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTEST": {
+    "label": "Response Assessment Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSCAT": {
+    "label": "Category for Response Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSORRES": {
+    "label": "Response Assessment Original Result",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTRESC": {
+    "label": "Response Assessment Result in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSREASND": {
+    "label": "Reason Response Assessment Not Performed",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVALID": {
+    "label": "Evaluator Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSACPTFL": {
+    "label": "Accepted Record Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDTC": {
+    "label": "Date/Time of Response Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDY": {
+    "label": "Study Day of Response Assessment",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "rs_onco_pcwg3": {
+  "label": "Disease Response (PCWG3) for Oncology",
+  "structure": null,
+  "n_rows": 90,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTESTCD": {
+    "label": "Response Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTEST": {
+    "label": "Response Assessment Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSCAT": {
+    "label": "Category for Response Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSORRES": {
+    "label": "Response Assessment Original Result",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTRESC": {
+    "label": "Response Assessment Result in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDTC": {
+    "label": "Date/Time of Response Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDY": {
+    "label": "Study Day of Response Assessment",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "rs_onco_recist": {
+  "label": "Disease Response (RECIST 1.1) for Oncology",
+  "structure": null,
+  "n_rows": 66,
+  "columns": {
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTESTCD": {
+    "label": "Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSTEST": {
+    "label": "Assessment Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSEVALID": {
+    "label": "Evaluator Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSACPTFL": {
+    "label": "Accepted Record Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSDTC": {
+    "label": "Date/Time of Assessment",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "sc_ophtha": {
+  "label": "Subject Characteristic for Ophthalmology",
+  "structure": null,
+  "n_rows": 254,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SCSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "SCTESTCD": {
+    "label": "Subject Characteristic Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SCTEST": {
+    "label": "Subject Characteristic",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SCCAT": {
+    "label": "Category for Subject Characteristic",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SCORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SCSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SCDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SCDY": {
+    "label": "Study Day of Examination",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "sdg_db": {
+  "label": "SDG",
+  "structure": null,
+  "n_rows": 16,
+  "columns": {
+   "termchar": {
+    "label": "Reported Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "sdg_name": {
+    "label": "Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "sdg_id": {
+    "label": "Name ID",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "termvar": {
+    "label": "Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "version": {
+    "label": "Version",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "smq_db": {
+  "label": "Standardized MedDRA Queries",
+  "structure": null,
+  "n_rows": 44,
+  "columns": {
+   "termchar": {
+    "label": "Reported Term",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "scope": {
+    "label": "Scope",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "smq_name": {
+    "label": "Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "smq_id": {
+    "label": "Name ID",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "version": {
+    "label": "Version",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "termvar": {
+    "label": "Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppae": {
+  "label": "Supplemental Adverse Events",
+  "structure": null,
+  "n_rows": 1191,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppce_vaccine": {
+  "label": "Supplemental Qualifiers for Clinical Events for Vaccine",
+  "structure": null,
+  "n_rows": 4,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppdm": {
+  "label": "Supplemental Demography",
+  "structure": null,
+  "n_rows": 1197,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppdm_vaccine": {
+  "label": "Supplemental Qualifiers for Demographics for Vaccine",
+  "structure": null,
+  "n_rows": 2,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppds": {
+  "label": "Supplemental Disposition",
+  "structure": null,
+  "n_rows": 3,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppex_vaccine": {
+  "label": "Supplemental Qualifiers for Exposures for Vaccine",
+  "structure": null,
+  "n_rows": 4,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppface_vaccine": {
+  "label": "Supplemental Qualifiers for Findings About for Clinical Events for Vaccine",
+  "structure": null,
+  "n_rows": 4,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppis_vaccine": {
+  "label": "Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine",
+  "structure": null,
+  "n_rows": 16,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "Boolean",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "suppnv_neuro": {
+  "label": "Supplemental for Neurological Assessment Dataset-neuro",
+  "structure": null,
+  "n_rows": 68,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "supprs_onco_ca125": {
+  "label": "Supplemental Qualifiers for RS_ONCO_CA125",
+  "structure": null,
+  "n_rows": 49,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "supprs_onco_imwg": {
+  "label": "Supplemental Qualifiers for RS_ONCO_IMWG",
+  "structure": null,
+  "n_rows": 19,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "supptr_onco": {
+  "label": "Supplemental Tumor Results for Oncology",
+  "structure": null,
+  "n_rows": 55995,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "sv": {
+  "label": "Subject Visits",
+  "structure": null,
+  "n_rows": 3559,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "SVSTDTC": {
+    "label": "Start Date/Time of Visit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "SVENDTC": {
+    "label": "End Date/Time of Visit",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "tr_onco": {
+  "label": "Tumor Results for Oncology",
+  "structure": null,
+  "n_rows": 55995,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "TRGRPID": {
+    "label": "Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRLNKGRP": {
+    "label": "Link Group",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRLNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRTESTCD": {
+    "label": "Tumor Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRTEST": {
+    "label": "Tumor Assessment Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRREASND": {
+    "label": "Reason Tumor Measurement Not Performed",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRMETHOD": {
+    "label": "Method used to Identify the Tumor",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TREVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TREVALID": {
+    "label": "Evaluator Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRACPTFL": {
+    "label": "Accepted Record Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRDTC": {
+    "label": "Date/Time of Tumor Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRDY": {
+    "label": "Study Day of Tumor Measurement",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "tr_onco_recist": {
+  "label": "Tumor Results (RECIST 1.1) for Oncology",
+  "structure": null,
+  "n_rows": 546,
+  "columns": {
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRGRPID": {
+    "label": "Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRLNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRTESTCD": {
+    "label": "Tumor/Lesion Assessment Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRTEST": {
+    "label": "Tumor/Lesion Assessment Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TREVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TREVALID": {
+    "label": "Evaluator Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRACPTFL": {
+    "label": "Accepted Record Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRDTC": {
+    "label": "Date/Time of Tumor/Lesion Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TRSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "ts": {
+  "label": "Trial Design",
+  "structure": null,
+  "n_rows": 33,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "TSPARMCD": {
+    "label": "Trial Summary Parameter Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TSPARM": {
+    "label": "Trial Summary Parameter",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TSVAL": {
+    "label": "Parameter Value",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "tu_onco": {
+  "label": "Tumor Identification for Oncology",
+  "structure": null,
+  "n_rows": 7734,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "TULNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUTESTCD": {
+    "label": "Tumor Identification Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUTEST": {
+    "label": "Tumor Identification Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUORRES": {
+    "label": "Tumor Identification Result",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUSTRESC": {
+    "label": "Tumor Identification Result Std. Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TULOC": {
+    "label": "Location of the Tumor",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUMETHOD": {
+    "label": "Method of Identification",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUEVALID": {
+    "label": "Evaluator Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUACPTFL": {
+    "label": "Accepted Record Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUDTC": {
+    "label": "Date/Time of Tumor Identification",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUDY": {
+    "label": "Study Day of Tumor Identification",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "tu_onco_recist": {
+  "label": "Tumor Identification (RECIST 1.1) for Oncology",
+  "structure": null,
+  "n_rows": 75,
+  "columns": {
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "TULOC": {
+    "label": "Location of the Tumor/Lesion",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUTESTCD": {
+    "label": "Tumor/Lesion ID Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUTEST": {
+    "label": "Tumor/Lesion ID Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUORRES": {
+    "label": "Tumor/Lesion ID Result",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUSTRESC": {
+    "label": "Tumor/Lesion ID Result Std. Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUMETHOD": {
+    "label": "Method of Identification",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TULNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUEVALID": {
+    "label": "Evaluator Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUACPTFL": {
+    "label": "Accepted Record Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "TUSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "vs": {
+  "label": "Vital Signs",
+  "structure": null,
+  "n_rows": 29643,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTESTCD": {
+    "label": "Vital Signs Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTEST": {
+    "label": "Vital Signs Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSPOS": {
+    "label": "Vital Signs Position of Subject",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSLOC": {
+    "label": "Location of Vital Signs Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDTC": {
+    "label": "Date/Time of Measurements",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDY": {
+    "label": "Study Day of Vital Signs",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSELTM": {
+    "label": "Planned Elapsed Time from Time Point Ref",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "vs_metabolic": {
+  "label": "Vital signs Dataset-metabolic",
+  "structure": null,
+  "n_rows": 719,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTESTCD": {
+    "label": "Vital Signs Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTEST": {
+    "label": "Vital Signs Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSPOS": {
+    "label": "Vital Signs Position of Subject",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSLOC": {
+    "label": "Location of Vital Signs Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDTC": {
+    "label": "Date/Time of Measurements",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDY": {
+    "label": "Study Day of Vital Signs",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSELTM": {
+    "label": "Planned Elapsed Time from Time Point Ref",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "vs_peds": {
+  "label": "Vital signs Dataset-pediatrics",
+  "structure": null,
+  "n_rows": 164,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTESTCD": {
+    "label": "Vital Signs Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTEST": {
+    "label": "Vital Signs Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSPOS": {
+    "label": "Vital Signs Position of Subject",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSLOC": {
+    "label": "Location of Vital Signs Measurement",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDTC": {
+    "label": "Date/Time of Measurements",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDY": {
+    "label": "Study Day of Vital Signs",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSELTM": {
+    "label": "Planned Elapsed Time from Time Point Ref",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ },
+ "vs_vaccine": {
+  "label": "Vital Signs for Vaccine",
+  "structure": null,
+  "n_rows": 28,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSEQ": {
+    "label": "Sequence Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "VSLNKID": {
+    "label": "Link ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSLNKGRP": {
+    "label": "Link Group ID",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTESTCD": {
+    "label": "Vital Signs Test Short Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTEST": {
+    "label": "Vital Signs Test Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSCAT": {
+    "label": "Category for Vital Signs",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSCAT": {
+    "label": "Subcategory for Vital Signs",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSLOC": {
+    "label": "Location of Vital Signs Measurement",
+    "type": "Boolean",
+    "mandatory": null,
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDTC": {
+    "label": "Date/Time of Measurements",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSDY": {
+    "label": "Study Day of Vital Signs",
+    "type": "Float64",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Int32",
+    "mandatory": null,
+    "role": null
+   },
+   "VSTPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   }
+  }
+ }
+}

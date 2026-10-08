@@ -1,0 +1,1373 @@
+---
+format:
+  html:
+    code-overflow: wrap
+engine: knitr
+execute:
+  eval: true
+  error: true
+title: "Polars vs Tidyverse"
+description: "polars side by side with the tidyverse"
+---
+
+<style>
+pre, pre code, pre.sourceCode { font-size: 0.82em; line-height: 1.35; }
+div.compare { display: flex; gap: 1.5rem; }
+div.compare-col { flex: 1 1 0; min-width: 0; }
+/* R text output (cell-output-stdout) gets a cream background by default
+   from bootstrap's .cell-output.cell-output-stdout rule; override it so
+   the tidyverse column matches the Polars (transparent) output. */
+.cell-output.cell-output-stdout,
+.cell-output.cell-output-stdout pre { background-color: transparent !important; }
+@media screen {
+  pre > code.sourceCode {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  div.sourceCode { overflow-x: hidden; }
+}
+</style>
+
+## Create the data
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+import polars as pl
+
+adsl = pl.DataFrame({
+    "USUBJID": ["U01", "U02", "U03", "U04"],
+    "ARM":     ["DRUG A", "DRUG B", "DRUG A", "DRUG B"],
+    "AGE":     [55, 62, 48, 70],
+    "SEX":     ["M", "F", "M", "F"],
+})
+
+advs = pl.DataFrame({
+    "USUBJID": ["U01","U01","U02","U02","U03","U03","U04","U04"],
+    "ARM":     ["DRUG A","DRUG A","DRUG B","DRUG B","DRUG A","DRUG A","DRUG B","DRUG B"],
+    "AGE":     [55, 55, 62, 62, 48, 48, 70, 70],
+    "SEX":     ["M","M","F","F","M","M","F","F"],
+    "PARAM":   ["Systolic BP","Diastolic BP","Systolic BP","Diastolic BP","Systolic BP","Diastolic BP","Systolic BP","Diastolic BP"],
+    "PARAMCD": ["SYSBP","DIABP","SYSBP","DIABP","SYSBP","DIABP","SYSBP","DIABP"],
+    "AVAL":    [120, 80, 130, 85, 110, 70, 140, 90],
+    "AVISIT":  ["Visit 1","Visit 1","Visit 1","Visit 1","Visit 2","Visit 2","Visit 2","Visit 2"],
+    "AVISITN": [1, 1, 1, 1, 2, 2, 2, 2],
+    "DTC":     ["2024-01-15","2024-01-15","2024-02-20","2024-02-20","2024-03-10","2024-03-10","2024-04-05","2024-04-05"],
+})
+adsl
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+#| message: false
+#| warning: false
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lubridate)
+library(readr)
+
+adsl <- tibble::tibble(
+  USUBJID = c("U01", "U02", "U03", "U04"),
+  ARM     = c("DRUG A", "DRUG B", "DRUG A", "DRUG B"),
+  AGE     = c(55, 62, 48, 70),
+  SEX     = c("M", "F", "M", "F")
+)
+
+advs <- tibble::tibble(
+  USUBJID = c("U01","U01","U02","U02","U03","U03","U04","U04"),
+  ARM     = c("DRUG A","DRUG A","DRUG B","DRUG B","DRUG A","DRUG A","DRUG B","DRUG B"),
+  AGE     = c(55, 55, 62, 62, 48, 48, 70, 70),
+  SEX     = c("M","M","F","F","M","M","F","F"),
+  PARAM   = c("Systolic BP","Diastolic BP","Systolic BP","Diastolic BP","Systolic BP","Diastolic BP","Systolic BP","Diastolic BP"),
+  PARAMCD = c("SYSBP","DIABP","SYSBP","DIABP","SYSBP","DIABP","SYSBP","DIABP"),
+  AVAL    = c(120, 80, 130, 85, 110, 70, 140, 90),
+  AVISIT  = c("Visit 1","Visit 1","Visit 1","Visit 1","Visit 2","Visit 2","Visit 2","Visit 2"),
+  AVISITN = c(1, 1, 1, 1, 2, 2, 2, 2),
+  DTC     = c("2024-01-15","2024-01-15","2024-02-20","2024-02-20","2024-03-10","2024-03-10","2024-04-05","2024-04-05")
+)
+adsl
+```
+:::
+:::
+
+## Verbs
+
+### Select columns
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+adsl.select("USUBJID", "ARM", "AGE")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> select(USUBJID, ARM, AGE)
+```
+:::
+:::
+
+### Drop columns
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+adsl.drop("SEX")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> select(-SEX)
+```
+:::
+:::
+
+### Drop by rule, not by name
+
+R's `where(is.numeric)` and `starts_with()` have direct counterparts: `cs.numeric()`
+and `cs.starts_with()`, composed with `|` and `&`.
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+import polars.selectors as cs
+
+adsl.select(cs.numeric() | cs.starts_with("U"))
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> select(where(is.numeric) | starts_with("U"))
+```
+:::
+:::
+
+### Rename columns
+
+The dictionary is keyed old-to-new, the opposite of `rename()`'s `new = old`.
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+adsl.rename({"AGE": "AGE_N"})
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> rename(AGE_N = AGE)
+```
+:::
+:::
+
+### Filter rows
+
+Conditions are expressions joined with `&`, `|`, `~`; `is_in` is `%in%`. Note that
+polars has no unquoted column names - every reference goes through `pl.col`.
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.filter(
+    (pl.col("ARM") == "DRUG A") & (pl.col("AVISIT").is_in(["Visit 1", "Visit 2"]))
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> filter(ARM == "DRUG A" & AVISIT %in% c("Visit 1", "Visit 2"))
+```
+:::
+:::
+
+### Add or replace columns
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+(
+    advs
+    .with_columns(doubled=pl.col("AVAL") * 2)
+    .with_columns(squared=pl.col("doubled") ** 2)
+    .select("USUBJID", "AVISIT", "AVAL", "doubled", "squared")
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  mutate(
+    doubled = AVAL * 2,
+    squared = doubled^2
+  ) |>
+  select(USUBJID, AVISIT, AVAL, doubled, squared)
+```
+:::
+:::
+
+### Conditional values (case_when)
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    response=pl.when(pl.col("AVAL") > 120)
+    .then(pl.lit("HIGH"))
+    .otherwise(pl.lit("NORMAL"))
+).select("USUBJID", "AVAL", "response")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  mutate(response = case_when(AVAL > 120 ~ "HIGH", TRUE ~ "NORMAL")) |>
+  select(USUBJID, AVAL, response)
+```
+:::
+:::
+
+### Sort rows
+
+The default placement of missing values differs: `arrange()` sorts `NA` last,
+`sort()` puts nulls first unless `nulls_last=True`.
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+adsl.sort("AGE", descending=True, nulls_last=True)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> arrange(desc(AGE))
+```
+:::
+:::
+
+### Slice by row position
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+adsl.head(3)
+adsl.tail(2)
+adsl.slice(1, 2)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> slice_head(n = 3)
+adsl |> slice_tail(n = 2)
+adsl |> slice(2:3)
+```
+:::
+:::
+
+### Distinct
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.select("USUBJID", "ARM").unique().sort("USUBJID")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> distinct(USUBJID, ARM) |> arrange(USUBJID)
+```
+:::
+:::
+
+### Type conversion
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+adsl.with_columns(id=pl.col("USUBJID").str.extract(r"(\d+)").cast(pl.Int32)).select("USUBJID", "id")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> mutate(id = as.integer(str_extract(USUBJID, "\\d+"))) |> select(USUBJID, id)
+```
+:::
+:::
+
+### Batch rename (prefix / suffix)
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+adsl.select(pl.col("AGE").name.prefix("BASE_"))
+adsl.select(pl.all().name.suffix("_raw"))
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+adsl |> select(AGE) |> rename_with(~ str_c("BASE_", .x))
+adsl |> rename_with(~ str_c(.x, "_raw"))
+```
+:::
+:::
+
+## Missing values
+
+### Check for missing values
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.null_count()
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> summarise(across(everything(), ~ sum(is.na(.))))
+```
+:::
+:::
+
+### Drop rows with a missing value
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+miss = advs.with_columns(AVAL=pl.when(pl.col("USUBJID") == "U02").then(None).otherwise(pl.col("AVAL")))
+miss.drop_nulls("AVAL").select("USUBJID", "AVAL")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+miss <- advs |> mutate(AVAL = ifelse(USUBJID == "U02", NA, AVAL))
+miss |> drop_na(AVAL) |> select(USUBJID, AVAL)
+```
+:::
+:::
+
+### Fill with a constant
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+miss.with_columns(filled=pl.col("AVAL").fill_null(0)).select("USUBJID", "AVAL", "filled")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+miss |>
+  mutate(filled = replace_na(AVAL, 0)) |>
+  select(USUBJID, AVAL, filled)
+```
+:::
+:::
+
+### Carry the last value forward
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+miss.with_columns(
+    filled=pl.col("AVAL").fill_null(strategy="forward")
+).select("USUBJID", "AVISIT", "AVAL", "filled")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+miss |>
+  fill(AVAL, .direction = "down") |>
+  select(USUBJID, AVISIT, AVAL)
+```
+:::
+:::
+
+### Fill within a group
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+miss.with_columns(
+    filled=pl.col("AVAL").fill_null(strategy="forward").over("USUBJID")
+).select("USUBJID", "AVISIT", "AVAL", "filled")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+miss |>
+  group_by(USUBJID) |>
+  fill(AVAL, .direction = "down") |>
+  ungroup() |>
+  select(USUBJID, AVISIT, AVAL)
+```
+:::
+:::
+
+### Coalesce
+
+`pl.coalesce` takes columns, `coalesce()` takes vectors.
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+co = pl.DataFrame({"a": [1, None, 3], "b": [10, 20, None]})
+co.with_columns(c=pl.coalesce("a", "b"))
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+co <- tibble(a = c(1, NA, 3), b = c(10, 20, NA))
+co |> mutate(c = coalesce(a, b))
+```
+:::
+:::
+
+### Delete empty rows
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+blank = pl.DataFrame({"USUBJID": [None], "AVAL": [None]})
+pl.concat([miss.select("USUBJID", "AVAL"), blank], how="vertical").drop_nulls()
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+blank <- tibble(USUBJID = NA_character_, AVAL = NA_real_)
+bind_rows(miss |> select(USUBJID, AVAL), blank) |> drop_na()
+```
+:::
+:::
+
+## Group and window
+
+### Summarise by group
+
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.group_by("ARM").agg(
+    n=pl.len(),
+    mean_age=pl.col("AGE").mean(),
+    mean_aval=pl.col("AVAL").mean(),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  group_by(ARM) |>
+  summarise(
+    n = n(),
+    mean_age = mean(AGE),
+    mean_aval = mean(AVAL)
+  )
+```
+:::
+:::
+
+### Common statistics
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.select(
+    mean=pl.col("AVAL").mean(),
+    median=pl.col("AVAL").median(),
+    sd=pl.col("AVAL").std(),
+    p75=pl.col("AVAL").quantile(0.75),
+    total=pl.col("AVAL").sum(),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  summarise(
+    mean = mean(AVAL),
+    median = median(AVAL),
+    sd = sd(AVAL),
+    p75 = quantile(AVAL, 0.75),
+    total = sum(AVAL)
+  )
+```
+:::
+:::
+
+### Summarise many columns at once (across)
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.group_by("ARM").agg(
+    pl.col("AGE", "AVAL").mean().name.prefix("mean_"),
+    pl.col("AGE", "AVAL").std().name.prefix("sd_"),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  group_by(ARM) |>
+  summarise(across(c(AGE, AVAL), list(mean = mean, sd = sd)))
+```
+:::
+:::
+
+### Count rows per group
+
+`len()` is `n()`.
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.group_by("ARM").len()
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> count(ARM)
+```
+:::
+:::
+
+### Window value (recycle an aggregate)
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    subj_mean=pl.col("AVAL").mean().over("USUBJID")
+).select("USUBJID", "AVISIT", "AVAL", "subj_mean")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  group_by(USUBJID) |>
+  mutate(subj_mean = mean(AVAL)) |>
+  ungroup() |>
+  select(USUBJID, AVISIT, AVAL, subj_mean)
+```
+:::
+:::
+
+### Running total within a group
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    cum_aval=pl.col("AVAL").cum_sum().over("USUBJID")
+).select("USUBJID", "AVISIT", "AVAL", "cum_aval")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  group_by(USUBJID) |>
+  mutate(cum_aval = cumsum(AVAL)) |>
+  ungroup() |>
+  select(USUBJID, AVISIT, AVAL, cum_aval)
+```
+:::
+:::
+
+### Lag and lead
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    prev=pl.col("AVAL").shift(1).over("USUBJID"),
+    lead_val=pl.col("AVAL").shift(-1).over("USUBJID"),
+).select("USUBJID", "AVISIT", "AVAL", "prev", "lead_val")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  group_by(USUBJID) |>
+  mutate(
+    prev = lag(AVAL),
+    lead_val = lead(AVAL)
+  ) |>
+  ungroup() |>
+  select(USUBJID, AVISIT, AVAL, prev, lead_val)
+```
+:::
+:::
+
+### First and last row of each group
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+(
+    advs
+    .with_columns(
+        rn=pl.col("AVAL").rank(method="ordinal").over("USUBJID", "AVISITN"),
+        is_first=pl.col("AVAL").rank(method="ordinal").over("USUBJID", "AVISITN") == 1,
+        is_last=pl.col("AVAL").rank(method="ordinal").over("USUBJID", "AVISITN") == pl.len().over("USUBJID", "AVISITN"),
+    )
+    .select("USUBJID", "AVISIT", "rn", "is_first", "is_last")
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  group_by(USUBJID, AVISITN) |>
+  mutate(
+    rn = row_number(),
+    is_first = row_number() == 1,
+    is_last = row_number() == n()
+  ) |>
+  ungroup() |>
+  select(USUBJID, AVISIT, rn, is_first, is_last)
+```
+:::
+:::
+
+### Row-wise sum of several columns
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(total=pl.sum_horizontal("AGE", "AVAL")).select("USUBJID", "AGE", "AVAL", "total")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  mutate(total = AGE + AVAL) |>
+  select(USUBJID, AGE, AVAL, total)
+```
+:::
+:::
+
+## Join and reshape
+
+### Left join
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+arms = pl.DataFrame({"ARM": ["DRUG A", "DRUG B"], "ARMCD": ["A", "B"]})
+adsl.join(arms, on="ARM", how="left")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+arms <- tibble(ARM = c("DRUG A", "DRUG B"), ARMCD = c("A", "B"))
+adsl |> left_join(arms, by = "ARM")
+```
+:::
+:::
+
+### Set operations
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+a = pl.DataFrame({"USUBJID": ["U01", "U02", "U03"]})
+b = pl.DataFrame({"USUBJID": ["U02", "U03", "U04"]})
+a.filter(pl.col("USUBJID").is_in(b["USUBJID"].to_list()))
+a.join(b, on="USUBJID", how="anti")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+a <- tibble(USUBJID = c("U01", "U02", "U03"))
+b <- tibble(USUBJID = c("U02", "U03", "U04"))
+a |> filter(USUBJID %in% b$USUBJID)
+a |> anti_join(b, by = "USUBJID")
+```
+:::
+:::
+
+### Pivot long to wide
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+wide = advs.pivot(index="USUBJID", on="PARAMCD", values="AVAL")
+wide
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+wide <- advs |> pivot_wider(names_from = PARAMCD, values_from = AVAL)
+wide
+```
+:::
+:::
+
+### Pivot wide to long
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+wide.unpivot(index="USUBJID", on=["SYSBP","DIABP"], variable_name="PARAMCD", value_name="AVAL")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+wide |> pivot_longer(c(SYSBP, DIABP), names_to = "PARAMCD", values_to = "AVAL")
+```
+:::
+:::
+
+### Stack frames vertically
+
+`concat([...], how="vertical")` is `bind_rows`.
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+top = advs.head(2)
+bot = advs.tail(2)
+pl.concat([top, bot], how="vertical")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+top <- advs |> head(2)
+bot <- advs |> tail(2)
+bind_rows(top, bot)
+```
+:::
+:::
+
+### Stack frames side by side
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+left = adsl.select("USUBJID", "ARM")
+right = adsl.select("AGE", "SEX")
+pl.concat([left, right], how="horizontal_extend")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+left <- adsl |> select(USUBJID, ARM)
+right <- adsl |> select(AGE, SEX)
+bind_cols(left, right)
+```
+:::
+:::
+
+## Strings
+
+### Change case
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.select(
+    upper=pl.col("ARM").str.to_uppercase(),
+    lower=pl.col("PARAMCD").str.to_lowercase(),
+    title=pl.col("PARAM").str.to_titlecase(),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> transmute(
+  upper = str_to_upper(ARM),
+  lower = str_to_lower(PARAMCD),
+  title = str_to_title(PARAM)
+)
+```
+:::
+:::
+
+### Trim and measure length
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.select(
+    n=pl.col("PARAM").str.len_chars(),
+    trimmed=pl.col("PARAM").str.strip_chars(),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> transmute(
+  n = str_length(PARAM),
+  trimmed = str_trim(PARAM)
+)
+```
+:::
+:::
+
+### Test for a pattern
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.filter(pl.col("PARAMCD").str.contains(r"^S"))
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> filter(str_detect(PARAMCD, "^S"))
+```
+:::
+:::
+
+### Extract the first match
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(num=pl.col("USUBJID").str.extract(r"(\d+)")).select("USUBJID", "num")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> mutate(num = str_extract(USUBJID, "\\d+")) |> select(USUBJID, num)
+```
+:::
+:::
+
+### Replace a pattern
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(arm=pl.col("ARM").str.replace(r"DRUG ", "")).select("ARM", "arm")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> mutate(arm = str_remove(ARM, "DRUG ")) |> select(ARM, arm)
+```
+:::
+:::
+
+### Split and merge
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.select(
+    parts=pl.col("PARAM").str.split(" "),
+    merged=pl.col("USUBJID") + pl.lit("-") + pl.col("AVISIT"),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> transmute(
+  parts = str_split(PARAM, " "),
+  merged = str_c(USUBJID, "-", AVISIT)
+)
+```
+:::
+:::
+
+### Slice and pad
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.select(
+    sliced=pl.col("PARAMCD").str.slice(0, 3),
+    padded=pl.col("USUBJID").str.zfill(6),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> transmute(
+  sliced = str_sub(PARAMCD, 1, 3),
+  padded = str_pad(USUBJID, width = 6, side = "left", pad = "0")
+)
+```
+:::
+:::
+
+## Dates
+
+### Parse a date, datetime or time
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    date=pl.col("DTC").str.to_date(),
+).select("USUBJID", "date")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> mutate(date = ymd(DTC)) |> select(USUBJID, date)
+```
+:::
+:::
+
+### Pull out parts
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    d=pl.col("DTC").str.to_date(),
+).select(
+    year=pl.col("d").dt.year(),
+    month=pl.col("d").dt.month(),
+    day=pl.col("d").dt.day(),
+    wday=pl.col("d").dt.weekday(),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  mutate(d = ymd(DTC)) |>
+  transmute(
+    year = year(d),
+    month = month(d),
+    day = mday(d),
+    wday = wday(d)
+  )
+```
+:::
+:::
+
+### Format a date as text
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    txt=pl.col("DTC").str.to_date().dt.strftime("%d %b %Y")
+).select("DTC", "txt")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> mutate(txt = format(ymd(DTC), "%d %b %Y")) |> select(DTC, txt)
+```
+:::
+:::
+
+### Truncate to a period
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+advs.with_columns(
+    month_start=pl.col("DTC").str.to_date().dt.truncate("1mo"),
+).select("DTC", "month_start")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |> mutate(month_start = floor_date(ymd(DTC), "month")) |> select(DTC, month_start)
+```
+:::
+:::
+
+### Month start and end
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+(
+    advs
+    .with_columns(d=pl.col("DTC").str.to_date())
+    .with_columns(
+        ms=pl.col("d").dt.month_start(),
+        me=pl.col("d").dt.month_end(),
+    )
+    .select("DTC", "ms", "me")
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+advs |>
+  mutate(
+    d = ymd(DTC),
+    ms = floor_date(d, "month"),
+    me = ceiling_date(d, "month") - days(1)
+  ) |>
+  select(DTC, ms, me)
+```
+:::
+:::
+
+### Add or subtract a period
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+jan = pl.DataFrame({"d": ["2024-01-31"]}).with_columns(d=pl.col("d").str.to_date())
+jan.with_columns(
+    next_month=pl.col("d").dt.offset_by("1mo"),
+    prev_month=pl.col("d").dt.offset_by("-1mo"),
+)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+jan <- tibble(d = ymd("2024-01-31"))
+jan |>
+  mutate(
+    next_month = d %m+% months(1),
+    prev_month = d %m-% months(1)
+  )
+```
+:::
+:::
+
+### Difference between dates
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+jan = pl.DataFrame({"d1": ["2024-01-01"], "d2": ["2024-04-01"]}).with_columns(
+    pl.col("d1", "d2").str.to_date()
+)
+jan.with_columns(days=pl.col("d2") - pl.col("d1"))
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+jan <- tibble(d1 = ymd("2024-01-01"), d2 = ymd("2024-04-01"))
+jan |> mutate(days = d2 - d1)
+```
+:::
+:::
+
+### Generate a sequence of dates
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+pl.DataFrame({"d": pl.date_range(pl.date(2024, 1, 1), pl.date(2024, 1, 5), "1d", eager=True)})
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+tibble(d = seq(ymd("2024-01-01"), ymd("2024-01-05"), by = "day"))
+```
+:::
+:::
+
+## Input / output
+
+### Read and write CSV
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+#| eval: false
+# write
+advs.write_csv("advs.csv")
+# read
+advs = pl.read_csv("advs.csv", try_parse_dates=True)
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+#| eval: false
+# write
+advs |> write_csv("advs.csv")
+# read
+advs <- read_csv("advs.csv")
+```
+:::
+:::
+
+### Read and write Parquet
+
+::: {.compare gutter="1.5rem"}
+::: {.compare-col width="50%"}
+**Polars**
+
+```{python}
+#| eval: false
+advs.write_parquet("advs.parquet")
+advs = pl.read_parquet("advs.parquet")
+```
+:::
+
+::: {.compare-col width="50%"}
+**tidyverse**
+
+```{r}
+#| eval: false
+advs |> arrow::write_parquet("advs.parquet")
+advs <- arrow::read_parquet("advs.parquet")
+```
+:::
+:::
+
+## Sources
+
+- Polars Python API. <https://docs.pola.rs/api/python/stable/reference/>.
+- Wickham H, Averick M, Bryan J, et al. Welcome to the tidyverse. *Journal of Open
+  Source Software*, 2019;4(43):1686. <https://doi.org/10.21105/joss.01686>.
+- Grolemund G, Wickham H. Dates and Times Made Easy with lubridate. *Journal of
+  Statistical Software*, 2011;40(3):1-25. <https://doi.org/10.18637/jss.v040.i03>.

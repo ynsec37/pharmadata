@@ -1,0 +1,37 @@
+/* Normalise Quarto cell-output styling so stdout, display and stderr blocks
+   share one background and text color. The default flatly theme gives
+   .cell-output-stdout a beige tint and leaves .cell-output-display
+   transparent, which makes consecutive code cells look inconsistent. */
+
+.cell-output,
+.cell-output pre,
+.cell-output pre code {
+  background-color: var(--quarto-code-bg, #f5f5f5);
+  color: var(--quarto-body-color, #212529);
+}
+
+.cell-output-stdout,
+.cell-output-stdout pre,
+.cell-output-stdout pre code,
+.cell-output-display,
+.cell-output-display pre,
+.cell-output-display pre code,
+.cell-output-stderr,
+.cell-output-stderr pre,
+.cell-output-stderr pre code {
+  background-color: var(--quarto-code-bg, #f5f5f5) !important;
+  color: var(--quarto-body-color, #212529) !important;
+}
+
+/* The notebook page is an interactive marimo island, so the "Copy page as
+   Markdown" widget makes no sense there. Hide it only on pages that contain
+   a marimo island; all other pages keep the widget. */
+body:has(marimo-island) .gd-copy-page {
+  display: none !important;
+}
+
+/* Left-align every table header. The flatly/Quarto default right-aligns `th`,
+   which looks odd for column names like STUDYID or variable. */
+table th {
+  text-align: left !important;
+}

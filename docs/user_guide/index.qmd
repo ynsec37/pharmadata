@@ -1,0 +1,130 @@
+---
+format: html
+jupyter: python3
+execute:
+  echo: true
+  error: false
+  warning: true
+  freeze: auto
+title: "Getting started"
+description: "Access CDISC ADaM and SDTM test datasets in Python"
+---
+
+Datasets are module attributes, lazy-loaded from parquet.
+
+## Collections
+
+| Module | Standard | Source | Datasets |
+| --- | --- | --- | --: |
+| `pharmadata.pharmaverseadam` | ADaM | pharmaverseadam | 30 |
+| `pharmadata.pharmaversesdtm` | SDTM | pharmaversesdtm | 64 |
+| `pharmadata.cdiscpilotadam` | ADaM | CDISC pilot | 12 |
+| `pharmadata.cdiscpilotsdtm` | SDTM | CDISC pilot | 31 |
+
+## Install
+
+```bash
+pip install pharmadata
+```
+
+## Usage
+
+```{python}
+import polars as pl
+from pharmadata import pharmaverseadam as adam, pharmaversesdtm as sdtm
+```
+
+```{python}
+adam.list_datasets()
+adam.meta_tables()
+adam.meta_columns()
+adam.meta_specs()
+adam_dict = adam.to_dict()
+```
+
+```{python}
+adsl = adam.adsl
+adsl_meta = adam.adsl_meta
+adsl_meta.column_names
+adsl_meta.column_labels
+adsl_meta.column_names_to_labels
+adsl_meta.number_rows
+adsl_meta.number_columns
+adsl_meta.file_label
+adsl_meta.file_encoding
+adsl.head()
+```
+
+## Format
+
+```{python}
+from pharmadata import set_output_pandas, set_output_polars, output_format
+set_output_pandas()
+dm = sdtm.dm
+print(type(dm))
+set_output_polars()
+dm = sdtm.dm
+print(type(dm))
+```
+
+`set_output_pandas()` / `set_output_polars()` switch globally; `output_format()`
+is a context manager.
+
+```{python}
+with output_format("pandas"):
+    adsl_pd = adam.adsl
+
+print(type(adsl_pd))
+```
+
+## Validate by `pointblank`
+```{python}
+import pointblank as pb
+# pb.validate_adam(adsl, "ADSL")
+pb.validate_adam_structure(adsl, "ADSL")
+```
+
+## Polars Examples
+
+```{python}
+adsl.select(["STUDYID", "USUBJID", "AGE", "SEX", "TRT01A"]).head()
+```
+
+```{python}
+adsl.filter((pl.col("AGE") >= 75) & (pl.col("SEX") == "F")).select(
+    ["USUBJID", "AGE", "SEX", "TRT01A"]
+).head()
+```
+
+```{python}
+adsl.filter(pl.col("TRT01A") != "Screen Failure").group_by("TRT01A").agg(
+    pl.col("AGE").mean().round(1).alias("mean_age"),
+    pl.len().alias("n"),
+).sort("TRT01A")
+```
+
+## Read parquet directly
+
+- Dataset label in schema metadata
+- Column labels in field metadata.
+
+Both are bytes, decode to str
+
+```{python}
+from importlib import resources
+
+import pyarrow.parquet as pq
+
+path = resources.files("pharmadata") / "_data" / "pharmaverseadam" / "adsl.parquet"
+schema = pq.ParquetFile(path).schema_arrow
+
+print((schema.metadata or {}).get(b"label", b"").decode())
+print({
+    name: (schema.field(name).metadata or {}).get(b"label", b"").decode()
+    for name in schema.names[:3]
+})
+```
+
+```{python}
+pl.from_arrow(pq.read_table(path, columns=schema.names[:6])).head(5)
+```

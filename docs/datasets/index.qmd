@@ -1,0 +1,172 @@
+---
+title: Datasets
+---
+
+# Datasets
+
+137 datasets across 4 collections, loaded as polars DataFrames.
+
+## ADaM (pharmaverse)
+
+30 datasets from [pharmaverseadam](https://github.com/pharmaverse/pharmaverseadam).
+
+| Dataset | Label | Rows | Columns |
+|:--|:--|--:|--:|
+| [adab](pharmaverseadam/adab.html) | Anti-Drug Antibody Analysis Dataset | 6,430 | 72 |
+| [adae](pharmaverseadam/adae.html) | Adverse Events Analysis | 1,191 | 107 |
+| [adapet_neuro](pharmaverseadam/adapet_neuro.html) | Amyloid PET Scan Analysis Dataset | 83 | 49 |
+| [adbcva_ophtha](pharmaverseadam/adbcva_ophtha.html) | Best Corrected Visual Acuity Analysis | 7,672 | 71 |
+| [adce_vaccine](pharmaverseadam/adce_vaccine.html) | Clinical Events Analysis for Vaccine | 44 | 56 |
+| [adcm](pharmaverseadam/adcm.html) | Concomitant Medications Analysis | 7,510 | 95 |
+| [adcoeq_metabolic](pharmaverseadam/adcoeq_metabolic.html) | Questionnaires Analysis for Metabolic | 1,110 | 85 |
+| [adeg](pharmaverseadam/adeg.html) | Electrocardiogram Tests Analysis | 78,756 | 108 |
+| [adex](pharmaverseadam/adex.html) | Exposure Analysis | 6,315 | 92 |
+| [adface_vaccine](pharmaverseadam/adface_vaccine.html) | Findings About Clinical Events Analysis | 371 | 61 |
+| [adis_vaccine](pharmaverseadam/adis_vaccine.html) | Immunogenicity Specimen Assessments | 64 | 103 |
+| [adlb](pharmaverseadam/adlb.html) | Laboratory Analysis | 83,652 | 115 |
+| [adlb_metabolic](pharmaverseadam/adlb_metabolic.html) | Laboratory Analysis for Metabolic | 371 | 43 |
+| [adlbhy](pharmaverseadam/adlbhy.html) | Analysis of Lab Hy's Law | 251 | 14 |
+| [admh](pharmaverseadam/admh.html) | Medical History Analysis | 1,818 | 114 |
+| [adnv_neuro](pharmaverseadam/adnv_neuro.html) | Nervous System Analysis Dataset | 30 | 43 |
+| [adoe_ophtha](pharmaverseadam/adoe_ophtha.html) | Exam Analysis for Ophthalmology | 19,136 | 103 |
+| [adpc](pharmaverseadam/adpc.html) | Pharmacokinetic Concentrations | 4,479 | 128 |
+| [adpp](pharmaverseadam/adpp.html) | Pharmacokinetic Parameters | 2,688 | 79 |
+| [adppk](pharmaverseadam/adppk.html) | Population Pharmacokinetic | 3,522 | 61 |
+| [adrs_onco](pharmaverseadam/adrs_onco.html) | Tumor Response Analysis | 3,694 | 79 |
+| [adsl](pharmaverseadam/adsl.html) | Subject Level Analysis | 306 | 55 |
+| [adsl_vaccine](pharmaverseadam/adsl_vaccine.html) | Subject Level Analysis for Vaccine | 2 | 46 |
+| [adtpet_neuro](pharmaverseadam/adtpet_neuro.html) | Tau PET Scan Analysis Dataset | 34 | 46 |
+| [adtr_onco](pharmaverseadam/adtr_onco.html) | Tumor Results Analysis for Oncology | 181 | 99 |
+| [adtte_onco](pharmaverseadam/adtte_onco.html) | Time to Event Analysis for Oncology | 512 | 20 |
+| [advfq_ophtha](pharmaverseadam/advfq_ophtha.html) | Visual Function Questionnaire Analysis | 28,798 | 89 |
+| [advs](pharmaverseadam/advs.html) | Vital Signs Analysis | 65,032 | 105 |
+| [advs_metabolic](pharmaverseadam/advs_metabolic.html) | Vital Signs Analysis for Metabolic | 760 | 101 |
+| [advs_peds](pharmaverseadam/advs_peds.html) | Vital Signs Analysis for Pediatrics | 546 | 80 |
+
+## SDTM (pharmaverse)
+
+64 datasets from [pharmaversesdtm](https://github.com/pharmaverse/pharmaversesdtm).
+
+| Dataset | Label | Rows | Columns |
+|:--|:--|--:|--:|
+| [ae](pharmaversesdtm/ae.html) | Adverse Events | 1,191 | 35 |
+| [ae_ophtha](pharmaversesdtm/ae_ophtha.html) | Adverse Events for Ophthalmology | 1,191 | 37 |
+| [ag_neuro](pharmaversesdtm/ag_neuro.html) | Procedure Agents Dataset-neuro | 68 | 13 |
+| [be](pharmaversesdtm/be.html) | Biospecimen Events | 43 | 13 |
+| [ce_vaccine](pharmaversesdtm/ce_vaccine.html) | Clinical Events for Vaccine | 44 | 29 |
+| [cm](pharmaversesdtm/cm.html) | Concomitant Medication | 7,510 | 22 |
+| [dm](pharmaversesdtm/dm.html) | Demography | 306 | 28 |
+| [dm_metabolic](pharmaversesdtm/dm_metabolic.html) | Demographic Dataset-metabolic | 5 | 28 |
+| [dm_neuro](pharmaversesdtm/dm_neuro.html) | Demographic Dataset-neuro | 15 | 28 |
+| [dm_peds](pharmaversesdtm/dm_peds.html) | Demographic Dataset-pediatrics | 5 | 28 |
+| [dm_vaccine](pharmaversesdtm/dm_vaccine.html) | Demographics for Vaccine | 2 | 30 |
+| [ds](pharmaversesdtm/ds.html) | Disposition | 850 | 13 |
+| [eg](pharmaversesdtm/eg.html) | Electrocardiogram | 26,717 | 23 |
+| [ex](pharmaversesdtm/ex.html) | Exposure | 591 | 17 |
+| [ex_ophtha](pharmaversesdtm/ex_ophtha.html) | Exposure for Ophthalmology | 591 | 19 |
+| [ex_vaccine](pharmaversesdtm/ex_vaccine.html) | Exposures for Vaccine | 4 | 19 |
+| [face_vaccine](pharmaversesdtm/face_vaccine.html) | Findings About Clinical Events for Vaccine | 307 | 30 |
+| [is_ada](pharmaversesdtm/is_ada.html) | Immunogenicity Specimen Assessments for ADA | 691 | 27 |
+| [is_vaccine](pharmaversesdtm/is_vaccine.html) | Immunogenicity Specimen Assessments for Vaccine | 16 | 24 |
+| [lb](pharmaversesdtm/lb.html) | Laboratory Measurements | 59,580 | 23 |
+| [lb_metabolic](pharmaversesdtm/lb_metabolic.html) | Laboratory Measurements Dataset-metabolic | 309 | 24 |
+| [lb_neuro](pharmaversesdtm/lb_neuro.html) | Laboratory Test Dataset-neuro | 151 | 23 |
+| [lb_onco_pcwg3](pharmaversesdtm/lb_onco_pcwg3.html) | Laboratory Measurements (PSA) for Oncology | 41 | 18 |
+| [mb](pharmaversesdtm/mb.html) | Microbiology Specimen | 18 | 21 |
+| [mh](pharmaversesdtm/mh.html) | Medical History | 1,818 | 28 |
+| [ms](pharmaversesdtm/ms.html) | Microbiology Susceptibility | 47 | 23 |
+| [nv_neuro](pharmaversesdtm/nv_neuro.html) | Neurological Assessment Dataset-neuro | 98 | 21 |
+| [oe_ophtha](pharmaversesdtm/oe_ophtha.html) | Ophthalmic Examinations for Ophthalmology | 26,852 | 25 |
+| [pc](pharmaversesdtm/pc.html) | Pharmacokinetic Concentrations | 4,572 | 21 |
+| [pp](pharmaversesdtm/pp.html) | Pharmacokinetic Parameters | 2,688 | 14 |
+| [qs_metabolic](pharmaversesdtm/qs_metabolic.html) | Questionnaire Dataset-metabolic | 966 | 18 |
+| [qs_ophtha](pharmaversesdtm/qs_ophtha.html) | Questionnaire for Ophthalmology | 348 | 20 |
+| [rs_onco](pharmaversesdtm/rs_onco.html) | Disease Response for Oncology | 5,808 | 19 |
+| [rs_onco_ca125](pharmaversesdtm/rs_onco_ca125.html) | Disease Response (GCIG) | 66 | 13 |
+| [rs_onco_imwg](pharmaversesdtm/rs_onco_imwg.html) | Disease Response (IMWG) | 65 | 17 |
+| [rs_onco_irecist](pharmaversesdtm/rs_onco_irecist.html) | Disease Response (iRECIST) for Oncology | 376 | 19 |
+| [rs_onco_lymphoma](pharmaversesdtm/rs_onco_lymphoma.html) | Disease Response (Lymphoma Lugano 2014) | 68 | 17 |
+| [rs_onco_pcwg3](pharmaversesdtm/rs_onco_pcwg3.html) | Disease Response (PCWG3) for Oncology | 90 | 14 |
+| [rs_onco_recist](pharmaversesdtm/rs_onco_recist.html) | Disease Response (RECIST 1.1) for Oncology | 66 | 14 |
+| [sc_ophtha](pharmaversesdtm/sc_ophtha.html) | Subject Characteristic for Ophthalmology | 254 | 12 |
+| [sdg_db](pharmaversesdtm/sdg_db.html) | SDG | 16 | 5 |
+| [smq_db](pharmaversesdtm/smq_db.html) | Standardized MedDRA Queries | 44 | 6 |
+| [suppae](pharmaversesdtm/suppae.html) | Supplemental Adverse Events | 1,191 | 10 |
+| [suppce_vaccine](pharmaversesdtm/suppce_vaccine.html) | Supplemental Qualifiers for Clinical Events for Vaccine | 4 | 9 |
+| [suppdm](pharmaversesdtm/suppdm.html) | Supplemental Demography | 1,197 | 10 |
+| [suppdm_vaccine](pharmaversesdtm/suppdm_vaccine.html) | Supplemental Qualifiers for Demographics for Vaccine | 2 | 9 |
+| [suppds](pharmaversesdtm/suppds.html) | Supplemental Disposition | 3 | 9 |
+| [suppex_vaccine](pharmaversesdtm/suppex_vaccine.html) | Supplemental Qualifiers for Exposures for Vaccine | 4 | 9 |
+| [suppface_vaccine](pharmaversesdtm/suppface_vaccine.html) | Supplemental Qualifiers for Findings About for Clinical Events for Vaccine | 4 | 9 |
+| [suppis_vaccine](pharmaversesdtm/suppis_vaccine.html) | Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine | 16 | 10 |
+| [suppnv_neuro](pharmaversesdtm/suppnv_neuro.html) | Supplemental for Neurological Assessment Dataset-neuro | 68 | 10 |
+| [supprs_onco_ca125](pharmaversesdtm/supprs_onco_ca125.html) | Supplemental Qualifiers for RS_ONCO_CA125 | 49 | 9 |
+| [supprs_onco_imwg](pharmaversesdtm/supprs_onco_imwg.html) | Supplemental Qualifiers for RS_ONCO_IMWG | 19 | 9 |
+| [supptr_onco](pharmaversesdtm/supptr_onco.html) | Supplemental Tumor Results for Oncology | 55,995 | 9 |
+| [sv](pharmaversesdtm/sv.html) | Subject Visits | 3,559 | 8 |
+| [tr_onco](pharmaversesdtm/tr_onco.html) | Tumor Results for Oncology | 55,995 | 24 |
+| [tr_onco_recist](pharmaversesdtm/tr_onco_recist.html) | Tumor Results (RECIST 1.1) for Oncology | 546 | 19 |
+| [ts](pharmaversesdtm/ts.html) | Trial Design | 33 | 6 |
+| [tu_onco](pharmaversesdtm/tu_onco.html) | Tumor Identification for Oncology | 7,734 | 18 |
+| [tu_onco_recist](pharmaversesdtm/tu_onco_recist.html) | Tumor Identification (RECIST 1.1) for Oncology | 75 | 16 |
+| [vs](pharmaversesdtm/vs.html) | Vital Signs | 29,643 | 24 |
+| [vs_metabolic](pharmaversesdtm/vs_metabolic.html) | Vital signs Dataset-metabolic | 719 | 24 |
+| [vs_peds](pharmaversesdtm/vs_peds.html) | Vital signs Dataset-pediatrics | 164 | 26 |
+| [vs_vaccine](pharmaversesdtm/vs_vaccine.html) | Vital Signs for Vaccine | 28 | 23 |
+
+## ADaM (CDISC pilot)
+
+12 datasets from [the CDISC SDTM/ADaM Pilot Project](https://github.com/phuse-org/phuse-scripts/tree/master/data/adam).
+
+| Dataset | Label | Rows | Columns |
+|:--|:--|--:|--:|
+| [adadas](cdiscpilotadam/adadas.html) | ADAS-Cog Analysis | 12,463 | 40 |
+| [adae](cdiscpilotadam/adae.html) | Adverse Events Analysis Dataset | 1,191 | 55 |
+| [adcibc](cdiscpilotadam/adcibc.html) | CIBIC+ Analysis | 730 | 36 |
+| [adlbc](cdiscpilotadam/adlbc.html) | Analysis Dataset Lab Blood Chemistry | 37,132 | 46 |
+| [adlbcpv](cdiscpilotadam/adlbcpv.html) | Analysis Dataset Lab Blood Chemistry (Previous Visit) | 37,132 | 46 |
+| [adlbh](cdiscpilotadam/adlbh.html) | Analysis Dataset Lab Hematology | 24,966 | 46 |
+| [adlbhpv](cdiscpilotadam/adlbhpv.html) | Analysis Dataset Lab Hematology (Previous Visit) | 24,966 | 46 |
+| [adlbhy](cdiscpilotadam/adlbhy.html) | Analysis Dataset Lab Hy's Law | 9,954 | 43 |
+| [adnpix](cdiscpilotadam/adnpix.html) | NPI-X Item Analysis Data | 31,140 | 41 |
+| [adsl](cdiscpilotadam/adsl.html) | Subject-Level Analysis | 254 | 49 |
+| [adtte](cdiscpilotadam/adtte.html) | AE Time To 1st Derm. Event Analysis | 254 | 26 |
+| [advs](cdiscpilotadam/advs.html) | Vital Signs Analysis Dataset | 32,139 | 35 |
+
+## SDTM (CDISC pilot)
+
+31 datasets from [the CDISC SDTM/ADaM Pilot Project](https://github.com/phuse-org/phuse-scripts/tree/master/data/sdtm).
+
+| Dataset | Label | Rows | Columns |
+|:--|:--|--:|--:|
+| [ae](cdiscpilotsdtm/ae.html) | Adverse Events | 961 | 37 |
+| [cm](cdiscpilotsdtm/cm.html) | Concomitant Medications | 7,510 | 23 |
+| [dm](cdiscpilotsdtm/dm.html) | Demographics | 306 | 25 |
+| [ds](cdiscpilotsdtm/ds.html) | Disposition | 596 | 15 |
+| [ex](cdiscpilotsdtm/ex.html) | Exposure | 591 | 18 |
+| [lbch](cdiscpilotsdtm/lbch.html) | Laboratory Tests Results | 32,740 | 24 |
+| [lbhe](cdiscpilotsdtm/lbhe.html) | Laboratory Tests Results | 21,927 | 24 |
+| [lbur](cdiscpilotsdtm/lbur.html) | Laboratory Tests Results | 4,913 | 24 |
+| [mh](cdiscpilotsdtm/mh.html) | Medical History | 1,817 | 19 |
+| [qsco](cdiscpilotsdtm/qsco.html) | Questionnaires | 12,241 | 23 |
+| [qsda](cdiscpilotsdtm/qsda.html) | Questionnaires | 32,920 | 23 |
+| [qsgi](cdiscpilotsdtm/qsgi.html) | Questionnaires | 562 | 23 |
+| [qshi](cdiscpilotsdtm/qshi.html) | Questionnaires | 3,302 | 23 |
+| [qsmm](cdiscpilotsdtm/qsmm.html) | Questionnaires | 1,524 | 23 |
+| [qsni](cdiscpilotsdtm/qsni.html) | Questionnaires | 71,200 | 23 |
+| [relrec](cdiscpilotsdtm/relrec.html) | Related Records | 211 | 7 |
+| [sc](cdiscpilotsdtm/sc.html) | Subject Characteristics | 254 | 14 |
+| [se](cdiscpilotsdtm/se.html) | Subject Elements | 752 | 12 |
+| [suppae](cdiscpilotsdtm/suppae.html) | Supplemental Qualifiers for AE | 961 | 10 |
+| [suppdm](cdiscpilotsdtm/suppdm.html) | Supplemental Qualifiers for DM | 1,197 | 10 |
+| [suppds](cdiscpilotsdtm/suppds.html) | Supplemental Qualifiers for DS | 3 | 10 |
+| [supplbch](cdiscpilotsdtm/supplbch.html) | Supplemental Qualifiers for LB | 37,124 | 10 |
+| [supplbhe](cdiscpilotsdtm/supplbhe.html) | Supplemental Qualifiers for LB | 24,558 | 10 |
+| [supplbur](cdiscpilotsdtm/supplbur.html) | Supplemental Qualifiers for LB | 2,721 | 10 |
+| [sv](cdiscpilotsdtm/sv.html) | Subject Visits | 3,559 | 12 |
+| [ta](cdiscpilotsdtm/ta.html) | Trial Arms | 11 | 10 |
+| [te](cdiscpilotsdtm/te.html) | Trial Elements | 7 | 7 |
+| [ti](cdiscpilotsdtm/ti.html) | Trial Inclusion/ Exclusion Criteria | 31 | 5 |
+| [ts](cdiscpilotsdtm/ts.html) | Trial Summary | 48 | 10 |
+| [tv](cdiscpilotsdtm/tv.html) | Trial Visits | 21 | 8 |
+| [vs](cdiscpilotsdtm/vs.html) | Vital Signs | 29,643 | 25 |

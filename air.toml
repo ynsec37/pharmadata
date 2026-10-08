@@ -1,0 +1,6 @@
+# air's defaults, pinned so editor, CLI and any later CI step agree. The R side keeps
+# tidyverse's 80 columns; the Python side is 88, set in pyproject.toml.
+[format]
+line-width = 80
+indent-width = 2
+assignment-style = "arrow"

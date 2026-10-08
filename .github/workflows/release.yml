@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build distribution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --all-groups
+      # Run the full test suite before publishing: tags are not gated by the
+      # CI workflow, so a broken commit could otherwise ship to PyPI.
+      - run: uv run pytest
+      - run: uv build
+      # The publish jobs only download artifacts; they must not rebuild.
+      - uses: actions/upload-artifact@v7
+        with:
+          name: python-package-distributions
+          path: dist/
+
+  publish-to-testpypi:
+    name: Publish to TestPyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/pharmadata
+    permissions:
+      # OIDC token for Trusted Publishing; no PyPI token lives in the repo.
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: python-package-distributions
+          path: dist/
+      # pypa/gh-action-pypi-publish generates and uploads PEP 740 (Sigstore)
+      # attestations by default, so no manual signing step is needed.
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  publish-to-pypi:
+    name: Publish to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    # The pypi environment is configured with required reviewers, so every
+    # release waits for manual approval before publishing.
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pharmadata
+    permissions:
+      # OIDC token for Trusted Publishing; no PyPI token lives in the repo.
+      id-token: write
+      # softprops/action-gh-release creates the GitHub Release entry.
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/download-artifact@v8
+        with:
+          name: python-package-distributions
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true

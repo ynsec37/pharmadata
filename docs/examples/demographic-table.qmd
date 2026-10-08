@@ -1,0 +1,216 @@
+---
+format: html
+jupyter: python3
+execute:
+  echo: true
+  error: false
+  warning: true
+  freeze: auto
+title: "Demographic table"
+description: "Summarise age, sex and race by treatment arm in polars"
+nav: "Demographic table"
+order: 2
+---
+
+The subject demographics table every ADaM deliverable carries: age and its groups, sex
+and race, summarised by treatment arm, built from `pharmadata.pharmaverseadam.adsl` in
+polars. It copies the target table of the
+[R demographic table example](https://pharmaverse.github.io/examples/tlg/demographic.html),
+which does the same with {cards} and {gtsummary}.
+
+The blocks run as the page is rendered, and the table is printed by the code rather than
+written into the page.
+
+```{python}
+import polars as pl
+
+from pharmadata import pharmaverseadam as adam
+```
+
+## The population
+
+The analysis population is the 254 subjects who were randomised and treated; screen
+failures stay out of the table. The two recodes are display spellings only.
+
+```{python}
+ARMS = ["Placebo", "Xanomeline High Dose", "Xanomeline Low Dose"]
+
+adsl = adam.adsl.filter(pl.col("ACTARM") != "Screen Failure").with_columns(
+    pl.col("SEX").replace_strict({"M": "MALE", "F": "FEMALE"}),
+    pl.when(pl.col("AGE").is_between(18, 40))
+    .then(pl.lit("18-40"))
+    .when(pl.col("AGE").is_between(41, 64))
+    .then(pl.lit("41-64"))
+    .when(pl.col("AGE") > 64)
+    .then(pl.lit(">=65"))
+    .alias("AGEGR1"),
+)
+```
+
+## Statistics as rows
+
+A long frame worn as a wide one: one row per statistic, per arm. Two functions produce
+those rows, one for a numeric variable and one for a categorical, and a third names a
+block.
+
+```{python}
+def group(label: str) -> pl.DataFrame:
+    """The bold row that opens a block of characteristics."""
+    return pl.DataFrame({"ACTARM": [""], "label": [f"**{label}**"], "value": [""]})
+
+
+def one_decimal(column: str) -> pl.Expr:
+    return pl.col(column).round(1).cast(pl.String)
+
+
+def summarise(df: pl.DataFrame, variable: str) -> pl.DataFrame:
+    """N, Mean (SD), Median (Q1, Q3) and Min, Max of one numeric variable, by arm."""
+    return (
+        df.group_by("ACTARM", maintain_order=True)
+        .agg(
+            pl.col(variable).count().alias("N"),
+            pl.col(variable).mean().alias("mean"),
+            pl.col(variable).std().alias("sd"),
+            pl.col(variable).median().alias("median"),
+            pl.col(variable).quantile(0.25, interpolation="linear").alias("q1"),
+            pl.col(variable).quantile(0.75, interpolation="linear").alias("q3"),
+            pl.col(variable).min().alias("low"),
+            pl.col(variable).max().alias("high"),
+        )
+        .select(
+            "ACTARM",
+            pl.col("N").cast(pl.String),
+            pl.concat_str(
+                [one_decimal("mean"), pl.lit(" ("), one_decimal("sd"), pl.lit(")")]
+            ).alias("Mean (SD)"),
+            pl.concat_str(
+                [
+                    one_decimal("median"),
+                    pl.lit(" ("),
+                    one_decimal("q1"),
+                    pl.lit(", "),
+                    one_decimal("q3"),
+                    pl.lit(")"),
+                ]
+            ).alias("Median (Q1, Q3)"),
+            pl.concat_str(
+                [one_decimal("low"), pl.lit(", "), one_decimal("high")]
+            ).alias("Min, Max"),
+        )
+        .unpivot(index="ACTARM", variable_name="label", value_name="value")
+    )
+```
+
+The `unpivot` turns the four formatted statistics into four rows. A name given with
+`alias()` becomes the row's label, so the display strings are built before it.
+
+```{python}
+def counts(df: pl.DataFrame, variable: str, levels: list[str]) -> pl.DataFrame:
+    """n (%) at each level of one categorical variable, by arm."""
+    return (
+        pl.DataFrame({"ACTARM": ARMS})
+        .join(pl.DataFrame({variable: levels}), how="cross")
+        .join(
+            df.group_by("ACTARM", variable).len(name="n"),
+            on=["ACTARM", variable],
+            how="left",
+        )
+        .with_columns(pl.col("n").fill_null(0))
+        .join(df.group_by("ACTARM").len(name="N"), on="ACTARM")
+        .select(
+            "ACTARM",
+            pl.col(variable).alias("label"),
+            pl.concat_str(
+                [
+                    pl.col("n").cast(pl.String),
+                    pl.lit(" ("),
+                    (100 * pl.col("n") / pl.col("N")).round(1).cast(pl.String),
+                    pl.lit("%)"),
+                ]
+            ).alias("value"),
+        )
+    )
+```
+
+The cross join is the point of that first line. No subject is between 18 and 40, so a
+`group_by` would drop the level silently; the levels are part of the specification, so
+they are listed and counts are joined onto them.
+
+## Assemble, then pivot
+
+```{python}
+long = pl.concat(
+    [
+        group("Age (yr)"),
+        summarise(adsl, "AGE"),
+        group("Age group"),
+        counts(adsl, "AGEGR1", ["18-40", "41-64", ">=65"]),
+        group("Sex"),
+        counts(adsl, "SEX", ["FEMALE", "MALE"]),
+        group("Race"),
+        counts(
+            adsl,
+            "RACE",
+            ["AMERICAN INDIAN OR ALASKA NATIVE", "BLACK OR AFRICAN AMERICAN", "WHITE"],
+        ),
+    ]
+)
+```
+
+`pivot()` puts an arm in each column. It does not promise a row order, so the order of
+first appearance is captured before the pivot and joined back after it.
+
+```{python}
+order = (
+    long.get_column("label")
+    .unique(maintain_order=True)
+    .to_frame()
+    .with_columns(pl.int_range(pl.len()).alias("ord"))
+)
+
+tlf = (
+    long.pivot(index="label", on="ACTARM", values="value")
+    .join(order, on="label")
+    .sort("ord")
+    .drop("ord")
+    .rename({"label": "Characteristic"})
+    .select("Characteristic", *ARMS)
+)
+```
+
+## The table
+
+polars' `_repr_html_` escapes the markdown in the group-row labels, so the page builds a
+markdown table by hand and hands it to Quarto with `IPython.display.Markdown`, which
+renders it as an HTML table and keeps the bold group headers intact.
+
+```{python}
+from IPython.display import Markdown, display
+
+
+def to_markdown(df: pl.DataFrame) -> str:
+    """Render a frame as a markdown table."""
+    lines = [
+        "| " + " | ".join(df.columns) + " |",
+        "| " + " | ".join(["---"] * df.width) + " |",
+    ]
+    for row in df.iter_rows():
+        cells = ["" if value is None else str(value) for value in row]
+        lines.append("| " + " | ".join(cells) + " |")
+    return "\n".join(lines)
+
+
+display(Markdown(to_markdown(tlf)))
+```
+
+## Two things the numbers depend on
+
+**A quartile is a definition, not a value.** polars' `quantile()` defaults to
+`interpolation="nearest"`, which answers with an observed age: on the high-dose arm it
+puts Q1 at 71.0. `linear` is the definition numpy, pandas and R's `quantile(type = 7)`
+share, and it interpolates, giving 70.5. The R example prints 70.0, because R's own
+default is `type = 2`, which averages the two observations instead of interpolating.
+
+**Race has three levels here, not four.** ADSL holds two screen-failure subjects
+recorded ASIAN, so this population has none. Dropping the population filter is one
+line, and the fourth level appears with it.

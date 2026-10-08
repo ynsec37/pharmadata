@@ -1,0 +1,487 @@
+---
+format: html
+jupyter: python3
+execute:
+  echo: true
+  error: false
+  warning: true
+  freeze: auto
+title: "ADSL from SDTM"
+description: "Derive a subject-level ADaM dataset (ADSL) end-to-end from SDTM in polars"
+nav: "ADSL from SDTM"
+order: 1
+---
+
+The subject-level ADaM dataset (`ADSL`), built end-to-end from SDTM in polars. It
+reproduces the derivation flow of the
+[pharmaverse ADSL example](https://pharmaverse.github.io/examples/adam/adsl.html),
+which uses `{admiral}` + `{metatools}` + `{metacore}`, minus its metadata/XPT step (that
+is about SAS transport files, not data). Where this study's shipped
+[ADaM ADSL](../datasets/pharmaverseadam/adsl.html) carries the same variable, the result is checked
+against it.
+
+The blocks run as the page is rendered, so what appears under one is what the code
+printed; a block that stops running stops the render.
+
+```{python}
+from functools import reduce
+
+import polars as pl
+
+from pharmadata import pharmaverseadam as adam, pharmaversesdtm as sdtm
+```
+
+## Load the SDTM inputs
+
+`dm`, `ds`, `ex`, `ae` and `suppdm` are the domains the derivations read from. The R
+example also loads `vs`, but no ADSL variable here uses it.
+
+```{python}
+dm = sdtm.dm
+ds = sdtm.ds
+ex = sdtm.ex
+ae = sdtm.ae
+suppdm = sdtm.suppdm
+```
+
+## DM + SUPPDM
+
+The R example starts with `metatools::combine_supp()`, which transposes `SUPPDM` so each
+`QNAM` becomes a column and each `QVAL` its value, then joins the result onto `DM`.
+`pivot()` is the polars spelling of that transpose. This study's `SUPPDM` holds only the
+six population flags (`ITT`, `SAFETY`, `EFFICACY`, `COMPLT8/16/24`), none of which appear
+in the shipped ADSL, so nothing after this step reads them; the step is kept because it is
+the first one the R guide performs.
+
+```{python}
+supp_wide = suppdm.pivot(
+    values="QVAL", index=["STUDYID", "USUBJID"], on="QNAM", aggregate_function="first"
+)
+dm_suppdm = dm.join(supp_wide, on=["STUDYID", "USUBJID"], how="left")
+```
+
+## The columns that carry straight through
+
+`build_from_derived()` pulls the `DM` columns whose SDTM name is also their ADaM name.
+Here that is every `DM` column except the three SDTM-only ones (`DOMAIN`, `ARMNRS`,
+`ACTARMUD`).
+
+```{python}
+adsl = dm.select([c for c in dm.columns if c not in ("DOMAIN", "ARMNRS", "ACTARMUD")])
+```
+
+## Grouping variables
+
+`admiral::derive_vars_cat()` applies a lookup table of conditions in order: the first
+condition that holds wins, the rest are never tested. A chain of `pl.when().then()` is
+exactly that, so one small function walks the lookup rows and stacks a `when` per row.
+
+```{python}
+def derive_vars_cat(df: pl.DataFrame, lookup: pl.DataFrame) -> pl.DataFrame:
+    """Add one column per lookup column, from the first condition that holds."""
+    rows = lookup.to_dicts()
+
+    def chain(target: str) -> pl.Expr:
+        first = pl.when(rows[0]["condition"]).then(pl.lit(rows[0][target]))
+        folded = reduce(
+            lambda acc, row: acc.when(row["condition"]).then(pl.lit(row[target])),
+            rows[1:],
+            first,
+        )
+        return folded.otherwise(pl.lit(None)).alias(target)
+
+    targets = [column for column in lookup.columns if column != "condition"]
+    return df.with_columns(*(chain(target) for target in targets))
+
+
+agegr1_lookup = pl.DataFrame(
+    {
+        "condition": [
+            pl.col("AGE").is_null(),
+            pl.col("AGE") < 18,
+            pl.col("AGE").is_between(18, 64),
+            pl.col("AGE").is_not_null(),
+        ],
+        "AGEGR1": ["Missing", "<18", "18-64", ">64"],
+        "AGEGR1N": [4, 1, 2, 3],
+    },
+    schema_overrides={"condition": pl.Object},
+)
+
+adsl = derive_vars_cat(adsl, agegr1_lookup)
+```
+
+A column of expressions is not a type Arrow can store, hence `pl.Object`: the lookup is a
+definition read by the derivation, not data it works on. `AGE` is present for all 306
+subjects and all are adults, so only the `18-64` and `>64` groups are populated.
+
+The numeric `RACEN` comes from a controlled codelist in the R example
+(`metatools::create_var_from_codelist`). The codes live in the study's terminology, which
+is not shipped with the data, so a simple 1..4 stands in here:
+
+```{python}
+race_codelist = {
+    "AMERICAN INDIAN OR ALASKA NATIVE": 1,
+    "ASIAN": 2,
+    "BLACK OR AFRICAN AMERICAN": 3,
+    "WHITE": 4,
+}
+adsl = adsl.with_columns(pl.col("RACE").replace_strict(race_codelist, default=None).alias("RACEN"))
+```
+
+## Exposure derivations
+
+Treatment start and end come from `EX`, after `EXSTDTC`/`EXENDTC` are turned into
+datetimes. Here every exposure datetime is a date with no time part, so the time is
+imputed: first moment of the day for a start, last moment for an end, with the imputation
+flag `H` (hour was the highest unit imputed). `admiral::derive_vars_dtm` would read a
+partial time from the `--T--` part of the ISO string and lower that flag accordingly; with
+date-only strings the flag is always `H`.
+
+```{python}
+ex_ext = ex.with_columns(
+    pl.col("EXSTDTC").str.to_datetime("%Y-%m-%d").alias("EXSTDTM"),
+    pl.lit("H").alias("EXSTTMF"),
+    (
+        pl.col("EXENDTC").str.to_datetime("%Y-%m-%d")
+        + pl.duration(hours=23, minutes=59, seconds=59)
+    ).alias("EXENDTM"),
+    pl.lit("H").alias("EXENTMF"),
+)
+```
+
+`derive_vars_merged()` is the polars form of `admiral::derive_vars_merged()`: filter the
+source, order it, take the first or last row per subject, rename the wanted columns and
+left-join them onto the main dataset. `order_by` plus `mode="first"` is "the earliest
+record"; `mode="last"` is "the latest". A `missing_values` mapping fills only the subjects
+whose join found no row - a cell that is null because the source held null stays null.
+
+```{python}
+def derive_vars_merged(
+    dataset: pl.DataFrame,
+    dataset_add: pl.DataFrame,
+    by_vars: list[str],
+    new_vars: dict[str, str],
+    filter_add: pl.Expr | None = None,
+    order_by: list[str] | None = None,
+    mode: str = "first",
+    missing_values: dict[str, str] | None = None,
+) -> pl.DataFrame:
+    add = dataset_add.filter(filter_add) if filter_add is not None else dataset_add
+    if order_by is not None:
+        add = add.sort(order_by)
+    agg = pl.all().first() if mode == "first" else pl.all().last()
+    add = add.group_by(by_vars).agg(agg)
+    keep = by_vars + list(new_vars.values())
+    add = add.select(keep).rename({src: tgt for tgt, src in new_vars.items()})
+    add = add.with_columns(pl.lit(True).alias("__matched__"))
+    out = dataset.join(add, on=by_vars, how="left")
+    for target, fill in (missing_values or {}).items():
+        out = out.with_columns(
+            pl.when(pl.col("__matched__").is_null())
+            .then(pl.lit(fill))
+            .otherwise(pl.col(target))
+            .alias(target)
+        )
+    return out.drop("__matched__")
+```
+
+Only dosing records count: a positive dose, or a zero dose of placebo. `TRTSDTM` is the
+first such record, `TRTEDTM` the last. From the two datetimes come the dates, the start
+time and the treatment duration (`TRTDURD = TRTEDT - TRTSDT + 1`). `SAFFL` is `Y` for a
+subject with any dosing record and `N` otherwise - `derive_var_merged_exist_flag()` in the
+R example, a left join of the safety subjects here.
+
+```{python}
+dose_ok = (pl.col("EXDOSE") > 0) | (
+    (pl.col("EXDOSE") == 0) & pl.col("EXTRT").str.contains("PLACEBO")
+)
+
+adsl = derive_vars_merged(
+    adsl,
+    ex_ext,
+    ["STUDYID", "USUBJID"],
+    {"TRTSDTM": "EXSTDTM", "TRTSTMF": "EXSTTMF"},
+    filter_add=dose_ok & pl.col("EXSTDTM").is_not_null(),
+    order_by=["EXSTDTM", "EXSEQ"],
+    mode="first",
+)
+adsl = derive_vars_merged(
+    adsl,
+    ex_ext,
+    ["STUDYID", "USUBJID"],
+    {"TRTEDTM": "EXENDTM", "TRTETMF": "EXENTMF"},
+    filter_add=dose_ok & pl.col("EXENDTM").is_not_null(),
+    order_by=["EXENDTM", "EXSEQ"],
+    mode="last",
+)
+```
+
+```{python}
+adsl = adsl.with_columns(
+    pl.col("TRTSDTM").dt.date().alias("TRTSDT"),
+    pl.col("TRTEDTM").dt.date().alias("TRTEDT"),
+    pl.col("TRTSDTM").dt.time().alias("TRTSTM"),
+)
+adsl = adsl.with_columns(
+    ((pl.col("TRTEDT") - pl.col("TRTSDT")).dt.total_days() + 1)
+    .cast(pl.Float64)
+    .alias("TRTDURD"),
+)
+
+safety_ids = (
+    ex.filter(dose_ok)
+    .select(["STUDYID", "USUBJID"])
+    .unique()
+    .with_columns(pl.lit("Y").alias("SAFFL"))
+)
+adsl = adsl.join(safety_ids, on=["STUDYID", "USUBJID"], how="left").with_columns(
+    pl.col("SAFFL").fill_null("N")
+)
+```
+
+## Treatment variables
+
+The example's mapping for a study without periods: subjects in `Screen Failure`,
+`Not Assigned` or `Not Treated` get `No Treatment`, everyone else keeps their arm. The
+numeric versions are a codelist again.
+
+```{python}
+def no_treatment(col: str) -> pl.Expr:
+    return (
+        (pl.col(col) == "Screen Failure")
+        | (pl.col(col) == "Not Assigned")
+        | (pl.col(col) == "Not Treated")
+    )
+
+
+adsl = adsl.with_columns(
+    pl.when(no_treatment("ARM")).then(pl.lit("No Treatment")).otherwise(pl.col("ARM")).alias("TRT01P"),
+    pl.when(no_treatment("ACTARM")).then(pl.lit("No Treatment")).otherwise(pl.col("ACTARM")).alias("TRT01A"),
+)
+
+trt_codelist = {
+    "No Treatment": 0,
+    "Placebo": 1,
+    "Xanomeline High Dose": 2,
+    "Xanomeline Low Dose": 3,
+}
+adsl = adsl.with_columns(
+    pl.col("TRT01P").replace_strict(trt_codelist, default=None).alias("TRT01PN"),
+    pl.col("TRT01A").replace_strict(trt_codelist, default=None).alias("TRT01AN"),
+)
+```
+
+## Disposition variables
+
+`DSSTDTC` becomes a date once, and the resulting `DSSTDT` is what every disposition date
+is picked out of: `EOSDT` from the end-of-study disposition, `RANDDT` from the
+randomization milestone, `SCRFDT` from the screen-failure event, `FRVDT` from the final
+retrieval visit.
+
+```{python}
+ds_ext = ds.with_columns(pl.col("DSSTDTC").str.to_date("%Y-%m-%d").alias("DSSTDT"))
+
+adsl = derive_vars_merged(
+    adsl,
+    ds_ext,
+    ["STUDYID", "USUBJID"],
+    {"EOSDT": "DSSTDT"},
+    filter_add=(pl.col("DSCAT") == "DISPOSITION EVENT") & (pl.col("DSDECOD") != "SCREEN FAILURE"),
+)
+```
+
+`EOSSTT` maps `DSDECOD` to `COMPLETED`/`DISCONTINUED`, with `SCREEN FAILURE` mapped to
+null. The `missing_values` "ONGOING" fills only a subject with no disposition event at
+all - not the screen failures, whose null is a derived value.
+
+```{python}
+ds_eosstt = ds.with_columns(
+    pl.when(pl.col("DSDECOD") == "COMPLETED")
+    .then(pl.lit("COMPLETED"))
+    .when(pl.col("DSDECOD") == "SCREEN FAILURE")
+    .then(pl.lit(None))
+    .otherwise(pl.lit("DISCONTINUED"))
+    .alias("EOSSTT_src")
+)
+adsl = derive_vars_merged(
+    adsl,
+    ds_eosstt,
+    ["STUDYID", "USUBJID"],
+    {"EOSSTT": "EOSSTT_src"},
+    filter_add=pl.col("DSCAT") == "DISPOSITION EVENT",
+    missing_values={"EOSSTT": "ONGOING"},
+)
+```
+
+`DTHDT` is `DTHDTC` as a date; every death date in this study is complete, so the
+`highest_imputation="M"` the R example sets (impute missing month/day to the first) never
+fires here. The relative day of death counts from first dose (`+ 1`); days from last dose
+to death do not.
+
+```{python}
+adsl = adsl.with_columns(pl.col("DTHDTC").str.to_date("%Y-%m-%d").alias("DTHDT"))
+
+adsl = derive_vars_merged(
+    adsl,
+    ds_ext,
+    ["STUDYID", "USUBJID"],
+    {"RANDDT": "DSSTDT"},
+    filter_add=pl.col("DSDECOD") == "RANDOMIZED",
+)
+adsl = derive_vars_merged(
+    adsl,
+    ds_ext,
+    ["STUDYID", "USUBJID"],
+    {"SCRFDT": "DSSTDT"},
+    filter_add=(pl.col("DSCAT") == "DISPOSITION EVENT") & (pl.col("DSDECOD") == "SCREEN FAILURE"),
+)
+adsl = derive_vars_merged(
+    adsl,
+    ds_ext,
+    ["STUDYID", "USUBJID"],
+    {"FRVDT": "DSSTDT"},
+    filter_add=(pl.col("DSCAT") == "OTHER EVENT") & (pl.col("DSDECOD") == "FINAL RETRIEVAL VISIT"),
+)
+
+adsl = adsl.with_columns(
+    ((pl.col("DTHDT") - pl.col("TRTSDT")).dt.total_days() + 1).cast(pl.Float64).alias("DTHADY"),
+    (pl.col("DTHDT") - pl.col("TRTEDT")).dt.total_days().cast(pl.Float64).alias("LDDTHELD"),
+    pl.when(pl.col("RANDDT").is_not_null()).then(pl.lit("Y")).otherwise(pl.lit(None)).alias("RANDFL"),
+)
+```
+
+## Cause of death
+
+`DTHCAUS` comes from whichever domain collected it, with `DTHDOM` recording that domain.
+`admiral::derive_vars_extreme_event()` stacks the candidate events and takes the first;
+the polars equivalent is a `concat` of the two event frames ordered by an event number,
+then one row per subject. A fatal AE contributes its `AEDECOD`; a `DS` death whose term
+starts "DEATH DUE TO" would contribute `DSTERM` - in this study every `DS` death term is
+just "DEATH", so the cause always comes from `AE`.
+
+```{python}
+ae_event = ae.filter(pl.col("AEOUT") == "FATAL").select(
+    "STUDYID", "USUBJID",
+    pl.col("AEDECOD").alias("DTHCAUS"),
+    pl.lit("AE").alias("DTHDOM"),
+    pl.lit(1).alias("event_nr"),
+)
+ds_event = ds.filter(
+    (pl.col("DSDECOD") == "DEATH") & pl.col("DSTERM").str.contains("DEATH DUE TO")
+).select(
+    "STUDYID", "USUBJID",
+    pl.col("DSTERM").alias("DTHCAUS"),
+    pl.lit("DS").alias("DTHDOM"),
+    pl.lit(2).alias("event_nr"),
+)
+events = (
+    pl.concat([ae_event, ds_event])
+    .sort("event_nr")
+    .unique(subset=["STUDYID", "USUBJID"], keep="first")
+)
+adsl = adsl.join(events.drop("event_nr"), on=["STUDYID", "USUBJID"], how="left")
+```
+
+## Other grouping variables
+
+The same `derive_vars_cat()` makes the remaining groups: region, race and the cause-of-
+death category. The lookups are the R example's, conditions and values alike.
+
+```{python}
+region1_lookup = pl.DataFrame(
+    {
+        "condition": [
+            (pl.col("COUNTRY") == "CAN") | (pl.col("COUNTRY") == "USA"),
+            pl.col("COUNTRY").is_not_null(),
+            pl.col("COUNTRY").is_null(),
+        ],
+        "REGION1": ["North America", "Rest of the World", "Missing"],
+        "REGION1N": [1, 2, 3],
+    },
+    schema_overrides={"condition": pl.Object},
+)
+racegr1_lookup = pl.DataFrame(
+    {
+        "condition": [
+            pl.col("RACE") == "WHITE",
+            pl.col("RACE") != "WHITE",
+            pl.col("RACE").is_null(),
+        ],
+        "RACEGR1": ["White", "Non-white", "Missing"],
+        "RACEGR1N": [1, 2, 3],
+    },
+    schema_overrides={"condition": pl.Object},
+)
+dthcgr1_lookup = pl.DataFrame(
+    {
+        "condition": [
+            pl.col("DTHDOM") == "AE",
+            pl.col("DTHDOM").is_not_null() & pl.col("DTHCAUS").str.contains("PROGRESSIVE DISEASE|DISEASE RELAPSE"),
+            pl.col("DTHDOM").is_not_null() & pl.col("DTHCAUS").is_not_null(),
+            pl.col("DTHDOM").is_null(),
+        ],
+        "DTHCGR1": ["ADVERSE EVENT", "PROGRESSIVE DISEASE", "OTHER", None],
+        "DTHCGR1N": [1, 2, 3, None],
+    },
+    schema_overrides={"condition": pl.Object},
+)
+adsl = derive_vars_cat(adsl, region1_lookup)
+adsl = derive_vars_cat(adsl, racegr1_lookup)
+adsl = derive_vars_cat(adsl, dthcgr1_lookup)
+```
+
+## Check it against the shipped ADSL
+
+The package ships both ends of the derivation, so the result is checked against the
+study's own ADSL with `datacompy`. Every derived variable that the shipped ADSL carries
+with the same encoding is compared; the report lists any mismatches per column.
+
+```{python}
+import datacompy
+
+shipped = adam.adsl
+
+compare = [
+    "AGEGR1", "RACEGR1", "DTHCGR1", "DTHDOM", "DTHCAUS", "EOSSTT", "EOSDT",
+    "RANDDT", "SCRFDT", "FRVDT", "DTHDT", "DTHADY", "LDDTHELD", "TRTSDT",
+    "TRTEDT", "TRTDURD", "SAFFL",
+]
+
+cmp = datacompy.PolarsCompare(
+    df1=adsl.select(["USUBJID", *compare]),
+    df2=shipped.select(["USUBJID", *compare]),
+    join_columns="USUBJID",
+    df1_name="derived",
+    df2_name="shipped",
+)
+
+mismatch_df = cmp.all_mismatch()
+mismatches = {
+    col: mismatch_df.filter(
+        pl.col(f"{col.lower()}_derived") != pl.col(f"{col.lower()}_shipped")
+    ).height
+    for col in compare
+}
+
+print(cmp.report())
+```
+
+Two derived variables are deliberately absent from that list because this study's ADSL
+encodes them differently:
+
+- **`TRT01P`/`TRT01A`.** The example's generic mapping turns screen failures into
+  `No Treatment`; the shipped ADSL keeps `Screen Failure`. Every other arm matches.
+- **`REGION1`.** The example derives `North America`; the shipped ADSL abbreviates it to
+  `NA`.
+
+The numeric companions (`AGEGR1N`, `RACEN`, `TRT01PN`, `TRT01AN`, `REGION1N`, `RACEGR1N`,
+`DTHCGR1N`) and `TRTSTM`, `RANDFL` have no counterpart among the shipped ADSL's 55
+variables, so nothing can be checked for them.
+
+The derived dataset itself, for reference:
+
+```{python}
+print(adsl.shape)
+print(adsl.select(["USUBJID", "TRTSDT", "TRTEDT", "TRTDURD", "SAFFL", "EOSSTT", "DTHCAUS", "DTHCGR1"]).head(5))
+```

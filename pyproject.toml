@@ -1,0 +1,205 @@
+[build-system]
+requires = ["uv_build>=0.8.3,<0.13.0"]
+build-backend = "uv_build"
+
+[project]
+name = "pharmadata"
+version = "0.1.0"
+description = "CDISC SDTM and ADaM test datasets in Python for clinical programming"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+dependencies = [
+    "pyarrow>=15",
+    "polars>=1.31",
+    "tzdata>=2024.1", # IANA tz db for zoneinfo on platforms without system tzdata
+]
+keywords = [
+    "cdisc",
+    "adam",
+    "sdtm",
+    "clinical-trials",
+    "test-data",
+    "pyarrow",
+    "polars"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+pandas = [
+    "pandas>=3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=6",
+    "ruff>=0.16",
+    "mypy>=2.3",
+    "pandas-stubs",
+    "pre-commit>=4",
+    "pandas>=3.0",
+    "pyarrow>=15", # tests read the embedded Arrow field metadata
+    "pyrefly>=1.3.2",
+    "typos>=1.50.3",
+]
+docs = [
+    "great-docs[marimo]>=0.17.0",
+    "ipykernel>=6", # Quarto's jupyter engine
+    "nbclient>=0.10", # jupyter.py driver
+    "nbformat>=5", # the .ipynb schema
+    "datacompy>=1.1.0",
+    "ipython>=8",
+    "pointblank>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ynsec37/pharmadata"
+Repository = "https://github.com/ynsec37/pharmadata"
+Documentation = "https://ynsec37.github.io/pharmadata/"
+Issues = "https://github.com/ynsec37/pharmadata/issues"
+Changelog = "https://github.com/ynsec37/pharmadata/blob/main/docs/changelog.md"
+
+[tool.uv.build-backend]
+module-root = "src"
+module-name = "pharmadata"
+source-include = ["conftest.py", "tests/*.py"]
+
+[tool.uv.sources]
+great-docs = { git = "https://github.com/posit-dev/great-docs", rev = "main" }
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["src", "tests", "data-raw"]
+extend-exclude = ["docs", "notebooks"]
+
+[tool.ruff.lint]
+select = [
+  "ANN", # flake8-annotations
+  "ARG", # flake8-unused-arguments
+  "B", # flake8-bugbear
+  "C4", # flake8-comprehensions
+  "D", # flake8-docstrings
+  "D417", # undocumented-param
+  "E", # pycodestyle
+  "EM", # flake8-errmsg
+  "F", # pyflakes
+  "FA", # flake8-future-annotations
+  "FBT001", # flake8-boolean-trap
+  "I", # isort
+  "ICN", # flake8-import-conventions
+  "INT", # flake8-gettext
+  "PERF", # perflint
+  "PIE", # flake8-pie
+  "PT", # flake8-pytest-style
+  "PTH", # flake8-use-pathlib
+  "PYI", # flake8-pyi
+  "RUF", # ruff-specific rules
+  "SIM", # flake8-simplify
+  "TC", # flake8-type-checking
+  "TD", # flake8-todos
+  "TID", # flake8-tidy-imports
+  "TRY", # tryceratops
+  "UP", # pyupgrade
+  "W", # pycodestyle
+]
+ignore = [
+  "E501", # line length is the formatter's job
+  "D401", # noun-phrase summaries
+]
+
+[tool.ruff.lint.flake8-pytest-style]
+parametrize-names-type = "csv"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ARG001"]
+# The pyarrow shim types genuinely dynamic parameters as `Any`.
+"stubs/**" = ["ANN401"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.isort]
+known-first-party = ["pharmadata", "tests"]
+
+[tool.mypy]
+files = ["src/pharmadata", "data-raw"]
+mypy_path = "src,stubs"
+warn_unused_configs = true
+sqlite_cache = false # Windows Py3.14 crashes the sqlite cache
+disallow_any_explicit = true
+
+# The local pyarrow shim legitimately types its dynamic parameters as Any.
+[[tool.mypy.overrides]]
+module = ["pyarrow", "pyarrow.*"]
+disallow_any_explicit = false
+
+[tool.typos]
+[tool.typos.files]
+# Generated __init__.pyi stubs carry CDISC/SDTM/ADaM variable names and labels
+# (e.g. CQ01NAM, FATEST, WORS01FL) that typos cannot distinguish from misspellings.
+extend-exclude = [
+  "docs/datasets",
+  "docs/_freeze",
+  "notebooks",
+  "src/pharmadata/_data",
+  "renv.lock",
+  "src/pharmadata/**/__init__.pyi",
+]
+
+[tool.typos.default.extend-identifiers]
+TRT01PN = "TRT01PN"
+NDAs = "NDAs"
+fnd = "fnd"
+FATEST = "FATEST"
+LOD = "LOD"
+NAM = "NAM"
+WORS = "WORS"
+EXCAT = "EXCAT"
+
+[tool.typos.default.extend-words]
+# CDISC abbreviations and variable-name prefixes carried in from source data we
+# do not own.
+FATEST = "FATEST"
+LOD = "LOD"
+NAM = "NAM"
+WORS = "WORS"
+EXCAT = "EXCAT"
+Imput = "Imput"
+
+[tool.pyrefly]
+project-includes = [
+    "src/pharmadata/**/*.py",
+    "data-raw/**/*.py",
+]
+search-path = ["src", "data-raw", "stubs"]
+python-version = "3.11"
+
+[tool.coverage.run]
+source = ["pharmadata"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.pytest.ini_options]
+testpaths = ["src", "tests"]
+addopts = "-q -p no:cacheprovider --strict-markers --doctest-modules --import-mode=importlib"
+markers = [
+    "build: a test of a data-raw/ build program, which needs a checkout",
+    "docs: a test of the site's pages and assets, which needs a checkout",
+]

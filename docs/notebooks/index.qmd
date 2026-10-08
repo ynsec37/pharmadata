@@ -1,0 +1,13 @@
+---
+title: Notebook
+description: "Interactive dataset viewer running in the browser via WebAssembly"
+---
+
+An interactive dataset viewer that runs entirely in your browser through
+WebAssembly (marimo + Pyodide) — no install, no server. Pick any of the 161
+datasets, choose the columns and the number of rows, and browse the result.
+
+The viewer installs the `pharmadata` package wheel via `micropip` and loads
+datasets through its public API — the same data the package ships.
+
+{{< marimo file="dataset_viewer.py" show-code="false" >}}

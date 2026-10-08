@@ -1,0 +1,16 @@
+from typing import Any
+
+from pyarrow import Schema, Table
+
+class FileMetaData:
+    num_rows: int
+
+class ParquetFile:
+    schema_arrow: Schema
+
+    def __init__(self, source: Any, **kwargs: Any) -> None: ...
+
+def read_table(source: Any, **kwargs: Any) -> Table: ...
+def write_table(table: Table, where: Any, **kwargs: Any) -> None: ...
+def read_metadata(where: Any) -> FileMetaData: ...
+def read_schema(where: Any, **kwargs: Any) -> Schema: ...

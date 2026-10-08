@@ -1,0 +1,98 @@
+---
+title: "Python for clinical programming"
+description: "Python open-source tools for clinical programming"
+---
+
+## Python projects for clinical programming
+
+- [pycsr](https://pycsr.org/) - Python for Clinical Study Reports and Submission
+- [csrlite](https://elong0527.github.io/csrlite/) - TLF generation for clinical study report
+- [py4csr](https://github.com/yanmingyu92/py4csr) - Python for Clinical Study Reporting
+- [pointblank](https://posit-dev.github.io/pointblank/) - SDTM and ADaM Validation
+- [Synthetic CDISC Data Generator](https://github.com/yanmingyu92/synethetic_data)
+- [CDISC Builder](https://github.com/hellomingchun/cdisc_builder) - Python package to build CDISC SDTM and ADaM datasets
+- [CDISC SDTM & ADaM Builder](https://github.com/valofils/cdisc-sdtm-adam-builder)
+- [yamaa](https://github.com/elong0527/yamaa) - YAML for CDISC mapping, derivation and data schema
+- [ClinTrialDataFlow](https://github.com/ElvisCuiHan/ClinTrialDataFlow)
+- [CDISC Rules Engine](https://github.com/cdisc-org/cdisc-rules-engine)
+- [odmlib](https://github.com/swhume/odmlib) - Python package for working with CDISC ODM
+- [cdisc-ct-downloader](https://github.com/A142763/cdisc-ct-downloader)
+- [cdisc-library-client](https://github.com/cdisc-org/cdisc-library-client) - Python client for accessing the CDISC library
+- [Forestly](https://github.com/elong0527/py-forestly)
+- [pharmaverse Python](https://pharmaverse.org/e2eclinical/python/) - pharmaverse Python packages.
+
+## Python ecosystem
+
+### Data processing
+
+- [polars](https://pola.rs)
+- [pandas](https://pandas.pydata.org)
+
+### Dataset comparison
+
+- [datacompy](https://github.com/capitalone/datacompy)
+
+### Data I/O
+
+- [pyreadstat](https://github.com/Roche/pyreadstat)
+- [pyarrow](https://arrow.apache.org/docs/python/)
+
+### Dates & times
+
+- [python-dateutil](https://dateutil.readthedocs.io)
+- [pendulum](https://pendulum.eustace.io)
+- [arrow](https://arrow.readthedocs.io)
+
+### Statistics
+
+- [numpy](https://numpy.org)
+- [scipy](https://scipy.org)
+- [statsmodels](https://www.statsmodels.org)
+- [lifelines](https://github.com/CamDavidsonPilon/lifelines) - Survival analysis in Python
+- [pingouin](https://pingouin-stats.org)
+- [lifelines](https://lifelines.readthedocs.io)
+
+### Plotting
+
+- [matplotlib](https://matplotlib.org)
+- [plotly](https://plotly.com/python/)
+- [seaborn](https://seaborn.pydata.org)
+- [altair](https://altair-viz.github.io)
+- [plotnine](https://github.com/has2k1/plotnine)
+
+### Tables & listings
+
+- [great-tables](https://github.com/posit-dev/great-tables)
+- [tableone](https://github.com/tompollard/tableone)
+- [pysummaries](https://github.com/Genentech/pysummaries)
+- [rtflite](https://github.com/pharmaverse/rtflite)
+
+### Dashboards & interactive apps
+
+- [Shiny for Python](https://shiny.posit.co/py/)
+- [Streamlit](https://streamlit.io)
+- [Marimo](https://marimo.io/)
+- [Dash](https://dash.plotly.com)
+- [Panel](https://panel.holoviz.org)
+
+### Submission & packaging
+
+- [pkglite](https://github.com/pharmaverse/py-pkglite)
+
+### Toolchain
+
+- [uv](https://docs.astral.sh/uv)
+- [ruff](https://docs.astral.sh/ruff)
+- [mypy](https://mypy-lang.org)
+- [pytest](https://docs.pytest.org)
+- [great-docs](https://posit-dev.github.io/great-docs/)
+
+## Python package development
+
+- [Python Packaging User Guide](https://packaging.python.org/en/latest)
+- [pyOpenSci Python Package Guide](https://www.pyopensci.org/python-package-guide/index.html)
+- [Python Packages](https://py-pkgs.org/)
+- [Developing High-Quality Python Libraries](https://mcginniscommawill.com/guides/python-library-development/#table-of-contents)
+- Publishing Python Packages: Test, share, and automate your projects
+
+## PharmaSUG papers

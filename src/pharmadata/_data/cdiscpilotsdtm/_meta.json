@@ -1,0 +1,3321 @@
+{
+ "ae": {
+  "label": "Adverse Events",
+  "structure": "One record per adverse event per subject",
+  "n_rows": 961,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "AESEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "AESPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "AETERM": {
+    "label": "Reported Term for the Adverse Event",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "AELLT": {
+    "label": "Lowest Level Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AELLTCD": {
+    "label": "Lowest Level Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AEDECOD": {
+    "label": "Dictionary-Derived Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "AEPTCD": {
+    "label": "Preferred Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AEHLT": {
+    "label": "High Level Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AEHLTCD": {
+    "label": "High Level Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AEHLGT": {
+    "label": "High Level Group Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AEHLGTCD": {
+    "label": "High Level Group Term Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AEBODSYS": {
+    "label": "Body System or Organ Class",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AEBDSYCD": {
+    "label": "Body System or Organ Class Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AESOC": {
+    "label": "Primary System Organ Class",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AESOCCD": {
+    "label": "Primary System Organ Class Code",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AESEV": {
+    "label": "Severity/Intensity",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "AESER": {
+    "label": "Serious Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AEACN": {
+    "label": "Action Taken with Study Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AEREL": {
+    "label": "Causality",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AEOUT": {
+    "label": "Outcome of Adverse Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AESCAN": {
+    "label": "Involves Cancer",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AESCONG": {
+    "label": "Congenital Anomaly or Birth Defect",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AESDISAB": {
+    "label": "Persist or Signif Disability/Incapacity",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AESDTH": {
+    "label": "Results in Death",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AESHOSP": {
+    "label": "Requires or Prolongs Hospitalization",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AESLIFE": {
+    "label": "Is Life Threatening",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AESOD": {
+    "label": "Occurred with Overdose",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "AEDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "AESTDTC": {
+    "label": "Start Date/Time of Adverse Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "AEENDTC": {
+    "label": "End Date/Time of Adverse Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "AEDY": {
+    "label": "Study Day of Visit/Collection/Exam",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "AESTDY": {
+    "label": "Study Day of Start of Adverse Event",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "AEENDY": {
+    "label": "Study Day of End of Adverse Event",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "cm": {
+  "label": "Concomitant Medications",
+  "structure": "One record per recorded medication occurrence or constant-dosing interval per subject",
+  "n_rows": 7510,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "CMSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "CMSPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "CMTRT": {
+    "label": "Reported Name of Drug, Med, or Therapy",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "CMDECOD": {
+    "label": "Standardized Medication Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "CMINDC": {
+    "label": "Indication",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "CMCLAS": {
+    "label": "Medication Class",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "CMDOSE": {
+    "label": "Dose per Administration",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "CMDOSU": {
+    "label": "Dose Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "CMDOSFRQ": {
+    "label": "Dosing Frequency per Interval",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "CMROUTE": {
+    "label": "Route of Administration",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "CMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "CMSTDTC": {
+    "label": "Start Date/Time of Medication",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "CMENDTC": {
+    "label": "End Date/Time of Medication",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "CMDY": {
+    "label": "Study Day of Visit/Collection/Exam",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "CMSTDY": {
+    "label": "Study Day of Start of Medication",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "CMENDY": {
+    "label": "Study Day of End of Medication",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "dm": {
+  "label": "Demographics",
+  "structure": "One record per subject",
+  "n_rows": 306,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "SUBJID": {
+    "label": "Subject Identifier for the Study",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "RFSTDTC": {
+    "label": "Subject Reference Start Date/Time",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "RFENDTC": {
+    "label": "Subject Reference End Date/Time",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "RFXSTDTC": {
+    "label": "Date/Time of First Study Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "RFXENDTC": {
+    "label": "Date/Time of Last Study Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "RFICDTC": {
+    "label": "Date/Time of Informed Consent",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "RFPENDTC": {
+    "label": "Date/Time of End of Participation",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "DTHDTC": {
+    "label": "Date/Time of Death",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "DTHFL": {
+    "label": "Subject Death Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "SITEID": {
+    "label": "Study Site Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RECORD QUALIFIER"
+   },
+   "AGE": {
+    "label": "Age",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "AGEU": {
+    "label": "Age Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "SEX": {
+    "label": "Sex",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RECORD QUALIFIER"
+   },
+   "RACE": {
+    "label": "Race",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "ETHNIC": {
+    "label": "Ethnicity",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RECORD QUALIFIER"
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "ACTARMCD": {
+    "label": "Actual Arm Code",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RECORD QUALIFIER"
+   },
+   "ACTARM": {
+    "label": "Description of Actual Arm",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "COUNTRY": {
+    "label": "Country",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RECORD QUALIFIER"
+   },
+   "DMDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "DMDY": {
+    "label": "Study Day of Collection",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "ds": {
+  "label": "Disposition",
+  "structure": "One record per disposition status or protocol milestone per subject",
+  "n_rows": 596,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DSSPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "DSTERM": {
+    "label": "Reported Term for the Disposition Event",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "DSDECOD": {
+    "label": "Standardized Disposition Term",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "DSCAT": {
+    "label": "Category for Disposition Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "DSDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "DSSTDTC": {
+    "label": "Start Date/Time of Disposition Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "DSDY": {
+    "label": "Study Day of Visit/Collection/Exam",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "DSSTDY": {
+    "label": "Study Day of Start of Disposition Event",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "ex": {
+  "label": "Exposure",
+  "structure": "One record per constant dosing interval per subject",
+  "n_rows": 591,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "EXSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "EXTRT": {
+    "label": "Name of Treatment",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "EXDOSE": {
+    "label": "Dose",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "EXDOSU": {
+    "label": "Dose Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "EXDOSFRM": {
+    "label": "Dose Form",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "EXDOSFRQ": {
+    "label": "Dosing Frequency per Interval",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "EXROUTE": {
+    "label": "Route of Administration",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EXSTDTC": {
+    "label": "Start Date/Time of Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EXENDTC": {
+    "label": "End Date/Time of Treatment",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EXSTDY": {
+    "label": "Study Day of Start of Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EXENDY": {
+    "label": "Study Day of End of Treatment",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "lbch": {
+  "label": "Laboratory Tests Results",
+  "structure": "One record per analyte per planned time point number per time point reference per visit per subject",
+  "n_rows": 32740,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBORNRLO": {
+    "label": "Reference Range Lower Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBORNRHI": {
+    "label": "Reference Range Upper Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTNRLO": {
+    "label": "Reference Range Lower Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTNRHI": {
+    "label": "Reference Range Upper Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "lbhe": {
+  "label": "Laboratory Tests Results",
+  "structure": "One record per analyte per planned time point number per time point reference per visit per subject",
+  "n_rows": 21927,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBORNRLO": {
+    "label": "Reference Range Lower Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBORNRHI": {
+    "label": "Reference Range Upper Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTNRLO": {
+    "label": "Reference Range Lower Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTNRHI": {
+    "label": "Reference Range Upper Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "lbur": {
+  "label": "Laboratory Tests Results",
+  "structure": "One record per analyte per planned time point number per time point reference per visit per subject",
+  "n_rows": 4913,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "LBSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "LBTESTCD": {
+    "label": "Lab Test or Examination Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "LBTEST": {
+    "label": "Lab Test or Examination Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "LBCAT": {
+    "label": "Category for Lab Test",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "LBORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBORNRLO": {
+    "label": "Reference Range Lower Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBORNRHI": {
+    "label": "Reference Range Upper Limit in Orig Unit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "LBSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTNRLO": {
+    "label": "Reference Range Lower Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBSTNRHI": {
+    "label": "Reference Range Upper Limit-Std Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBNRIND": {
+    "label": "Reference Range Indicator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "LBBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "LBDTC": {
+    "label": "Date/Time of Specimen Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "LBDY": {
+    "label": "Study Day of Specimen Collection",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "mh": {
+  "label": "Medical History",
+  "structure": "One record per medical history event per subject",
+  "n_rows": 1817,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "MHSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "MHSPID": {
+    "label": "Sponsor-Defined Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "MHTERM": {
+    "label": "Reported Term for the Medical History",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "MHLLT": {
+    "label": "Lowest Level Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "MHDECOD": {
+    "label": "Dictionary-Derived Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "MHHLT": {
+    "label": "High Level Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "MHHLGT": {
+    "label": "High Level Group Term",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "MHCAT": {
+    "label": "Category for Medical History",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "MHBODSYS": {
+    "label": "Body System or Organ Class",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "MHSEV": {
+    "label": "Severity/Intensity",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "MHDTC": {
+    "label": "Date/Time of History Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "MHSTDTC": {
+    "label": "Start Date/Time of Medical History Event",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "MHDY": {
+    "label": "Study Day of History Collection",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "qsco": {
+  "label": "Questionnaires",
+  "structure": "One record per questionnaire per question per time point per visit per subject",
+  "n_rows": 12241,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSTESTCD": {
+    "label": "Question Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QSTEST": {
+    "label": "Question Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QSCAT": {
+    "label": "Category of Question",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSSCAT": {
+    "label": "Subcategory for Question",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSORRES": {
+    "label": "Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESN": {
+    "label": "Numeric Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSREASND": {
+    "label": "Reason Not Performed",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSDRVFL": {
+    "label": "Derived Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "qsda": {
+  "label": "Questionnaires",
+  "structure": "One record per questionnaire per question per time point per visit per subject",
+  "n_rows": 32920,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSTESTCD": {
+    "label": "Question Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QSTEST": {
+    "label": "Question Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QSCAT": {
+    "label": "Category of Question",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSSCAT": {
+    "label": "Subcategory for Question",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSORRES": {
+    "label": "Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESN": {
+    "label": "Numeric Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSREASND": {
+    "label": "Reason Not Performed",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSDRVFL": {
+    "label": "Derived Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "qsgi": {
+  "label": "Questionnaires",
+  "structure": "One record per questionnaire per question per time point per visit per subject",
+  "n_rows": 562,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSTESTCD": {
+    "label": "Question Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QSTEST": {
+    "label": "Question Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QSCAT": {
+    "label": "Category of Question",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSSCAT": {
+    "label": "Subcategory for Question",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSORRES": {
+    "label": "Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESN": {
+    "label": "Numeric Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSREASND": {
+    "label": "Reason Not Performed",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSDRVFL": {
+    "label": "Derived Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "qshi": {
+  "label": "Questionnaires",
+  "structure": "One record per questionnaire per question per time point per visit per subject",
+  "n_rows": 3302,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSTESTCD": {
+    "label": "Question Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QSTEST": {
+    "label": "Question Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QSCAT": {
+    "label": "Category of Question",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSSCAT": {
+    "label": "Subcategory for Question",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSORRES": {
+    "label": "Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESN": {
+    "label": "Numeric Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSREASND": {
+    "label": "Reason Not Performed",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSDRVFL": {
+    "label": "Derived Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "qsmm": {
+  "label": "Questionnaires",
+  "structure": "One record per questionnaire per question per time point per visit per subject",
+  "n_rows": 1524,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSTESTCD": {
+    "label": "Question Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QSTEST": {
+    "label": "Question Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QSCAT": {
+    "label": "Category of Question",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSSCAT": {
+    "label": "Subcategory for Question",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSORRES": {
+    "label": "Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESN": {
+    "label": "Numeric Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSREASND": {
+    "label": "Reason Not Performed",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSDRVFL": {
+    "label": "Derived Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "qsni": {
+  "label": "Questionnaires",
+  "structure": "One record per questionnaire per question per time point per visit per subject",
+  "n_rows": 71200,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "QSTESTCD": {
+    "label": "Question Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QSTEST": {
+    "label": "Question Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QSCAT": {
+    "label": "Category of Question",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSSCAT": {
+    "label": "Subcategory for Question",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "QSORRES": {
+    "label": "Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTRESC": {
+    "label": "Result or Finding in Standard Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESN": {
+    "label": "Numeric Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "QSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "QSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSREASND": {
+    "label": "Reason Not Performed",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "QSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "QSDRVFL": {
+    "label": "Derived Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDTC": {
+    "label": "Date/Time of Finding",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "QSDY": {
+    "label": "Study Day of Finding",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "relrec": {
+  "label": "Related Records",
+  "structure": "One record per related record, group of records or datasets",
+  "n_rows": 211,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "RELTYPE": {
+    "label": "Relationship Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "RELID": {
+    "label": "Relationship Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   }
+  }
+ },
+ "sc": {
+  "label": "Subject Characteristics",
+  "structure": "One record per characteristic per subject",
+  "n_rows": 254,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "SCSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "SCTESTCD": {
+    "label": "Subject Characteristic Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "SCTEST": {
+    "label": "Subject Characteristic",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "SCCAT": {
+    "label": "Category for Subject Characteristic",
+    "type": "String",
+    "mandatory": "No",
+    "role": "GROUPING QUALIFIER"
+   },
+   "SCORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "SCORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "SCSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "SCSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "SCSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "SCDTC": {
+    "label": "Date/Time of Collection",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SCDY": {
+    "label": "Study Day of Examination",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "se": {
+  "label": "Subject Elements",
+  "structure": "One record per actual Element per subject",
+  "n_rows": 752,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "SESEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "ETCD": {
+    "label": "Element Code",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "ELEMENT": {
+    "label": "Description of Element",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "SEUPDES": {
+    "label": "Description of Unplanned Element",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SESTDTC": {
+    "label": "Start Date/Time of Element",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TIMING"
+   },
+   "SEENDTC": {
+    "label": "End Date/Time of Element",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SESTDY": {
+    "label": "Study Day of Start of Observation",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SEENDY": {
+    "label": "Study Day of End of Observation",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "suppae": {
+  "label": "Supplemental Qualifiers for AE",
+  "structure": "One record per IDVAR, IDVARVAL, and QNAM value per subject",
+  "n_rows": 961,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT"
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT QUALIFIER"
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   }
+  }
+ },
+ "suppdm": {
+  "label": "Supplemental Qualifiers for DM",
+  "structure": "One record per IDVAR, IDVARVAL, and QNAM value per subject",
+  "n_rows": 1197,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT"
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT QUALIFIER"
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   }
+  }
+ },
+ "suppds": {
+  "label": "Supplemental Qualifiers for DS",
+  "structure": "One record per IDVAR, IDVARVAL, and QNAM value per subject",
+  "n_rows": 3,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT"
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT QUALIFIER"
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   }
+  }
+ },
+ "supplbch": {
+  "label": "Supplemental Qualifiers for LB",
+  "structure": "One record per IDVAR, IDVARVAL, and QNAM value per subject",
+  "n_rows": 37124,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT"
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT QUALIFIER"
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   }
+  }
+ },
+ "supplbhe": {
+  "label": "Supplemental Qualifiers for LB",
+  "structure": "One record per IDVAR, IDVARVAL, and QNAM value per subject",
+  "n_rows": 24558,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT"
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT QUALIFIER"
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   }
+  }
+ },
+ "supplbur": {
+  "label": "Supplemental Qualifiers for LB",
+  "structure": "One record per IDVAR, IDVARVAL, and QNAM value per subject",
+  "n_rows": 2721,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "RDOMAIN": {
+    "label": "Related Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IDVAR": {
+    "label": "Identifying Variable",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "IDVARVAL": {
+    "label": "Identifying Variable Value",
+    "type": "String",
+    "mandatory": "No",
+    "role": "IDENTIFIER"
+   },
+   "QNAM": {
+    "label": "Qualifier Variable Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "QLABEL": {
+    "label": "Qualifier Variable Label",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "QVAL": {
+    "label": "Data Value",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT"
+   },
+   "QORIG": {
+    "label": "Origin",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT QUALIFIER"
+   },
+   "QEVAL": {
+    "label": "Evaluator",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   }
+  }
+ },
+ "sv": {
+  "label": "Subject Visits",
+  "structure": "One record per actual visit per subject",
+  "n_rows": 3559,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SVSTDTC": {
+    "label": "Start Date/Time of Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SVENDTC": {
+    "label": "End Date/Time of Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SVSTDY": {
+    "label": "Study Day of Start of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SVENDY": {
+    "label": "Study Day of End of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "SVUPDES": {
+    "label": "Description of Unplanned Visit",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   }
+  }
+ },
+ "ta": {
+  "label": "Trial Arms",
+  "structure": "One record per planned Element per Arm",
+  "n_rows": 11,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "ARM": {
+    "label": "Description of Planned Arm",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "TAETORD": {
+    "label": "Planned Order of Element within Arm",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "ETCD": {
+    "label": "Element Code",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RECORD QUALIFIER"
+   },
+   "ELEMENT": {
+    "label": "Description of Element",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "TABRANCH": {
+    "label": "Branch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RULE"
+   },
+   "TATRANS": {
+    "label": "Transition Rule",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RULE"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TIMING"
+   }
+  }
+ },
+ "te": {
+  "label": "Trial Elements",
+  "structure": "One record per planned Element",
+  "n_rows": 7,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "ETCD": {
+    "label": "Element Code",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "ELEMENT": {
+    "label": "Description of Element",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "TESTRL": {
+    "label": "Rule for Start of Element",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RULE"
+   },
+   "TEENRL": {
+    "label": "Rule for End of Element",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RULE"
+   },
+   "TEDUR": {
+    "label": "Planned Duration of Element",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ },
+ "ti": {
+  "label": "Trial Inclusion/ Exclusion Criteria",
+  "structure": "One record per I/E criterion",
+  "n_rows": 31,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "IETESTCD": {
+    "label": "Inclusion/Exclusion Criterion Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "IETEST": {
+    "label": "Inclusion/Exclusion Criterion",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "IECAT": {
+    "label": "Inclusion/Exclusion Category",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "GROUPING QUALIFIER"
+   }
+  }
+ },
+ "ts": {
+  "label": "Trial Summary",
+  "structure": "One record per trial summary parameter value",
+  "n_rows": 48,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "TSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "TSPARMCD": {
+    "label": "Trial Summary Parameter Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "TSPARM": {
+    "label": "Trial Summary Parameter",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "TSVAL": {
+    "label": "Parameter Value",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RESULT QUALIFIER"
+   },
+   "TSVALNF": {
+    "label": "Parameter Null Flavor",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "TSVALCD": {
+    "label": "Parameter Value Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "TSVCDREF": {
+    "label": "Name of the Reference Terminology",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "TSVCDVER": {
+    "label": "Version of the Reference Terminology",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   }
+  }
+ },
+ "tv": {
+  "label": "Trial Visits",
+  "structure": "One record per planned Visit per Arm",
+  "n_rows": 21,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "ARMCD": {
+    "label": "Planned Arm Code",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "TVSTRL": {
+    "label": "Visit Start Rule",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "RULE"
+   },
+   "TVENRL": {
+    "label": "Visit End Rule",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RULE"
+   }
+  }
+ },
+ "vs": {
+  "label": "Vital Signs",
+  "structure": "One record per vital sign measurement per time point per visit per subject",
+  "n_rows": 29643,
+  "columns": {
+   "STUDYID": {
+    "label": "Study Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "DOMAIN": {
+    "label": "Domain Abbreviation",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "USUBJID": {
+    "label": "Unique Subject Identifier",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "VSSEQ": {
+    "label": "Sequence Number",
+    "type": "Float64",
+    "mandatory": "Yes",
+    "role": "IDENTIFIER"
+   },
+   "VSTESTCD": {
+    "label": "Vital Signs Test Short Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "TOPIC"
+   },
+   "VSTEST": {
+    "label": "Vital Signs Test Name",
+    "type": "String",
+    "mandatory": "Yes",
+    "role": "SYNONYM QUALIFIER"
+   },
+   "VSPOS": {
+    "label": "Vital Signs Position of Subject",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VSORRES": {
+    "label": "Result or Finding in Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "VSORRESU": {
+    "label": "Original Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "VSSTRESC": {
+    "label": "Character Result/Finding in Std Format",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "VSSTRESN": {
+    "label": "Numeric Result/Finding in Standard Units",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "RESULT QUALIFIER"
+   },
+   "VSSTRESU": {
+    "label": "Standard Units",
+    "type": "String",
+    "mandatory": "No",
+    "role": "VARIABLE QUALIFIER"
+   },
+   "VSSTAT": {
+    "label": "Completion Status",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VSLOC": {
+    "label": "Location of Vital Signs Measurement",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VSBLFL": {
+    "label": "Baseline Flag",
+    "type": "String",
+    "mandatory": "No",
+    "role": "RECORD QUALIFIER"
+   },
+   "VISITNUM": {
+    "label": "Visit Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISIT": {
+    "label": "Visit Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VISITDY": {
+    "label": "Planned Study Day of Visit",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "EPOCH": {
+    "label": "Epoch",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VSDTC": {
+    "label": "Date/Time of Measurements",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VSDY": {
+    "label": "Study Day of Vital Signs",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VSTPT": {
+    "label": "Planned Time Point Name",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VSTPTNUM": {
+    "label": "Planned Time Point Number",
+    "type": "Float64",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VSELTM": {
+    "label": "Planned Elapsed Time from Time Point Ref",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   },
+   "VSTPTREF": {
+    "label": "Time Point Reference",
+    "type": "String",
+    "mandatory": "No",
+    "role": "TIMING"
+   }
+  }
+ }
+}
