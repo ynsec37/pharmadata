@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "pharmadata"
-version = "0.1.0"
+version = "0.1.1"
 description = "CDISC SDTM and ADaM test datasets in Python for clinical programming"
 readme = "README.md"
 license = "Apache-2.0"
