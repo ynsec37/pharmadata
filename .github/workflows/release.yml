@@ -17,11 +17,13 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uv sync --all-groups
-      # Run the full test suite before publishing: tags are not gated by the
+      # Run the test suite before publishing: tags are not gated by the
       # CI workflow, so a broken commit could otherwise ship to PyPI.
-      - run: uv run pytest
+      # build/docs tests need the data pipeline (fetch + R export); exclude
+      # them here, matching the CI sdist subset.
+      - run: uv run pytest -m "not build and not docs"
       - run: uv build
       # The publish jobs only download artifacts; they must not rebuild.
       - uses: actions/upload-artifact@v7

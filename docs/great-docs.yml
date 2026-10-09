@@ -41,6 +41,7 @@ site:
 # Rename the hardcoded Reference sidebar group "Constants" to "Datasets".
 include_in_header:
   - text: <script>document.head.appendChild(Object.assign(document.createElement('script'),{src:(document.querySelector('meta[name="quarto:offset"]')||{content:''}).content+'assets/gd-rename-labels.js'}));</script>
+  - text: <script>document.head.appendChild(Object.assign(document.createElement('script'),{src:(document.querySelector('meta[name="quarto:offset"]')||{content:''}).content+'assets/gd-marimo-toolbar.js'}));</script>
 
 navbar_order:
   - User Guide

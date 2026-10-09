@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uv sync --all-groups
       - run: uv run ruff check .
       - run: uv run ruff format --check .
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uv sync --all-groups
       - run: uv run mypy
       - run: uv run pyrefly check
@@ -41,15 +41,18 @@ jobs:
         python-version: ["3.11", "3.12", "3.13", "3.14"]
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v6
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
       - run: uv sync --all-groups
-      - run: uv run pytest --cov --cov-report=term-missing --cov-report=xml --cov-fail-under=90
+      # build/docs tests need the data pipeline (fetch + R export); they are
+      # exercised by the docs job. The sdist subset skips them.
+      - run: uv run pytest -m "not build and not docs" --cov --cov-report=term-missing --cov-report=xml --cov-fail-under=90
       - uses: codecov/codecov-action@v5
         with:
           files: ./coverage.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: false
 
   docs:
@@ -58,9 +61,9 @@ jobs:
     env:
       # The locked R library must be on R's default search path: great-docs runs
       # Quarto, which starts its R in a scratch dir with no project .Rprofile.
-      R_LIBS_USER: ${{ runner.temp }}/rlib
+      R_LIBS_USER: /tmp/rlib
       # Tell renv (and setup-renv) to install into that same path.
-      RENV_PATHS_LIBRARY: ${{ runner.temp }}/rlib
+      RENV_PATHS_LIBRARY: /tmp/rlib
       # knitr (engine: knitr) runs {python} chunks via reticulate; the jupyter
       # engine uses QUARTO_PYTHON.  Point both at the venv interpreter that has
       # polars and pharmadata installed (uv sync --group docs creates .venv).
@@ -68,7 +71,7 @@ jobs:
       QUARTO_PYTHON: ${{ github.workspace }}/.venv/bin/python
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uv sync --group docs
       # Posit's official R setup, then renv restores the packages the
       # comparative Resources pages need (knitr, reticulate, dplyr, ...).
@@ -81,6 +84,12 @@ jobs:
         run: Rscript data-raw/tests/testthat.R
       # great-docs needs Quarto to render .qmd pages; official Posit action.
       - uses: quarto-dev/quarto-actions/setup@v2
+      # Build the raw inputs the shipped data is regenerated from. Without
+      # these, 03_build_data.py's validate() refuses to run.
+      - name: Fetch upstream sources
+        run: uv run python data-raw/01_fetch_sources.py
+      - name: Export raw datasets
+        run: Rscript data-raw/02_export_data.R
       # Regenerate everything 03_build_data owns and require a clean diff: anything that
       # drifted from its source fails here instead of shipping stale.
       - name: Generated data + docs match their sources
@@ -101,7 +110,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uv build
       - uses: actions/upload-artifact@v7
         with:

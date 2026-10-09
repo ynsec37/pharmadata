@@ -30,8 +30,10 @@ body:has(marimo-island) .gd-copy-page {
   display: none !important;
 }
 
-/* Left-align every table header. The flatly/Quarto default right-aligns `th`,
-   which looks odd for column names like STUDYID or variable. */
-table th {
+/* Left-align every table header and cell. The flatly/Quarto default
+   right-aligns `th` and centre-aligns `td`, which looks odd for column
+   names like STUDYID or values like USUBJID. */
+table th,
+table td {
   text-align: left !important;
 }

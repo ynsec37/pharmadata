@@ -19,12 +19,12 @@ jobs:
     name: Build docs site
     runs-on: ubuntu-latest
     env:
-      R_LIBS_USER: ${{ runner.temp }}/rlib
-      RENV_PATHS_LIBRARY: ${{ runner.temp }}/rlib
+      R_LIBS_USER: /tmp/rlib
+      RENV_PATHS_LIBRARY: /tmp/rlib
     steps:
       - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uv sync --group docs
 
       - uses: r-lib/actions/setup-r@v2
@@ -33,6 +33,10 @@ jobs:
       - uses: r-lib/actions/setup-renv@v2
 
       - uses: quarto-dev/quarto-actions/setup@v2
+
+      # Build the raw inputs the shipped data is regenerated from.
+      - run: uv run python data-raw/01_fetch_sources.py
+      - run: Rscript data-raw/02_export_data.R
 
       - run: uv run python data-raw/03_build_data.py
       - run: uv run python data-raw/05_build_dataset_qmd.py
@@ -47,7 +51,7 @@ jobs:
         run: uv run great-docs build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: docs/_site
 
@@ -60,4 +64,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

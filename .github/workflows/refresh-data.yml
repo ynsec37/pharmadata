@@ -17,11 +17,11 @@ jobs:
     env:
       # R loads R_LIBS_USER whatever the working directory, so the locked library
       # reaches Quarto, which starts its R from a copy under tmp/.
-      R_LIBS_USER: ${{ runner.temp }}/rlib
+      R_LIBS_USER: /tmp/rlib
     steps:
       - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
 
       - name: Install the Python toolchain
         run: uv sync --all-groups
@@ -32,7 +32,7 @@ jobs:
 
       # Keyed on the lockfile: a hit is the same library, a miss is a restore.
       - name: Cache the locked R library
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ${{ env.R_LIBS_USER }}
           key: r-${{ runner.os }}-${{ hashFiles('renv.lock') }}

@@ -1,10 +1,10 @@
 <div align="center">
 
-<em>CDISC SDTM and ADaM Test Datasets in Python for Clinical Programming</em>
+<h1>CDISC SDTM and ADaM Test Datasets in Python for Clinical Programming</h1>
 
 [![CI](https://github.com/ynsec37/pharmadata/actions/workflows/ci.yml/badge.svg)](https://github.com/ynsec37/pharmadata/actions/workflows/ci.yml)
 [![Coverage](https://codecov.io/gh/ynsec37/pharmadata/branch/main/graph/badge.svg)](https://codecov.io/gh/ynsec37/pharmadata)
-[![PyPI](https://img.shields.io/pypi/v/pharmadata.svg)](https://pypi.org/project/pharmadata/)
+[![PyPI](https://img.shields.io/pypi/v/pharmadata?cacheSeconds=30)](https://pypi.org/project/pharmadata/)
 
 </div>
 
