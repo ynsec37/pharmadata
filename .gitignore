@@ -14,6 +14,7 @@ build/
 # Regenerable intermediate data
 data-raw/raw/
 data-raw/sources/
+data-raw/_changed.json
 
 # Docs build output
 /_site/

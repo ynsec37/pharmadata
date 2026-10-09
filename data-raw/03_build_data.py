@@ -13,10 +13,11 @@ and both generators pick it up.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import keyword
 from pathlib import Path
-from typing import TYPE_CHECKING, TypedDict, cast
+from typing import TYPE_CHECKING, Literal, TypedDict, cast
 
 import polars as pl
 import pyarrow as pa
@@ -195,30 +196,75 @@ def embed_labels(frame: pl.DataFrame, entry: DatasetMetaEntry, path: Path) -> No
     pq.write_table(tbl.cast(pa.schema(fields, metadata=schema_metadata)), path)
 
 
+def _parquet_hash(path: Path) -> str:
+    """SHA-256 of a parquet file's bytes."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _load_existing_meta(out_dir: Path) -> dict[str, DatasetMetaEntry]:
+    """The shipped ``_meta.json`` if present, else an empty dict."""
+    meta_path = out_dir / "_meta.json"
+    if not meta_path.is_file():
+        return {}
+    return json.loads(meta_path.read_text(encoding="utf-8"))
+
+
+def _update_collection_sources(collection: str, data: Path = DATA) -> None:
+    """Copy the fetched source hashes into the shipped ``_collection.json``."""
+    sources_path = PKG / "data-raw" / "sources" / collection / "_sources.json"
+    coll_path = data / collection / "_collection.json"
+    if not sources_path.is_file() or not coll_path.is_file():
+        return
+    sources = json.loads(sources_path.read_text(encoding="utf-8"))
+    coll = json.loads(coll_path.read_text(encoding="utf-8"))
+    coll["sources"] = {
+        name: {"sha256": entry["sha256"]}
+        for name, entry in sources.items()
+        if isinstance(entry, dict) and "sha256" in entry
+    }
+    coll_path.write_text(
+        json.dumps(coll, indent=1, ensure_ascii=False),
+        encoding="utf-8",
+        newline="\n",
+    )
+
+
 def build_collection(
     collection: str,
     only: str | None = None,
     raw: Path = RAW,
     data: Path = DATA,
+    changed: set[str] | None = None,
 ) -> None:
     """Package one collection: the shipped labelled parquet and ``_meta.json``.
 
-    *only* rebuilds one dataset; ``_meta.json`` still comes from the full set.
-    The collection module, its stub and the docs pages are written elsewhere
-    (``data-raw/04_build_modules.py`` and ``data-raw/05_build_dataset_qmd.py``).
+    *only* rebuilds one dataset; *changed* limits the rebuild to those dataset
+    names (datasets not listed keep their shipped parquet and metadata). When
+    *changed* is None every raw dataset is rebuilt. ``_meta.json`` always
+    covers the full shipped set: rebuilt entries are merged with the existing
+    ones so unchanged datasets are preserved.
     """
     raw_dir, out_dir = raw / collection, data / collection
     out_dir.mkdir(parents=True, exist_ok=True)
-    all_meta: dict[str, DatasetMetaEntry] = {}
+    all_meta: dict[str, DatasetMetaEntry] = _load_existing_meta(out_dir)
     written = 0
+    rebuilt = 0
     for meta_path in sorted(raw_dir.glob("*_meta.parquet")):
         name, entry = read_meta(meta_path)
+        # _meta.json always covers every raw dataset; only the rebuild step
+        # below is gated by --dataset / the change list.
         all_meta[name] = entry
         if only is not None and name != only:
             continue
-        frame = pl.read_parquet(meta_path.with_name(f"{name}.parquet"))
-        embed_labels(frame, entry, out_dir / f"{name}.parquet")
+        if changed is not None and name not in changed:
+            continue
+        raw_parquet = meta_path.with_name(f"{name}.parquet")
+        shipped_parquet = out_dir / f"{name}.parquet"
+        frame = pl.read_parquet(raw_parquet)
+        embed_labels(frame, entry, shipped_parquet)
+        entry["parquet_hash"] = _parquet_hash(shipped_parquet)
         written += 1
+        rebuilt += 1
     if only is not None and written == 0:
         msg = (
             f"[{collection}] no dataset {only!r}; "
@@ -232,6 +278,7 @@ def build_collection(
         encoding="utf-8",
         newline="\n",
     )
+    _update_collection_sources(collection, data)
     n_undoc = sum(
         1
         for e in all_meta.values()
@@ -239,7 +286,8 @@ def build_collection(
         if c["label"] == "undocumented field"
     )
     print(
-        f"[{collection}] {len(all_meta)} datasets packaged, {n_undoc} undocumented columns"
+        f"[{collection}] {len(all_meta)} datasets packaged, "
+        f"{rebuilt} rebuilt, {n_undoc} undocumented columns"
     )
 
 
@@ -300,21 +348,55 @@ def _parse_args(
     return args
 
 
+def _load_changed() -> dict[str, list[str]] | None:
+    """The change list written by ``01b_detect_changes.py``, or None if absent."""
+    path = PKG / "data-raw" / "_changed.json"
+    if not path.is_file():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def main(
     argv: Sequence[str] | None = None,
     collections: Iterable[str] = COLLECTIONS,
     raw: Path = RAW,
     data: Path = DATA,
+    changed_map: dict[str, list[str]] | Literal["all"] | None = None,
 ) -> None:
-    """Package every collection; ``--check`` validates the raw inputs only."""
+    """Package every collection; ``--check`` validates the raw inputs only.
+
+    *changed_map* overrides the change list: pass a mapping to force an
+    incremental build, ``None`` to read ``data-raw/_changed.json`` (the
+    default), or the string ``"all"`` to rebuild every dataset regardless.
+    """
     args = _parse_args(argv, collections=collections)
-    # validate before writing: everything is rewritten from what raw/ holds
-    validate(collections=collections, raw=raw)
+    if changed_map is None:
+        changes = _load_changed()
+    elif changed_map == "all":
+        changes = None
+    else:
+        changes = changed_map
+    # --check always validates every collection; otherwise only collections
+    # with changed raw data are validated (the rest have an empty raw/ dir).
+    validate_collections = (
+        list(collections)
+        if args.check or changes is None
+        else [c for c in collections if changes.get(c)]
+    )
+    if validate_collections:
+        validate(collections=validate_collections, raw=raw)
     if args.check:
         return
     for collection in collections:
         if args.collection is None or collection == args.collection:
-            build_collection(collection, only=args.dataset, raw=raw, data=data)
+            changed = set(changes.get(collection, [])) if changes is not None else None
+            build_collection(
+                collection,
+                only=args.dataset,
+                raw=raw,
+                data=data,
+                changed=changed,
+            )
 
 
 if __name__ == "__main__":

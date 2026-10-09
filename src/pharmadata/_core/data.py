@@ -6,7 +6,7 @@ import json
 from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
-from typing import TYPE_CHECKING, TypedDict, cast
+from typing import TYPE_CHECKING, NotRequired, TypedDict, cast
 
 import polars as pl
 import pyarrow as pa
@@ -45,12 +45,17 @@ class ColumnSpec(TypedDict):
 
 
 class DatasetMetaEntry(TypedDict):
-    """One dataset's entry in a collection's ``_meta.json``."""
+    """One dataset's entry in a collection's ``_meta.json``.
+
+    ``parquet_hash`` is written by the build pipeline to enable incremental
+    refresh and is absent in hand-authored or legacy entries.
+    """
 
     label: str | None
     structure: str | None
     n_rows: int
     columns: dict[str, ColumnSpec]
+    parquet_hash: NotRequired[str]
 
 
 # The directory the shipped data lives in, a sibling of this ``_core`` package.

@@ -2,5 +2,100 @@
  "title": "SDTM (CDISC pilot)",
  "source": "the CDISC SDTM/ADaM Pilot Project",
  "url": "https://github.com/phuse-org/phuse-scripts/tree/master/data/sdtm",
- "example": "dm"
+ "example": "dm",
+ "sources": {
+  "ae": {
+   "sha256": "26ab6d10399561fc77f2411dcea7654a47f8e6e2daacfbe84cb41df58ab7d19d"
+  },
+  "cm": {
+   "sha256": "5409e4757254457d57cf135baee85117dc170a2d7d004ef22b9861a6e29f8874"
+  },
+  "dm": {
+   "sha256": "06c42ef3c1d4423f418a02916210fcec05b70b417651628072f39bde9ad216ab"
+  },
+  "ds": {
+   "sha256": "7266ce4a590e266b8c59728714975ead7c1a3e36c9a833608a43774de5cd40d9"
+  },
+  "ex": {
+   "sha256": "21d989257cb177aaa2b7bfefe3332bfaed699230fc0f5d33476d52cfdc798bc3"
+  },
+  "lbch": {
+   "sha256": "5fc481d75f052d682f3f19b65b33ee214515a663c4cfc8046071c6f26c2544cd"
+  },
+  "lbhe": {
+   "sha256": "bfd2b3f6d906c2388b2a86bc7eed60b8b91d3028b97f8aa0d10b583e7ad7bc10"
+  },
+  "lbur": {
+   "sha256": "4469fdb376faa3f457fad3ada4f05ca5b252533fe93dce877359ccd4e25c0d82"
+  },
+  "mh": {
+   "sha256": "c5ecb2d56a9868ac46e56cee2e64a36b0f466f00b0f552e519f5becf83a4f28a"
+  },
+  "qsco": {
+   "sha256": "04584274019295c97b14a17a5cd09ce0b1d9dff56e8ea3f782f52a70418584fa"
+  },
+  "qsda": {
+   "sha256": "c3058542e0e85d5d89fe39064a4745a06ad8fbee878214be8fe9197163377729"
+  },
+  "qsgi": {
+   "sha256": "f5f7e269cd1f85e5ba98940b733efdbc387bb0ace2fb60132c708acf557a4817"
+  },
+  "qshi": {
+   "sha256": "d50b59b3cd4f2e11b8fb4d1918c360e2438b828cde56b3a80aea563c52c7dcb1"
+  },
+  "qsmm": {
+   "sha256": "f5b4a60e069ec68c5785b0a3714a8225073e7e90bdaf3191a156a279450b0bf7"
+  },
+  "qsni": {
+   "sha256": "0cd3221dfb3e9809eea91a5df0a7582daebf8a8be9bf102f37c69e20c4edef7b"
+  },
+  "relrec": {
+   "sha256": "717bca1cc82b60ddd353645cc2a46cb87705a594917dcfad668ddf423f41d4c5"
+  },
+  "sc": {
+   "sha256": "79fb7cdcb5f27c80b2d0aac92364f28529c1c404995db5f3bc2b170d44d2d753"
+  },
+  "se": {
+   "sha256": "6b71b25346855bdad42db1c86d250c70fd0b8e647993c32ed8d15e5aa091773d"
+  },
+  "suppae": {
+   "sha256": "11f39e7515d137379f299eaa92a346540332cbc55fb51492aeff893c3fc1633b"
+  },
+  "suppdm": {
+   "sha256": "6ffbaf06812e8280feaee9b91a2a17374f1fcd35bb5973ad16b887a326883baf"
+  },
+  "suppds": {
+   "sha256": "c8f332cc76f6521645117bea017455a2ba01d380163b5ba84a7b91b23a376fe7"
+  },
+  "supplbch": {
+   "sha256": "6f51f853be2c7bb335488b839d00d3b6cce68bbfc7ec82194b743c8717f04824"
+  },
+  "supplbhe": {
+   "sha256": "8d70607d2582dabb078e71a6a646531f5fd8940165c880731222cab31032b2d1"
+  },
+  "supplbur": {
+   "sha256": "63bb62a2b32694a63fbcd158f54ad83321814f72f760361e69956f93b9c16d3f"
+  },
+  "sv": {
+   "sha256": "b8af34a6d384cf5f2323dab21a91e1f55c7d1392bca963897ad7957012d202ca"
+  },
+  "ta": {
+   "sha256": "cc773e85410dcc809e3900e65d34489d81cf6af1d67b2375d5974cccb3d45643"
+  },
+  "te": {
+   "sha256": "b2a9d8ff5a86ebda957c47a6b4fc6e3dd39953721945fc272238b4a5f6b9e191"
+  },
+  "ti": {
+   "sha256": "e3f316c1b399de618140ed4e64cb816d131d87f120f8e98019854d064b2112f0"
+  },
+  "ts": {
+   "sha256": "91d8bf253ab2dd86b2e76bbe63897b91c568d93d1f2f79db426f235b2fd916a2"
+  },
+  "tv": {
+   "sha256": "e60f925dc90f132ec74285f131dc003fcb7d96032e435a4a605d2975f0587b6c"
+  },
+  "vs": {
+   "sha256": "ce2c17eeb807e2a33d4d4ee9b82d0cd978a9f02cafb290b68b985f2a2c591ea3"
+  }
+ }
 }

@@ -244,7 +244,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "73d9771ff2c8895b3dffdc3304ac39e74eb0322dd83407af54cfc236dff0a9b0"
  },
  "adae": {
   "label": "Adverse Events Analysis Dataset",
@@ -581,7 +582,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "b96f933c3f9b1639405d392c37e4ac21eee69a186bbe28d133c3cdd7b2eb034c"
  },
  "adcibc": {
   "label": "CIBIC+ Analysis",
@@ -804,7 +806,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "2217d223a60113046b17070173deb426df69ed6956e130ec76d593600e6320b2"
  },
  "adlbc": {
   "label": "Analysis Dataset Lab Blood Chemistry",
@@ -1087,7 +1090,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "52ba3baf1ef2d97efbd42a7b8d6b28df66b071d4267c610b4bf1554f1df07691"
  },
  "adlbcpv": {
   "label": "Analysis Dataset Lab Blood Chemistry (Previous Visit)",
@@ -1370,7 +1374,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "cea67d5a434dfef8157b2a3cc4f46b88d4e40cdb8b1b43a90464cebe19a0bd06"
  },
  "adlbh": {
   "label": "Analysis Dataset Lab Hematology",
@@ -1653,7 +1658,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "e15ab5674a78f908f39dac291f283fbbc64ad9857ec1bd8de1478a8d6755da2f"
  },
  "adlbhpv": {
   "label": "Analysis Dataset Lab Hematology (Previous Visit)",
@@ -1936,7 +1942,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "510041d04ae86a25e1d33c09d09dd08a7b88798da0cf045c31b97e8334cf7a72"
  },
  "adlbhy": {
   "label": "Analysis Dataset Lab Hy's Law",
@@ -2201,7 +2208,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "47309869add3b8c8adae8a12a486a2941fc351295f016c4f6d3af1ac39f0948e"
  },
  "adnpix": {
   "label": "NPI-X Item Analysis Data",
@@ -2454,7 +2462,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "7bed4900e1ed9ff4ff1ffb05056996b4fc28bb92a403a20d3ee058c59bfd6bdd"
  },
  "adsl": {
   "label": "Subject-Level Analysis",
@@ -2755,7 +2764,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "c2e8a1d0509ccf2242a46c93d0a0d10afc7f59e8469b489c478a8b5a04579f0f"
  },
  "adtte": {
   "label": "AE Time To 1st Derm. Event Analysis",
@@ -2918,7 +2928,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "fae47d860caa0878e760565c7914838b75a60dd57af11bbbc82ab547b52cba5a"
  },
  "advs": {
   "label": "Vital Signs Analysis Dataset",
@@ -3135,6 +3146,7 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "14fe62c3d172dea621a3b6acfb6d83ddff08915763d28b7638de7969c16a5b34"
  }
 }

@@ -64,6 +64,10 @@ export_pilot <- function(collection) {
       "i" = "run {.code data-raw/01_fetch_sources.py} first"
     ))
   }
+  only <- changed_filter(collection)
+  if (!is.null(only)) {
+    xpt <- xpt[path_ext_remove(path_file(xpt)) %in% only]
+  }
   define <- read_define(path(dir, "define.xml"))
 
   walk(xpt, function(xpt_file) {
