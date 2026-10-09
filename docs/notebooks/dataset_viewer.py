@@ -59,6 +59,9 @@ def _():
     # In marimo islands the table's Markdown and Parquet exports do not work:
     # the Markdown download button is disabled and Parquet needs a kernel-side
     # writer. Hide both rows so only the functional CSV/TSV/JSON options show.
+    # The Visualize/Explore toolbar buttons are hidden site-wide by
+    # docs/assets/gd-marimo-toolbar.js, which injects CSS into the table's
+    # shadow DOM (light-DOM CSS cannot reach it).
     mo.md(
         "<style>"
         "[data-testid='export-row-markdown'],"
@@ -80,7 +83,7 @@ def _(COLLECTIONS):
     options = {key.replace("_", " / ", 1): key for key, _, _ in entries}
     lookup = {key: (coll, name) for key, coll, name in entries}
     dataset = mo.ui.dropdown(options=options, value=next(iter(options)), label="Dataset")
-    nrows = mo.ui.slider(5, 100, value=20, step=5, label="Rows")
+    nrows = mo.ui.slider(5, 100, value=10, step=5, label="Rows")
     mo.hstack([dataset, nrows], justify="start")
 
 
@@ -93,7 +96,7 @@ def _(dataset, lookup):
     df = pl.DataFrame(getattr(collection, name))
     columns = mo.ui.multiselect(
         options=df.columns,
-        value=df.columns[: min(8, len(df.columns))],
+        value=df.columns[: min(10, len(df.columns))],
         label="Columns",
     )
     columns
@@ -105,7 +108,9 @@ def _(dataset, nrows, columns, df):
     n = nrows.value if hasattr(nrows, "value") else nrows
     cols = columns.value if hasattr(columns, "value") else columns
     cols = list(cols) if cols else []
-    mo.ui.table(df.select(cols).head(n), selection=None, label=sel)
+    # show_search=False hides the search box so the table's top-right toolbar
+    # only keeps its native Columns and Export buttons.
+    mo.ui.table(df.select(cols).head(n), selection=None, label=sel, show_search=False)
 
 
 if __name__ == "__main__":
