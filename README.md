@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/ynsec37/pharmadata/actions/workflows/ci.yml/badge.svg)](https://github.com/ynsec37/pharmadata/actions/workflows/ci.yml)
 [![Coverage](https://codecov.io/gh/ynsec37/pharmadata/branch/main/graph/badge.svg)](https://codecov.io/gh/ynsec37/pharmadata)
-[![PyPI](https://img.shields.io/pypi/v/pharmadata?cacheSeconds=30)](https://pypi.org/project/pharmadata/)
+[![PyPI](https://img.shields.io/pypi/v/pharmadata)](https://pypi.org/project/pharmadata/)
 
 </div>
 

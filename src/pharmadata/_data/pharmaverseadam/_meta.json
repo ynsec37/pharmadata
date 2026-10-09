@@ -436,7 +436,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "df720ac0e568784f6a2312e0a62a4dab9144030a4507804174f0baeab5a5af1e"
  },
  "adae": {
   "label": "Adverse Events Analysis",
@@ -1085,7 +1086,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "8d6bda68daaf5b05c2fcfcb93f1ddccd60b82341f8fcb70d084a210299a9bca5"
  },
  "adapet_neuro": {
   "label": "Amyloid PET Scan Analysis Dataset",
@@ -1386,7 +1388,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "3bc31c00032bce4046666673776ca676622860617a4c34802852bb2676e197e5"
  },
  "adbcva_ophtha": {
   "label": "Best Corrected Visual Acuity Analysis",
@@ -1819,7 +1822,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "70e0030ac0e8d5f6c9f9ad52d5f5b2d7a1c78b60d27b1c396c8dc197216c320e"
  },
  "adce_vaccine": {
   "label": "Clinical Events Analysis for Vaccine",
@@ -2162,7 +2166,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "4f2fa93ce459d98c23e8c4442f569c0e36fa74b8a92bb8ad51bc433f3e6b8146"
  },
  "adcm": {
   "label": "Concomitant Medications Analysis",
@@ -2739,7 +2744,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "107feb345f095a8df231ff91fd5803d1e49ccef85748f41730f3fb3b6ee17350"
  },
  "adcoeq_metabolic": {
   "label": "Questionnaires Analysis for Metabolic",
@@ -3256,7 +3262,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "455bd9f1b6d3d45aeabb9edc147cbba91b943573090d807d8cb5d18e399872f8"
  },
  "adeg": {
   "label": "Electrocardiogram Tests Analysis",
@@ -3911,7 +3918,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "7196534503d55f6faa17edacac0d74294416ea1a09052d0861560b402b306958"
  },
  "adex": {
   "label": "Exposure Analysis",
@@ -4470,7 +4478,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "f215bb76fce106341484917ae77d960ef4da0b6d95d6a6ee75ecd87907f1b4b9"
  },
  "adface_vaccine": {
   "label": "Findings About Clinical Events Analysis",
@@ -4843,7 +4852,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "2eb1233b2dbbd5a54b39d60a28541290ffc48c350a84e40c092bdb2ea6349751"
  },
  "adis_vaccine": {
   "label": "Immunogenicity Specimen Assessments",
@@ -5468,7 +5478,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "94d59d30c1c1519e7a0ef385636f6976d2e35e14e00ba2dd4a16a04485d83975"
  },
  "adlb": {
   "label": "Laboratory Analysis",
@@ -6165,7 +6176,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "a7d53253f339481a1c695ebe3018930fdf819525d797ad02648e7791d3a7ac3b"
  },
  "adlb_metabolic": {
   "label": "Laboratory Analysis for Metabolic",
@@ -6430,7 +6442,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "f3a3975f269bb0e7f4ba40c3611b265f58eaf21700d512696f360ce7f54e2267"
  },
  "adlb_neuro": {
   "label": "Laboratory Analysis for Neuroscience",
@@ -6725,7 +6738,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "57d8d2069e6766f1944b048d28e8052922d37bc0ae19623f56f60ded75e8cf4d"
  },
  "adlbhy": {
   "label": "Analysis of Lab Hy's Law",
@@ -6816,7 +6830,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "f9aa5656606aac9a3feb239629d537e111c5c123cf1591ce9e51504566ea5ae0"
  },
  "admh": {
   "label": "Medical History Analysis",
@@ -7507,7 +7522,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "3b0f6300565d5dffad76439398e7a91a04dfbef63e6995568898f1d8df2bac22"
  },
  "adnv_neuro": {
   "label": "Nervous System Analysis Dataset",
@@ -7772,7 +7788,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "73655bad154ac55ec28fbdf090db9cb20a89b5fdc7bfd5daa807f7be6abab113"
  },
  "adoe_ophtha": {
   "label": "Exam Analysis for Ophthalmology",
@@ -8397,7 +8414,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "c3b32fbb2fac9d16c1e4b36f8373837568500ecfd1535e2e6eb1ecaeb78b03e0"
  },
  "adpc": {
   "label": "Pharmacokinetic Concentrations",
@@ -9172,7 +9190,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "7963b6089e49ad218d80cec83aed9160935f31c78a4e5d3d66dae47bf7ba6cac"
  },
  "adpp": {
   "label": "Pharmacokinetic Parameters",
@@ -9653,7 +9672,8 @@
     "mandatory": null,
     "role": null
    }
-  }
+  },
+  "parquet_hash": "43b1f3554effc5b67ac2b66dc24fd80f9641731774bbc6dff24f2f9c2ef70df9"
  },
  "adppk": {
   "label": "Population Pharmacokinetic",
@@ -10026,7 +10046,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "ad815d2c56855f95a2e8d5512183b827690856361a16cb0143d8415ccc19859c"
  },
  "adrs_onco": {
   "label": "Tumor Response Analysis",
@@ -10507,7 +10528,8 @@
     "mandatory": null,
     "role": null
    }
-  }
+  },
+  "parquet_hash": "5d740c5e9fa8c1de3f99e201f913033833e439b20f7d997b060b47b4a8f9b6ad"
  },
  "adsl": {
   "label": "Subject Level Analysis",
@@ -10844,7 +10866,8 @@
     "mandatory": null,
     "role": null
    }
-  }
+  },
+  "parquet_hash": "3a4b18463b3847a68e6bcaea6e8ab7822cfeb952bf17b2ff93cc536f55692be3"
  },
  "adsl_vaccine": {
   "label": "Subject Level Analysis for Vaccine",
@@ -11127,7 +11150,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "de8f28e9b1555795343e1ead0247d7c036b412072ced1ddd1da18eab05266a63"
  },
  "adtpet_neuro": {
   "label": "Tau PET Scan Analysis Dataset",
@@ -11410,7 +11434,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "f9bb2311f30c2c3452327a969a65656811378b24a63204185f9748abf35ed011"
  },
  "adtr_onco": {
   "label": "Tumor Results Analysis for Oncology",
@@ -12011,7 +12036,8 @@
     "mandatory": null,
     "role": null
    }
-  }
+  },
+  "parquet_hash": "4fb7302057ca6eb733d7518c3db090e13a5766266a56e4f53d188a858bcae76b"
  },
  "adtte_onco": {
   "label": "Time to Event Analysis for Oncology",
@@ -12138,7 +12164,8 @@
     "mandatory": "No",
     "role": "Datapoint Traceability Variables"
    }
-  }
+  },
+  "parquet_hash": "95bc113a83b89a70114b1543990049583994834cf52bf15df73a2c0ca3249ac4"
  },
  "advfq_ophtha": {
   "label": "Visual Function Questionnaire Analysis",
@@ -12679,7 +12706,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "d333d17215e3496d630bcc97b029aaf0d74934dac799a4462337f948ceeee958"
  },
  "advs": {
   "label": "Vital Signs Analysis",
@@ -13316,7 +13344,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "d16d5ccd7a70894ab4f36e643fa3b05904a0d28a233f729a2f81e74c508c654b"
  },
  "advs_metabolic": {
   "label": "Vital Signs Analysis for Metabolic",
@@ -13929,7 +13958,8 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "a89d2d984cf82b608eb2859f63668d171bf0388ed63d61db2fbffe5702a1c2d8"
  },
  "advs_peds": {
   "label": "Vital Signs Analysis for Pediatrics",
@@ -14416,6 +14446,7 @@
     "mandatory": "No",
     "role": null
    }
-  }
+  },
+  "parquet_hash": "da54c1de8cd84237a334d7d2471f5d6529df7d804abcb3930eea82f8ace16858"
  }
 }

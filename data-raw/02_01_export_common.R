@@ -8,6 +8,7 @@ suppressPackageStartupMessages({
   library(dplyr)
   library(fs)
   library(here)
+  library(jsonlite)
   library(purrr)
   library(stringr)
   library(tibble)
@@ -67,6 +68,21 @@ fix_utf8 <- function(x) {
     x[bad] <- iconv(x[bad], from = "CP1252", to = "UTF-8")
   }
   x
+}
+
+# Names of datasets whose source changed for *collection*, or NULL when every
+# dataset should be exported (no _changed.json or empty change list). Written
+# by data-raw/01b_detect_changes.py after the fetch stage.
+changed_filter <- function(collection) {
+  file <- here("data-raw", "_changed.json")
+  if (!file_exists(file)) {
+    return(NULL)
+  }
+  changed <- jsonlite::fromJSON(file, simplifyVector = TRUE)
+  if (is.null(changed[[collection]])) {
+    return(character())
+  }
+  as.character(changed[[collection]])
 }
 
 # The first object of an .rda file (the pharmaverse packages hold one per file).

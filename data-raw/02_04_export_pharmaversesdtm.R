@@ -7,8 +7,14 @@ source(here::here("data-raw", "02_01_export_common.R"))
 export_pharmaversesdtm <- function() {
   dir <- require_source("pharmaversesdtm")
   out <- raw_dir("pharmaversesdtm")
+  only <- changed_filter("pharmaversesdtm")
 
-  walk(rda_files(dir), function(file) {
+  files <- rda_files(dir)
+  if (!is.null(only)) {
+    files <- files[path_ext_remove(path_file(files)) %in% only]
+  }
+
+  walk(files, function(file) {
     name <- as.character(path_ext_remove(path_file(file)))
     export_one(
       name,

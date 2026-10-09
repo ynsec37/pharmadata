@@ -56,8 +56,14 @@ export_pharmaverseadam <- function() {
   dir <- require_source("pharmaverseadam")
   out <- raw_dir("pharmaverseadam")
   specs <- read_adam_specs(path(dir, "inst", "extdata", "adams-specs.json"))
+  only <- changed_filter("pharmaverseadam")
 
-  walk(rda_files(dir), function(file) {
+  files <- rda_files(dir)
+  if (!is.null(only)) {
+    files <- files[path_ext_remove(path_file(files)) %in% only]
+  }
+
+  walk(files, function(file) {
     name <- as.character(path_ext_remove(path_file(file)))
     df <- load_rda(file)
     spec <- specs[[spec_dataset(name)]]

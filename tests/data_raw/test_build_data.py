@@ -90,7 +90,7 @@ def test_main_packages_a_collection_into_shipped_data(tmp_path: Path) -> None:
     collection = "testcoll"
     _write_raw_collection(raw, collection)
 
-    script.main([], collections=[collection], raw=raw, data=data)
+    script.main([], collections=[collection], raw=raw, data=data, changed_map="all")
 
     # the shipped parquet carries the dataset label in schema metadata and each
     # column label in field metadata; the generator ID is also persisted
@@ -128,6 +128,7 @@ def test_main_with_only_rebuilds_one_dataset_and_keeps_full_meta(
         collections=[collection],
         raw=raw,
         data=data,
+        changed_map="all",
     )
 
     # only the requested dataset's parquet is written, the other is absent
@@ -151,4 +152,5 @@ def test_main_with_unknown_dataset_names_available_ones(tmp_path: Path) -> None:
             collections=[collection],
             raw=raw,
             data=data,
+            changed_map="all",
         )

@@ -5,6 +5,7 @@ from __future__ import annotations
 import fnmatch
 import hashlib
 import io
+import json
 import sys
 import urllib.request
 import zipfile
@@ -37,6 +38,9 @@ class Source:
     require: tuple[str, ...] = ()
     # archive inside the repository, "" for the repository tree itself
     path: str = ""
+    # glob pattern for the actual data files (one per dataset), relative to
+    # the source's output directory. Used to hash each dataset's source file.
+    data_glob: str = "*.rda"
 
 
 # The two pharmaverse R packages, read as the files their repository holds.
@@ -53,12 +57,14 @@ REPOS = (
             "inst/extdata/adams-specs.json",
         ),
         require=("inst/extdata/adams-specs.json",),
+        data_glob="data/*.rda",
     ),
     Source(
         key="pharmaversesdtm",
         repo="pharmaverse/pharmaversesdtm",
         ref="main",
         keep=("DESCRIPTION", "LICENSE.md", "data/*", "man/*"),
+        data_glob="data/*.rda",
     ),
 )
 
@@ -71,6 +77,7 @@ ARCHIVES = (
         keep=("*.xpt", "define.xml"),
         require=("define.xml",),
         path="data/sdtm/cdiscpilot_update2.zip",
+        data_glob="*.xpt",
     ),
     Source(
         key="cdiscpilotadam",
@@ -79,6 +86,7 @@ ARCHIVES = (
         keep=("*.xpt", "define.xml"),
         require=("define.xml",),
         path="data/adam/cdiscpilot_update1.zip",
+        data_glob="*.xpt",
     ),
 )
 
@@ -171,6 +179,26 @@ def extract(source: Source, bundle: bytes, source_dir: Path = SOURCE_DIR) -> lis
     return sorted(names)
 
 
+def compute_source_hashes(
+    source: Source, source_dir: Path = SOURCE_DIR
+) -> dict[str, dict[str, str]]:
+    """SHA-256 of every data file in a source's output directory.
+
+    Returns a mapping ``dataset_name -> {"file": rel, "sha256": hex}`` where
+    the dataset name is the data file's stem. Written alongside the source as
+    ``_sources.json`` so the change detector can compare against the hashes
+    stored in the shipped ``_collection.json``.
+    """
+    base = out_dir(source, source_dir)
+    hashes: dict[str, dict[str, str]] = {}
+    for path in sorted(base.glob(source.data_glob)):
+        if path.is_file():
+            rel = path.relative_to(base).as_posix()
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            hashes[path.stem] = {"file": rel, "sha256": digest}
+    return hashes
+
+
 def fetch(source: Source, source_dir: Path = SOURCE_DIR) -> list[str]:
     """Download one source and write the files its collection is exported from."""
     url = url_for(source)
@@ -190,6 +218,11 @@ def fetch(source: Source, source_dir: Path = SOURCE_DIR) -> list[str]:
     print(
         f"[{source.key}] {source.ref}: {len(written)} files, "
         f"sha256 {digest} -> {out_dir(source, source_dir).relative_to(PKG)}"
+    )
+    # Persist per-dataset source hashes for the change detector.
+    hashes = compute_source_hashes(source, source_dir)
+    (out_dir(source, source_dir) / "_sources.json").write_text(
+        json.dumps(hashes, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n"
     )
     return written
 
