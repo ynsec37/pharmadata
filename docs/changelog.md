@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.0
+## 0.1.2
 
 Hash-based incremental data refresh: source and parquet hashes drive rebuilds.
 Only datasets whose upstream source changed are re-exported and repackaged;
