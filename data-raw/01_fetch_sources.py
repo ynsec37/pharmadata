@@ -181,21 +181,26 @@ def extract(source: Source, bundle: bytes, source_dir: Path = SOURCE_DIR) -> lis
 
 def compute_source_hashes(
     source: Source, source_dir: Path = SOURCE_DIR
-) -> dict[str, dict[str, str]]:
-    """SHA-256 of every data file in a source's output directory.
+) -> dict[str, dict[str, str | int]]:
+    """SHA-256 and size of every data file in a source's output directory.
 
-    Returns a mapping ``dataset_name -> {"file": rel, "sha256": hex}`` where
-    the dataset name is the data file's stem. Written alongside the source as
-    ``_sources.json`` so the change detector can compare against the hashes
-    stored in the shipped ``_collection.json``.
+    Returns a mapping ``dataset_name -> {"file": rel, "sha256": hex,
+    "size_bytes": int}`` where the dataset name is the data file's stem.
+    Written alongside the source as ``_sources.json`` so the change detector
+    can compare against the hashes stored in the shipped ``_collection.json``.
     """
     base = out_dir(source, source_dir)
-    hashes: dict[str, dict[str, str]] = {}
+    hashes: dict[str, dict[str, str | int]] = {}
     for path in sorted(base.glob(source.data_glob)):
         if path.is_file():
             rel = path.relative_to(base).as_posix()
-            digest = hashlib.sha256(path.read_bytes()).hexdigest()
-            hashes[path.stem] = {"file": rel, "sha256": digest}
+            data = path.read_bytes()
+            digest = hashlib.sha256(data).hexdigest()
+            hashes[path.stem] = {
+                "file": rel,
+                "sha256": digest,
+                "size_bytes": len(data),
+            }
     return hashes
 
 

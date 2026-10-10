@@ -5,97 +5,128 @@
  "example": "adsl",
  "sources": {
   "adab": {
-   "sha256": "717c59be3571a582258d14e2742f97f58bf33d080f7a1864252eac30a16f3b95"
+   "sha256": "717c59be3571a582258d14e2742f97f58bf33d080f7a1864252eac30a16f3b95",
+   "size_bytes": 50408
   },
   "adae": {
-   "sha256": "394dfdcf132b43c83404daf94060b93c0519be49e3ed96f37e49f54fd8474cd2"
+   "sha256": "394dfdcf132b43c83404daf94060b93c0519be49e3ed96f37e49f54fd8474cd2",
+   "size_bytes": 54395
   },
   "adapet_neuro": {
-   "sha256": "21a100ac8a52057ca3d5030a7f641fd0c0e24508db8cee2e12cac57ba9ab4f9c"
+   "sha256": "21a100ac8a52057ca3d5030a7f641fd0c0e24508db8cee2e12cac57ba9ab4f9c",
+   "size_bytes": 5011
   },
   "adbcva_ophtha": {
-   "sha256": "d7f84a56c655fd74f7ba7856811fce99ade9aaa6d4f1ae1d7f28c10511ef4023"
+   "sha256": "d7f84a56c655fd74f7ba7856811fce99ade9aaa6d4f1ae1d7f28c10511ef4023",
+   "size_bytes": 130651
   },
   "adce_vaccine": {
-   "sha256": "f704050539fb6552734e8953c839a4f65fe796cef97c4fcf0f2f19593bddd74b"
+   "sha256": "f704050539fb6552734e8953c839a4f65fe796cef97c4fcf0f2f19593bddd74b",
+   "size_bytes": 3103
   },
   "adcm": {
-   "sha256": "d19995773dbaad2578a995c2f883c363770a5b9b310ede05ad875f857ed1f305"
+   "sha256": "d19995773dbaad2578a995c2f883c363770a5b9b310ede05ad875f857ed1f305",
+   "size_bytes": 86992
   },
   "adcoeq_metabolic": {
-   "sha256": "b1fac40b83a4a61cd8163d5f6e950e728fcfb736fff09d7e8ea7957c0c46f868"
+   "sha256": "b1fac40b83a4a61cd8163d5f6e950e728fcfb736fff09d7e8ea7957c0c46f868",
+   "size_bytes": 20450
   },
   "adeg": {
-   "sha256": "d0a469b956e920be4cd04db3d3f30a61f3a8b2a40d479ae7c36365ddc3b1b724"
+   "sha256": "d0a469b956e920be4cd04db3d3f30a61f3a8b2a40d479ae7c36365ddc3b1b724",
+   "size_bytes": 1099265
   },
   "adex": {
-   "sha256": "6217686d4e422c2b1de326acbbb956f0436482d318fa94d61402156897ab13e6"
+   "sha256": "6217686d4e422c2b1de326acbbb956f0436482d318fa94d61402156897ab13e6",
+   "size_bytes": 60998
   },
   "adface_vaccine": {
-   "sha256": "1d65ba3660ac62b5c1e079aeedb623b2236b4ecba2860a857690067f40d30455"
+   "sha256": "1d65ba3660ac62b5c1e079aeedb623b2236b4ecba2860a857690067f40d30455",
+   "size_bytes": 5612
   },
   "adis_vaccine": {
-   "sha256": "a42c4f0eacf1affb37fc613f63f06d23910e4a791e46e3aa6dfe14974d6c68d1"
+   "sha256": "a42c4f0eacf1affb37fc613f63f06d23910e4a791e46e3aa6dfe14974d6c68d1",
+   "size_bytes": 4672
   },
   "adlb": {
-   "sha256": "8f18edd7d063ecad187717ed87519089221f506bf8be959aa35e63653a7d4551"
+   "sha256": "8f18edd7d063ecad187717ed87519089221f506bf8be959aa35e63653a7d4551",
+   "size_bytes": 1239509
   },
   "adlb_metabolic": {
-   "sha256": "543075126ed907b273b50a4ae7fa285ebc9a3f620d2b4e81df8046650a3c4a99"
+   "sha256": "543075126ed907b273b50a4ae7fa285ebc9a3f620d2b4e81df8046650a3c4a99",
+   "size_bytes": 9772
   },
   "adlb_neuro": {
-   "sha256": "04e9c0342268792b74fc6deffa2059d16d3652b4f5bf21f91d22d716d62f8ac2"
+   "sha256": "04e9c0342268792b74fc6deffa2059d16d3652b4f5bf21f91d22d716d62f8ac2",
+   "size_bytes": 7839
   },
   "adlbhy": {
-   "sha256": "15e420f1081d6979d52d1b857d5faa6019587ea9c2982194c695c8414dcef4cc"
+   "sha256": "15e420f1081d6979d52d1b857d5faa6019587ea9c2982194c695c8414dcef4cc",
+   "size_bytes": 2716
   },
   "admh": {
-   "sha256": "f86baf8a4de179b66db30a1e083e7d4b9bc486e2dd8b1e0338094986d35f61c0"
+   "sha256": "f86baf8a4de179b66db30a1e083e7d4b9bc486e2dd8b1e0338094986d35f61c0",
+   "size_bytes": 60971
   },
   "adnv_neuro": {
-   "sha256": "5ae90f0abc610e0de9bced84359019d53f5ca58ef56186d460fa3f4e0a764e3a"
+   "sha256": "5ae90f0abc610e0de9bced84359019d53f5ca58ef56186d460fa3f4e0a764e3a",
+   "size_bytes": 2275
   },
   "adoe_ophtha": {
-   "sha256": "51ac13a1f2d292f8facf0178fee23bb32398b3bb3e6827b6484ef0cee4287f19"
+   "sha256": "51ac13a1f2d292f8facf0178fee23bb32398b3bb3e6827b6484ef0cee4287f19",
+   "size_bytes": 221145
   },
   "adpc": {
-   "sha256": "ca54c8f77ab3a626e15b5b15faa38c596dd2e74b0ca8ea3b71797ae2b3739bc0"
+   "sha256": "ca54c8f77ab3a626e15b5b15faa38c596dd2e74b0ca8ea3b71797ae2b3739bc0",
+   "size_bytes": 139102
   },
   "adpp": {
-   "sha256": "4f389ada04e17b90c1a23873b362c4e03c3e365805eaad412c2563a4dd54b474"
+   "sha256": "4f389ada04e17b90c1a23873b362c4e03c3e365805eaad412c2563a4dd54b474",
+   "size_bytes": 35994
   },
   "adppk": {
-   "sha256": "1bf333ac2daac513b84d890d5faed67c24b432b428c2774960bc82d5e7422f95"
+   "sha256": "1bf333ac2daac513b84d890d5faed67c24b432b428c2774960bc82d5e7422f95",
+   "size_bytes": 78101
   },
   "adrs_onco": {
-   "sha256": "f1f7e31ab9037e22cec1954a6fc005fada519c5c4544c8d30d34d57eee343aa6"
+   "sha256": "f1f7e31ab9037e22cec1954a6fc005fada519c5c4544c8d30d34d57eee343aa6",
+   "size_bytes": 31253
   },
   "adsl": {
-   "sha256": "03d1de397730bb6059219d0e3c254d9fd66cbf18f5996322a0d6ae63764e2ccc"
+   "sha256": "03d1de397730bb6059219d0e3c254d9fd66cbf18f5996322a0d6ae63764e2ccc",
+   "size_bytes": 13912
   },
   "adsl_vaccine": {
-   "sha256": "a1f818065ea321054ff0f6fe986b0b0745b8d4abe03368d73d8ddb7fcef5ef56"
+   "sha256": "a1f818065ea321054ff0f6fe986b0b0745b8d4abe03368d73d8ddb7fcef5ef56",
+   "size_bytes": 1465
   },
   "adtpet_neuro": {
-   "sha256": "e135f3b6d75353b3f6b0aeaaa8a561074c890755b8f2b7480ebac2975c43788a"
+   "sha256": "e135f3b6d75353b3f6b0aeaaa8a561074c890755b8f2b7480ebac2975c43788a",
+   "size_bytes": 3361
   },
   "adtr_onco": {
-   "sha256": "21edddb8320b3d1dd1cf0d3b8aac2ec1c4eb7f45af2e4e45f37eba4a36523a07"
+   "sha256": "21edddb8320b3d1dd1cf0d3b8aac2ec1c4eb7f45af2e4e45f37eba4a36523a07",
+   "size_bytes": 6742
   },
   "adtte_onco": {
-   "sha256": "78e1f44afab97e6e100caaa23db1ec021266ba6ca224d879ef5fb6a67e1445e9"
+   "sha256": "78e1f44afab97e6e100caaa23db1ec021266ba6ca224d879ef5fb6a67e1445e9",
+   "size_bytes": 5281
   },
   "advfq_ophtha": {
-   "sha256": "151f194e1633a28e2ca0a09e6825ba3e61e1a461b7a21d0e2fb89b13595c90f0"
+   "sha256": "151f194e1633a28e2ca0a09e6825ba3e61e1a461b7a21d0e2fb89b13595c90f0",
+   "size_bytes": 174428
   },
   "advs": {
-   "sha256": "72331bc9c291da573c070635571a69a9343af3fef5fdb59ea9facf73fb1e8b69"
+   "sha256": "72331bc9c291da573c070635571a69a9343af3fef5fdb59ea9facf73fb1e8b69",
+   "size_bytes": 489424
   },
   "advs_metabolic": {
-   "sha256": "7a36e0ca93e49a1aba6759c985d9a5b55dc5fa06763fa498a679ccf085f8fe49"
+   "sha256": "7a36e0ca93e49a1aba6759c985d9a5b55dc5fa06763fa498a679ccf085f8fe49",
+   "size_bytes": 16842
   },
   "advs_peds": {
-   "sha256": "e6437a94308e4cbbcff1307f72e8a437fd7ff2cfe970ef641ff84b04aea811da"
+   "sha256": "e6437a94308e4cbbcff1307f72e8a437fd7ff2cfe970ef641ff84b04aea811da",
+   "size_bytes": 13070
   }
  }
 }

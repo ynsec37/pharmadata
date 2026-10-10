@@ -5,40 +5,52 @@
  "example": "adsl",
  "sources": {
   "adadas": {
-   "sha256": "006f078e7a05b7f3789e8e7a91a32f57a2a0228291ca9121e64b49cf683ed1ab"
+   "sha256": "006f078e7a05b7f3789e8e7a91a32f57a2a0228291ca9121e64b49cf683ed1ab",
+   "size_bytes": 4231280
   },
   "adae": {
-   "sha256": "4b5fb54448f83a056b3f33f6a322f0a2145799a038667b0b7c7e28d2972adb2d"
+   "sha256": "4b5fb54448f83a056b3f33f6a322f0a2145799a038667b0b7c7e28d2972adb2d",
+   "size_bytes": 713600
   },
   "adcibc": {
-   "sha256": "68abb121a6fa43bedeae3346fe7afd8c659209db61daa63f96b72f8b02e7ce4a"
+   "sha256": "68abb121a6fa43bedeae3346fe7afd8c659209db61daa63f96b72f8b02e7ce4a",
+   "size_bytes": 290480
   },
   "adlbc": {
-   "sha256": "7b8f529abf9b395a82751f0de461f0740d921a772216d68b83f8bfea334b65b4"
+   "sha256": "7b8f529abf9b395a82751f0de461f0740d921a772216d68b83f8bfea334b65b4",
+   "size_bytes": 14488720
   },
   "adlbcpv": {
-   "sha256": "c4bf6352fd0b5f6ea8206c9a19d9c561c31b12cfbbfe1f13ae926f427b51eaad"
+   "sha256": "c4bf6352fd0b5f6ea8206c9a19d9c561c31b12cfbbfe1f13ae926f427b51eaad",
+   "size_bytes": 16530960
   },
   "adlbh": {
-   "sha256": "60c3679e8dcba8f51a907441c4def9666db5658f18a0c6f51146da967d2516cb"
+   "sha256": "60c3679e8dcba8f51a907441c4def9666db5658f18a0c6f51146da967d2516cb",
+   "size_bytes": 10193360
   },
   "adlbhpv": {
-   "sha256": "ee456146cca293516c079a15d4ccc0a12862cc5369b048a20f9e92f0bda8d74e"
+   "sha256": "ee456146cca293516c079a15d4ccc0a12862cc5369b048a20f9e92f0bda8d74e",
+   "size_bytes": 11541520
   },
   "adlbhy": {
-   "sha256": "95f404c2024d7effb2b2b7283da6e416f36b61896e7a0735d0ee5ae5082fb6b7"
+   "sha256": "95f404c2024d7effb2b2b7283da6e416f36b61896e7a0735d0ee5ae5082fb6b7",
+   "size_bytes": 4008320
   },
   "adnpix": {
-   "sha256": "58d7d61811333ca439af9450c974505c281967231ef9018f7607d4d43d3792ee"
+   "sha256": "58d7d61811333ca439af9450c974505c281967231ef9018f7607d4d43d3792ee",
+   "size_bytes": 11216880
   },
   "adsl": {
-   "sha256": "83f7a82f8b371b758e246b906f66ae6700ceea0a8f32c02de5d3d27da74a64e3"
+   "sha256": "83f7a82f8b371b758e246b906f66ae6700ceea0a8f32c02de5d3d27da74a64e3",
+   "size_bytes": 117840
   },
   "adtte": {
-   "sha256": "0fbcb6dc55c4956e9a4cb7fa7887ad91af1e6b0266e1a10054dd2e24cad2d6a6"
+   "sha256": "0fbcb6dc55c4956e9a4cb7fa7887ad91af1e6b0266e1a10054dd2e24cad2d6a6",
+   "size_bytes": 73520
   },
   "advs": {
-   "sha256": "9253dbe0e38507cf2577d3ddd8d59109527b734b695c08a2e5c43737bb76f718"
+   "sha256": "9253dbe0e38507cf2577d3ddd8d59109527b734b695c08a2e5c43737bb76f718",
+   "size_bytes": 14596800
   }
  }
 }

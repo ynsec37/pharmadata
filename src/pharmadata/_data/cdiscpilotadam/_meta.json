@@ -245,7 +245,9 @@
     "role": null
    }
   },
-  "parquet_hash": "73d9771ff2c8895b3dffdc3304ac39e74eb0322dd83407af54cfc236dff0a9b0"
+  "parquet_hash": "73d9771ff2c8895b3dffdc3304ac39e74eb0322dd83407af54cfc236dff0a9b0",
+  "parquet_size_bytes": 88783,
+  "hash_alg": "sha256"
  },
  "adae": {
   "label": "Adverse Events Analysis Dataset",
@@ -583,7 +585,9 @@
     "role": null
    }
   },
-  "parquet_hash": "b96f933c3f9b1639405d392c37e4ac21eee69a186bbe28d133c3cdd7b2eb034c"
+  "parquet_hash": "b96f933c3f9b1639405d392c37e4ac21eee69a186bbe28d133c3cdd7b2eb034c",
+  "parquet_size_bytes": 60683,
+  "hash_alg": "sha256"
  },
  "adcibc": {
   "label": "CIBIC+ Analysis",
@@ -807,7 +811,9 @@
     "role": null
    }
   },
-  "parquet_hash": "2217d223a60113046b17070173deb426df69ed6956e130ec76d593600e6320b2"
+  "parquet_hash": "2217d223a60113046b17070173deb426df69ed6956e130ec76d593600e6320b2",
+  "parquet_size_bytes": 26977,
+  "hash_alg": "sha256"
  },
  "adlbc": {
   "label": "Analysis Dataset Lab Blood Chemistry",
@@ -1091,7 +1097,9 @@
     "role": null
    }
   },
-  "parquet_hash": "52ba3baf1ef2d97efbd42a7b8d6b28df66b071d4267c610b4bf1554f1df07691"
+  "parquet_hash": "52ba3baf1ef2d97efbd42a7b8d6b28df66b071d4267c610b4bf1554f1df07691",
+  "parquet_size_bytes": 544924,
+  "hash_alg": "sha256"
  },
  "adlbcpv": {
   "label": "Analysis Dataset Lab Blood Chemistry (Previous Visit)",
@@ -1375,7 +1383,9 @@
     "role": null
    }
   },
-  "parquet_hash": "cea67d5a434dfef8157b2a3cc4f46b88d4e40cdb8b1b43a90464cebe19a0bd06"
+  "parquet_hash": "cea67d5a434dfef8157b2a3cc4f46b88d4e40cdb8b1b43a90464cebe19a0bd06",
+  "parquet_size_bytes": 237729,
+  "hash_alg": "sha256"
  },
  "adlbh": {
   "label": "Analysis Dataset Lab Hematology",
@@ -1659,7 +1669,9 @@
     "role": null
    }
   },
-  "parquet_hash": "e15ab5674a78f908f39dac291f283fbbc64ad9857ec1bd8de1478a8d6755da2f"
+  "parquet_hash": "e15ab5674a78f908f39dac291f283fbbc64ad9857ec1bd8de1478a8d6755da2f",
+  "parquet_size_bytes": 403420,
+  "hash_alg": "sha256"
  },
  "adlbhpv": {
   "label": "Analysis Dataset Lab Hematology (Previous Visit)",
@@ -1943,7 +1955,9 @@
     "role": null
    }
   },
-  "parquet_hash": "510041d04ae86a25e1d33c09d09dd08a7b88798da0cf045c31b97e8334cf7a72"
+  "parquet_hash": "510041d04ae86a25e1d33c09d09dd08a7b88798da0cf045c31b97e8334cf7a72",
+  "parquet_size_bytes": 189701,
+  "hash_alg": "sha256"
  },
  "adlbhy": {
   "label": "Analysis Dataset Lab Hy's Law",
@@ -2209,7 +2223,9 @@
     "role": null
    }
   },
-  "parquet_hash": "47309869add3b8c8adae8a12a486a2941fc351295f016c4f6d3af1ac39f0948e"
+  "parquet_hash": "47309869add3b8c8adae8a12a486a2941fc351295f016c4f6d3af1ac39f0948e",
+  "parquet_size_bytes": 77090,
+  "hash_alg": "sha256"
  },
  "adnpix": {
   "label": "NPI-X Item Analysis Data",
@@ -2463,7 +2479,9 @@
     "role": null
    }
   },
-  "parquet_hash": "7bed4900e1ed9ff4ff1ffb05056996b4fc28bb92a403a20d3ee058c59bfd6bdd"
+  "parquet_hash": "7bed4900e1ed9ff4ff1ffb05056996b4fc28bb92a403a20d3ee058c59bfd6bdd",
+  "parquet_size_bytes": 161956,
+  "hash_alg": "sha256"
  },
  "adsl": {
   "label": "Subject-Level Analysis",
@@ -2765,7 +2783,9 @@
     "role": null
    }
   },
-  "parquet_hash": "c2e8a1d0509ccf2242a46c93d0a0d10afc7f59e8469b489c478a8b5a04579f0f"
+  "parquet_hash": "c2e8a1d0509ccf2242a46c93d0a0d10afc7f59e8469b489c478a8b5a04579f0f",
+  "parquet_size_bytes": 37014,
+  "hash_alg": "sha256"
  },
  "adtte": {
   "label": "AE Time To 1st Derm. Event Analysis",
@@ -2929,7 +2949,9 @@
     "role": null
    }
   },
-  "parquet_hash": "fae47d860caa0878e760565c7914838b75a60dd57af11bbbc82ab547b52cba5a"
+  "parquet_hash": "fae47d860caa0878e760565c7914838b75a60dd57af11bbbc82ab547b52cba5a",
+  "parquet_size_bytes": 18513,
+  "hash_alg": "sha256"
  },
  "advs": {
   "label": "Vital Signs Analysis Dataset",
@@ -3147,6 +3169,8 @@
     "role": null
    }
   },
-  "parquet_hash": "14fe62c3d172dea621a3b6acfb6d83ddff08915763d28b7638de7969c16a5b34"
+  "parquet_hash": "14fe62c3d172dea621a3b6acfb6d83ddff08915763d28b7638de7969c16a5b34",
+  "parquet_size_bytes": 245479,
+  "hash_alg": "sha256"
  }
 }

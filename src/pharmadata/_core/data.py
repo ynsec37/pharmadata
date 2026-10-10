@@ -47,8 +47,10 @@ class ColumnSpec(TypedDict):
 class DatasetMetaEntry(TypedDict):
     """One dataset's entry in a collection's ``_meta.json``.
 
-    ``parquet_hash`` is written by the build pipeline to enable incremental
-    refresh and is absent in hand-authored or legacy entries.
+    ``parquet_hash`` and friends are written by the build pipeline to enable
+    incremental refresh and integrity checks; they are absent in hand-authored
+    or legacy entries. ``hash_alg`` names the algorithm used for
+    ``parquet_hash`` (currently ``"sha256"``).
     """
 
     label: str | None
@@ -56,6 +58,8 @@ class DatasetMetaEntry(TypedDict):
     n_rows: int
     columns: dict[str, ColumnSpec]
     parquet_hash: NotRequired[str]
+    parquet_size_bytes: NotRequired[int]
+    hash_alg: NotRequired[str]
 
 
 # The directory the shipped data lives in, a sibling of this ``_core`` package.

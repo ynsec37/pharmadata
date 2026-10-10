@@ -227,7 +227,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "4530bb856ca703e085b3273909278fada6b16d9311061d4557dd910a7d6a6508"
+  "parquet_hash": "4530bb856ca703e085b3273909278fada6b16d9311061d4557dd910a7d6a6508",
+  "parquet_size_bytes": 50050,
+  "hash_alg": "sha256"
  },
  "cm": {
   "label": "Concomitant Medications",
@@ -373,7 +375,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "4a26349942a5584d3561bb60bd21d98da8066a7857b705b0077c77218a85333a"
+  "parquet_hash": "4a26349942a5584d3561bb60bd21d98da8066a7857b705b0077c77218a85333a",
+  "parquet_size_bytes": 81508,
+  "hash_alg": "sha256"
  },
  "dm": {
   "label": "Demographics",
@@ -531,7 +535,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "7bd7ffd25eb6464af7d9516266f371ba4ad7eafec6af618918f779441672aee4"
+  "parquet_hash": "7bd7ffd25eb6464af7d9516266f371ba4ad7eafec6af618918f779441672aee4",
+  "parquet_size_bytes": 23309,
+  "hash_alg": "sha256"
  },
  "ds": {
   "label": "Disposition",
@@ -629,7 +635,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "807555f5827a25f3673ac43447c3b1a9511b80964b065985ccb20fd9c3ca4965"
+  "parquet_hash": "807555f5827a25f3673ac43447c3b1a9511b80964b065985ccb20fd9c3ca4965",
+  "parquet_size_bytes": 19966,
+  "hash_alg": "sha256"
  },
  "ex": {
   "label": "Exposure",
@@ -745,7 +753,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "e2c4f401861d09b8872d4382d528e1960b6280f2be062fc14a4464cbd14935ce"
+  "parquet_hash": "e2c4f401861d09b8872d4382d528e1960b6280f2be062fc14a4464cbd14935ce",
+  "parquet_size_bytes": 16336,
+  "hash_alg": "sha256"
  },
  "lbch": {
   "label": "Laboratory Tests Results",
@@ -897,7 +907,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "d80dc97fab8f5ed8bc25354a8afcf8877798873a21a753ffd6ce61060488341a"
+  "parquet_hash": "d80dc97fab8f5ed8bc25354a8afcf8877798873a21a753ffd6ce61060488341a",
+  "parquet_size_bytes": 260996,
+  "hash_alg": "sha256"
  },
  "lbhe": {
   "label": "Laboratory Tests Results",
@@ -1049,7 +1061,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "9100b5512720b280efae520adaea46cb67d44a9cf02d1d7bed06a948e8f3463b"
+  "parquet_hash": "9100b5512720b280efae520adaea46cb67d44a9cf02d1d7bed06a948e8f3463b",
+  "parquet_size_bytes": 218207,
+  "hash_alg": "sha256"
  },
  "lbur": {
   "label": "Laboratory Tests Results",
@@ -1201,7 +1215,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "f5cd976a7ef162be5f03ee2258c977ea90e505da084d7e835c61d508207f2a2b"
+  "parquet_hash": "f5cd976a7ef162be5f03ee2258c977ea90e505da084d7e835c61d508207f2a2b",
+  "parquet_size_bytes": 66214,
+  "hash_alg": "sha256"
  },
  "mh": {
   "label": "Medical History",
@@ -1323,7 +1339,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "3f46fa70bfd31805a90ec4c112b3fe27aa5009bd544e3dac21be45d3b52a0b60"
+  "parquet_hash": "3f46fa70bfd31805a90ec4c112b3fe27aa5009bd544e3dac21be45d3b52a0b60",
+  "parquet_size_bytes": 54407,
+  "hash_alg": "sha256"
  },
  "qsco": {
   "label": "Questionnaires",
@@ -1469,7 +1487,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "fd59a42f37c728606d55a57909242bb770c91059b7dfb3336e5452cb6e44e1ce"
+  "parquet_hash": "fd59a42f37c728606d55a57909242bb770c91059b7dfb3336e5452cb6e44e1ce",
+  "parquet_size_bytes": 60756,
+  "hash_alg": "sha256"
  },
  "qsda": {
   "label": "Questionnaires",
@@ -1615,7 +1635,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "fe09242ca409d977481c923528877874d6304a09869768b84beecdf84ab8b0fd"
+  "parquet_hash": "fe09242ca409d977481c923528877874d6304a09869768b84beecdf84ab8b0fd",
+  "parquet_size_bytes": 56497,
+  "hash_alg": "sha256"
  },
  "qsgi": {
   "label": "Questionnaires",
@@ -1761,7 +1783,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "018531811c8a504c9e0b558edb08c137333d1951ef6ee40d91aad1ebbffb6e35"
+  "parquet_hash": "018531811c8a504c9e0b558edb08c137333d1951ef6ee40d91aad1ebbffb6e35",
+  "parquet_size_bytes": 15330,
+  "hash_alg": "sha256"
  },
  "qshi": {
   "label": "Questionnaires",
@@ -1907,7 +1931,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "4bb19e6800feb6d3fe458cb0f6df1166dadcaee28d282af42ac8f68e00ce68d8"
+  "parquet_hash": "4bb19e6800feb6d3fe458cb0f6df1166dadcaee28d282af42ac8f68e00ce68d8",
+  "parquet_size_bytes": 13995,
+  "hash_alg": "sha256"
  },
  "qsmm": {
   "label": "Questionnaires",
@@ -2053,7 +2079,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "24a5e3acd884f8e4b19eb6e9233727b2f9f723d69ea5f837535fe8cfc7592ae5"
+  "parquet_hash": "24a5e3acd884f8e4b19eb6e9233727b2f9f723d69ea5f837535fe8cfc7592ae5",
+  "parquet_size_bytes": 16514,
+  "hash_alg": "sha256"
  },
  "qsni": {
   "label": "Questionnaires",
@@ -2199,7 +2227,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "a4c56249e267e769522f3f72c4ffe52cd9c1e1b96ddf20dcd6b4b61ac9feddd8"
+  "parquet_hash": "a4c56249e267e769522f3f72c4ffe52cd9c1e1b96ddf20dcd6b4b61ac9feddd8",
+  "parquet_size_bytes": 304604,
+  "hash_alg": "sha256"
  },
  "relrec": {
   "label": "Related Records",
@@ -2249,7 +2279,9 @@
     "role": "TOPIC"
    }
   },
-  "parquet_hash": "1068a738087310070a11c0df8700b89780b4750f7b9454b4a83e5ac769bfcd3a"
+  "parquet_hash": "1068a738087310070a11c0df8700b89780b4750f7b9454b4a83e5ac769bfcd3a",
+  "parquet_size_bytes": 4724,
+  "hash_alg": "sha256"
  },
  "sc": {
   "label": "Subject Characteristics",
@@ -2341,7 +2373,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "c92a9a63d6b5cba3baed2b0dfb5e00f4568a7b9f312af176d777c51939000e3d"
+  "parquet_hash": "c92a9a63d6b5cba3baed2b0dfb5e00f4568a7b9f312af176d777c51939000e3d",
+  "parquet_size_bytes": 9404,
+  "hash_alg": "sha256"
  },
  "se": {
   "label": "Subject Elements",
@@ -2421,7 +2455,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "f4dac6b8d9264dfc3f07f5e49aa95e917cbc6d51babdd51dbe32360d4bde5cb0"
+  "parquet_hash": "f4dac6b8d9264dfc3f07f5e49aa95e917cbc6d51babdd51dbe32360d4bde5cb0",
+  "parquet_size_bytes": 16766,
+  "hash_alg": "sha256"
  },
  "suppae": {
   "label": "Supplemental Qualifiers for AE",
@@ -2489,7 +2525,9 @@
     "role": "RESULT QUALIFIER"
    }
   },
-  "parquet_hash": "88f3a22cc6638dfe8e974c6851f472bd3c9bc3f6e1d241b41598ace098879bd1"
+  "parquet_hash": "88f3a22cc6638dfe8e974c6851f472bd3c9bc3f6e1d241b41598ace098879bd1",
+  "parquet_size_bytes": 6640,
+  "hash_alg": "sha256"
  },
  "suppdm": {
   "label": "Supplemental Qualifiers for DM",
@@ -2557,7 +2595,9 @@
     "role": "RESULT QUALIFIER"
    }
   },
-  "parquet_hash": "b74fc176a0e67cad23ea0f261ebb494867fbc6f0dbe30be4cd84a28840cd30b8"
+  "parquet_hash": "b74fc176a0e67cad23ea0f261ebb494867fbc6f0dbe30be4cd84a28840cd30b8",
+  "parquet_size_bytes": 6970,
+  "hash_alg": "sha256"
  },
  "suppds": {
   "label": "Supplemental Qualifiers for DS",
@@ -2625,7 +2665,9 @@
     "role": "RESULT QUALIFIER"
    }
   },
-  "parquet_hash": "a82a714726708c4e53d1ab4b114fd926894e79b508feb0f3d1a015b365805966"
+  "parquet_hash": "a82a714726708c4e53d1ab4b114fd926894e79b508feb0f3d1a015b365805966",
+  "parquet_size_bytes": 3819,
+  "hash_alg": "sha256"
  },
  "supplbch": {
   "label": "Supplemental Qualifiers for LB",
@@ -2693,7 +2735,9 @@
     "role": "RESULT QUALIFIER"
    }
   },
-  "parquet_hash": "1d0fdcf344c96264d42a2e791386a2cdd79943281a5564e107a449ad25757086"
+  "parquet_hash": "1d0fdcf344c96264d42a2e791386a2cdd79943281a5564e107a449ad25757086",
+  "parquet_size_bytes": 61718,
+  "hash_alg": "sha256"
  },
  "supplbhe": {
   "label": "Supplemental Qualifiers for LB",
@@ -2761,7 +2805,9 @@
     "role": "RESULT QUALIFIER"
    }
   },
-  "parquet_hash": "49bf47953b2433b314093c1e9b1dfe90833ac3ebebf911b445a2aa02f732304b"
+  "parquet_hash": "49bf47953b2433b314093c1e9b1dfe90833ac3ebebf911b445a2aa02f732304b",
+  "parquet_size_bytes": 41186,
+  "hash_alg": "sha256"
  },
  "supplbur": {
   "label": "Supplemental Qualifiers for LB",
@@ -2829,7 +2875,9 @@
     "role": "RESULT QUALIFIER"
    }
   },
-  "parquet_hash": "15625b91b825ae640f65311cfc969b27e266ef977d7170b7006d868a4692722f"
+  "parquet_hash": "15625b91b825ae640f65311cfc969b27e266ef977d7170b7006d868a4692722f",
+  "parquet_size_bytes": 10684,
+  "hash_alg": "sha256"
  },
  "sv": {
   "label": "Subject Visits",
@@ -2909,7 +2957,9 @@
     "role": "SYNONYM QUALIFIER"
    }
   },
-  "parquet_hash": "b05ca2b852effe099a4dc073b78119a66b021a703f376e9e635cee01142bfdf6"
+  "parquet_hash": "b05ca2b852effe099a4dc073b78119a66b021a703f376e9e635cee01142bfdf6",
+  "parquet_size_bytes": 37037,
+  "hash_alg": "sha256"
  },
  "ta": {
   "label": "Trial Arms",
@@ -2977,7 +3027,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "94c540457ebfbbce5cdba73caff86061bdfb9b3b5a04dc88f251d673788cc218"
+  "parquet_hash": "94c540457ebfbbce5cdba73caff86061bdfb9b3b5a04dc88f251d673788cc218",
+  "parquet_size_bytes": 4055,
+  "hash_alg": "sha256"
  },
  "te": {
   "label": "Trial Elements",
@@ -3027,7 +3079,9 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "afd3cb88994c27a13abb0174f25fb4117dfa65d094f4c808e0b4e4795fd28237"
+  "parquet_hash": "afd3cb88994c27a13abb0174f25fb4117dfa65d094f4c808e0b4e4795fd28237",
+  "parquet_size_bytes": 3573,
+  "hash_alg": "sha256"
  },
  "ti": {
   "label": "Trial Inclusion/ Exclusion Criteria",
@@ -3065,7 +3119,9 @@
     "role": "GROUPING QUALIFIER"
    }
   },
-  "parquet_hash": "22f8ca61213db2c66a6eb9e4f5af85348d38c782cffef3044b51d24ee8007c9b"
+  "parquet_hash": "22f8ca61213db2c66a6eb9e4f5af85348d38c782cffef3044b51d24ee8007c9b",
+  "parquet_size_bytes": 4670,
+  "hash_alg": "sha256"
  },
  "ts": {
   "label": "Trial Summary",
@@ -3133,7 +3189,9 @@
     "role": "RESULT QUALIFIER"
    }
   },
-  "parquet_hash": "63afe4f3d0899b7eef2c0475cb5a4402a677b17514a94fc4606a1c643d6220e6"
+  "parquet_hash": "63afe4f3d0899b7eef2c0475cb5a4402a677b17514a94fc4606a1c643d6220e6",
+  "parquet_size_bytes": 6575,
+  "hash_alg": "sha256"
  },
  "tv": {
   "label": "Trial Visits",
@@ -3189,7 +3247,9 @@
     "role": "RULE"
    }
   },
-  "parquet_hash": "e7abd817a39cd1f2068b8095ebaf911d3129ca871d30baa9a93155de072f3d58"
+  "parquet_hash": "e7abd817a39cd1f2068b8095ebaf911d3129ca871d30baa9a93155de072f3d58",
+  "parquet_size_bytes": 4406,
+  "hash_alg": "sha256"
  },
  "vs": {
   "label": "Vital Signs",
@@ -3347,6 +3407,8 @@
     "role": "TIMING"
    }
   },
-  "parquet_hash": "f678751740f3132d3e158075a38281dcf519c26133b65d96335917cbe696a9e5"
+  "parquet_hash": "f678751740f3132d3e158075a38281dcf519c26133b65d96335917cbe696a9e5",
+  "parquet_size_bytes": 200274,
+  "hash_alg": "sha256"
  }
 }

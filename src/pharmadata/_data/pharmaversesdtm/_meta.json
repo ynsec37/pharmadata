@@ -215,7 +215,9 @@
     "role": null
    }
   },
-  "parquet_hash": "2e551f06dbb3b6ff12b2def54b4fc45a733e2f2bd880f149ae9edb01486b61ca"
+  "parquet_hash": "2e551f06dbb3b6ff12b2def54b4fc45a733e2f2bd880f149ae9edb01486b61ca",
+  "parquet_size_bytes": 51104,
+  "hash_alg": "sha256"
  },
  "ae_ophtha": {
   "label": "Adverse Events for Ophthalmology",
@@ -445,7 +447,9 @@
     "role": null
    }
   },
-  "parquet_hash": "da0941e637e246c16fdb4a86bb0e94abcf273df00b8d9f4c548a71a2345bd0e5"
+  "parquet_hash": "da0941e637e246c16fdb4a86bb0e94abcf273df00b8d9f4c548a71a2345bd0e5",
+  "parquet_size_bytes": 51831,
+  "hash_alg": "sha256"
  },
  "ag_neuro": {
   "label": "Procedure Agents Dataset-neuro",
@@ -531,7 +535,9 @@
     "role": null
    }
   },
-  "parquet_hash": "564942970437946d7332105a971e35a6f143e418d5284f727432084f545e413e"
+  "parquet_hash": "564942970437946d7332105a971e35a6f143e418d5284f727432084f545e413e",
+  "parquet_size_bytes": 5814,
+  "hash_alg": "sha256"
  },
  "be": {
   "label": "Biospecimen Events",
@@ -617,7 +623,9 @@
     "role": null
    }
   },
-  "parquet_hash": "16200ab4cf4f598b20974ab05a0d8f7c9ac2f61714ce6dc805986724d916ccd5"
+  "parquet_hash": "16200ab4cf4f598b20974ab05a0d8f7c9ac2f61714ce6dc805986724d916ccd5",
+  "parquet_size_bytes": 6100,
+  "hash_alg": "sha256"
  },
  "ce_vaccine": {
   "label": "Clinical Events for Vaccine",
@@ -799,7 +807,9 @@
     "role": null
    }
   },
-  "parquet_hash": "adb98456f62fbb65111a22a11c4de38d5de8212835107f5cf0e4dfa377566e85"
+  "parquet_hash": "adb98456f62fbb65111a22a11c4de38d5de8212835107f5cf0e4dfa377566e85",
+  "parquet_size_bytes": 12262,
+  "hash_alg": "sha256"
  },
  "cm": {
   "label": "Concomitant Medication",
@@ -939,7 +949,9 @@
     "role": null
    }
   },
-  "parquet_hash": "83d0166d4755bd712d2db2fc4326adc981cb77f40e0cb9bac52120c2eccab5fc"
+  "parquet_hash": "83d0166d4755bd712d2db2fc4326adc981cb77f40e0cb9bac52120c2eccab5fc",
+  "parquet_size_bytes": 68438,
+  "hash_alg": "sha256"
  },
  "dm": {
   "label": "Demography",
@@ -1115,7 +1127,9 @@
     "role": null
    }
   },
-  "parquet_hash": "9c3748ed9b9bb11b7b08851dfee0a271de19e511e504b6d292b34d832c7e53ac"
+  "parquet_hash": "9c3748ed9b9bb11b7b08851dfee0a271de19e511e504b6d292b34d832c7e53ac",
+  "parquet_size_bytes": 26477,
+  "hash_alg": "sha256"
  },
  "dm_metabolic": {
   "label": "Demographic Dataset-metabolic",
@@ -1291,7 +1305,9 @@
     "role": null
    }
   },
-  "parquet_hash": "9d1872800719ad4bb675842b4619922824f8c946c9c822eff777aeabe46888d0"
+  "parquet_hash": "9d1872800719ad4bb675842b4619922824f8c946c9c822eff777aeabe46888d0",
+  "parquet_size_bytes": 10122,
+  "hash_alg": "sha256"
  },
  "dm_neuro": {
   "label": "Demographic Dataset-neuro",
@@ -1467,7 +1483,9 @@
     "role": null
    }
   },
-  "parquet_hash": "551de25003e6a25f8079c048f7965fbf4ef47b7c8399546daf5415c5157bbf68"
+  "parquet_hash": "551de25003e6a25f8079c048f7965fbf4ef47b7c8399546daf5415c5157bbf68",
+  "parquet_size_bytes": 11452,
+  "hash_alg": "sha256"
  },
  "dm_peds": {
   "label": "Demographic Dataset-pediatrics",
@@ -1643,7 +1661,9 @@
     "role": null
    }
   },
-  "parquet_hash": "3238a0be34670d5e03f9faf82003f7bb8ad7e65eaba020c0da60b29bfb4c93fd"
+  "parquet_hash": "3238a0be34670d5e03f9faf82003f7bb8ad7e65eaba020c0da60b29bfb4c93fd",
+  "parquet_size_bytes": 10259,
+  "hash_alg": "sha256"
  },
  "dm_vaccine": {
   "label": "Demographics for Vaccine",
@@ -1831,7 +1851,9 @@
     "role": null
    }
   },
-  "parquet_hash": "e8ce9974e8d410afde690310eb60b3d20860cb20f828ff39174245c96db9e6f5"
+  "parquet_hash": "e8ce9974e8d410afde690310eb60b3d20860cb20f828ff39174245c96db9e6f5",
+  "parquet_size_bytes": 10794,
+  "hash_alg": "sha256"
  },
  "ds": {
   "label": "Disposition",
@@ -1917,7 +1939,9 @@
     "role": null
    }
   },
-  "parquet_hash": "80c62ef4fa846800b7095452cf9c2fccf56840737dd2b253cde11f92a6485a12"
+  "parquet_hash": "80c62ef4fa846800b7095452cf9c2fccf56840737dd2b253cde11f92a6485a12",
+  "parquet_size_bytes": 20811,
+  "hash_alg": "sha256"
  },
  "eg": {
   "label": "Electrocardiogram",
@@ -2063,7 +2087,9 @@
     "role": null
    }
   },
-  "parquet_hash": "12f56828c9103078260e88985b7b29012a4ea6b03293fdf64eec75e63f40074f"
+  "parquet_hash": "12f56828c9103078260e88985b7b29012a4ea6b03293fdf64eec75e63f40074f",
+  "parquet_size_bytes": 166367,
+  "hash_alg": "sha256"
  },
  "ex": {
   "label": "Exposure",
@@ -2173,7 +2199,9 @@
     "role": null
    }
   },
-  "parquet_hash": "296c5765938f82249ca53410d7f89d8f641840d2684393fae71433479364bb9e"
+  "parquet_hash": "296c5765938f82249ca53410d7f89d8f641840d2684393fae71433479364bb9e",
+  "parquet_size_bytes": 16046,
+  "hash_alg": "sha256"
  },
  "ex_ophtha": {
   "label": "Exposure for Ophthalmology",
@@ -2295,7 +2323,9 @@
     "role": null
    }
   },
-  "parquet_hash": "45503c056b0864bcf3e24f04956121f2178e1727e4de69f65dcecd5fa5799675"
+  "parquet_hash": "45503c056b0864bcf3e24f04956121f2178e1727e4de69f65dcecd5fa5799675",
+  "parquet_size_bytes": 16845,
+  "hash_alg": "sha256"
  },
  "ex_vaccine": {
   "label": "Exposures for Vaccine",
@@ -2417,7 +2447,9 @@
     "role": null
    }
   },
-  "parquet_hash": "18642fd468867db07ffd79b0a82ed2b25e27a2e9fa2c09cf39f51d0c743335e6"
+  "parquet_hash": "18642fd468867db07ffd79b0a82ed2b25e27a2e9fa2c09cf39f51d0c743335e6",
+  "parquet_size_bytes": 7420,
+  "hash_alg": "sha256"
  },
  "face_vaccine": {
   "label": "Findings About Clinical Events for Vaccine",
@@ -2605,7 +2637,9 @@
     "role": null
    }
   },
-  "parquet_hash": "a23696fea58779b6e513b68cab0fcd6f71b5f08f9e1461bf158fb0ac8761360f"
+  "parquet_hash": "a23696fea58779b6e513b68cab0fcd6f71b5f08f9e1461bf158fb0ac8761360f",
+  "parquet_size_bytes": 15956,
+  "hash_alg": "sha256"
  },
  "is_ada": {
   "label": "Immunogenicity Specimen Assessments for ADA",
@@ -2775,7 +2809,9 @@
     "role": null
    }
   },
-  "parquet_hash": "d554cba912a561c6a2ebf427945cab9da361d98b2217b6cb755a9f5fe5162052"
+  "parquet_hash": "d554cba912a561c6a2ebf427945cab9da361d98b2217b6cb755a9f5fe5162052",
+  "parquet_size_bytes": 18641,
+  "hash_alg": "sha256"
  },
  "is_vaccine": {
   "label": "Immunogenicity Specimen Assessments for Vaccine",
@@ -2927,7 +2963,9 @@
     "role": null
    }
   },
-  "parquet_hash": "0492ae152cc870bd25ab9faec1504da89b4b44fd0671dbc8e7101414580aa658"
+  "parquet_hash": "0492ae152cc870bd25ab9faec1504da89b4b44fd0671dbc8e7101414580aa658",
+  "parquet_size_bytes": 9179,
+  "hash_alg": "sha256"
  },
  "lb": {
   "label": "Laboratory Measurements",
@@ -3073,7 +3111,9 @@
     "role": null
    }
   },
-  "parquet_hash": "3bacb945480696a72d1749298edc1dc505b9e9c096fa0baaea0af016850f4912"
+  "parquet_hash": "3bacb945480696a72d1749298edc1dc505b9e9c096fa0baaea0af016850f4912",
+  "parquet_size_bytes": 568538,
+  "hash_alg": "sha256"
  },
  "lb_metabolic": {
   "label": "Laboratory Measurements Dataset-metabolic",
@@ -3225,7 +3265,9 @@
     "role": null
    }
   },
-  "parquet_hash": "c9965f5ccc280b1d556ff561d289407cf8e3e4160349c9fd4d8e110035508686"
+  "parquet_hash": "c9965f5ccc280b1d556ff561d289407cf8e3e4160349c9fd4d8e110035508686",
+  "parquet_size_bytes": 16416,
+  "hash_alg": "sha256"
  },
  "lb_neuro": {
   "label": "Laboratory Test Dataset-neuro",
@@ -3371,7 +3413,9 @@
     "role": null
    }
   },
-  "parquet_hash": "f5cb0589ca5220e3489f3ea8fbb4fa374c62f5b930e6687869f83ae30f120bbf"
+  "parquet_hash": "f5cb0589ca5220e3489f3ea8fbb4fa374c62f5b930e6687869f83ae30f120bbf",
+  "parquet_size_bytes": 13856,
+  "hash_alg": "sha256"
  },
  "lb_onco_pcwg3": {
   "label": "Laboratory Measurements (PSA) for Oncology",
@@ -3487,7 +3531,9 @@
     "role": null
    }
   },
-  "parquet_hash": "6b205002497feac2524fba5ba51df0a896fce2403e386e8e2b61e8d6bbcda301"
+  "parquet_hash": "6b205002497feac2524fba5ba51df0a896fce2403e386e8e2b61e8d6bbcda301",
+  "parquet_size_bytes": 8150,
+  "hash_alg": "sha256"
  },
  "mb": {
   "label": "Microbiology Specimen",
@@ -3621,7 +3667,9 @@
     "role": null
    }
   },
-  "parquet_hash": "de425b23c88ebdfdcf79a9cc0da801317c08932da76fdbb30893e559fe7ee306"
+  "parquet_hash": "de425b23c88ebdfdcf79a9cc0da801317c08932da76fdbb30893e559fe7ee306",
+  "parquet_size_bytes": 8793,
+  "hash_alg": "sha256"
  },
  "mh": {
   "label": "Medical History",
@@ -3797,7 +3845,9 @@
     "role": null
    }
   },
-  "parquet_hash": "0e83c3c3f802942a58733bd5a541e26007cd937c82af2b32f964444132e6aab7"
+  "parquet_hash": "0e83c3c3f802942a58733bd5a541e26007cd937c82af2b32f964444132e6aab7",
+  "parquet_size_bytes": 61861,
+  "hash_alg": "sha256"
  },
  "ms": {
   "label": "Microbiology Susceptibility",
@@ -3943,7 +3993,9 @@
     "role": null
    }
   },
-  "parquet_hash": "d98cbdac6477a16e0412328e26ff6620c7d1bc38a5819a45dbddf1d6a573de52"
+  "parquet_hash": "d98cbdac6477a16e0412328e26ff6620c7d1bc38a5819a45dbddf1d6a573de52",
+  "parquet_size_bytes": 9994,
+  "hash_alg": "sha256"
  },
  "nv_neuro": {
   "label": "Neurological Assessment Dataset-neuro",
@@ -4077,7 +4129,9 @@
     "role": null
    }
   },
-  "parquet_hash": "9787490bda84c04a7a2a7bb5e1e02cf423fafda8324b7b7fd82d48cedc1d676c"
+  "parquet_hash": "9787490bda84c04a7a2a7bb5e1e02cf423fafda8324b7b7fd82d48cedc1d676c",
+  "parquet_size_bytes": 11367,
+  "hash_alg": "sha256"
  },
  "oe_ophtha": {
   "label": "Ophthalmic Examinations for Ophthalmology",
@@ -4235,7 +4289,9 @@
     "role": null
    }
   },
-  "parquet_hash": "9bfeee6aa99e3bc785c23b9384f33ddc6b7dbb40381ccb2c4d9686daca1ba0d6"
+  "parquet_hash": "9bfeee6aa99e3bc785c23b9384f33ddc6b7dbb40381ccb2c4d9686daca1ba0d6",
+  "parquet_size_bytes": 262208,
+  "hash_alg": "sha256"
  },
  "pc": {
   "label": "Pharmacokinetic Concentrations",
@@ -4369,7 +4425,9 @@
     "role": null
    }
   },
-  "parquet_hash": "c697ef2c548180203619933e986d87f30ba37c98571fc96654136c6a967018a4"
+  "parquet_hash": "c697ef2c548180203619933e986d87f30ba37c98571fc96654136c6a967018a4",
+  "parquet_size_bytes": 133321,
+  "hash_alg": "sha256"
  },
  "pp": {
   "label": "Pharmacokinetic Parameters",
@@ -4461,7 +4519,9 @@
     "role": null
    }
   },
-  "parquet_hash": "cbd8f1a0bc5d69421dc958a43d62dc40b7b12897189a3625a07d91929c220021"
+  "parquet_hash": "cbd8f1a0bc5d69421dc958a43d62dc40b7b12897189a3625a07d91929c220021",
+  "parquet_size_bytes": 51538,
+  "hash_alg": "sha256"
  },
  "qs_metabolic": {
   "label": "Questionnaire Dataset-metabolic",
@@ -4577,7 +4637,9 @@
     "role": null
    }
   },
-  "parquet_hash": "5d7d1304b53453334f7a8f2f717429dfd1021c60a49f23b9a02c593c812cf011"
+  "parquet_hash": "5d7d1304b53453334f7a8f2f717429dfd1021c60a49f23b9a02c593c812cf011",
+  "parquet_size_bytes": 13970,
+  "hash_alg": "sha256"
  },
  "qs_ophtha": {
   "label": "Questionnaire for Ophthalmology",
@@ -4705,7 +4767,9 @@
     "role": null
    }
   },
-  "parquet_hash": "e129f39df52a407d9666b8bc0a07530b376a32f012dd76e1c9fbd3e6acebfaf5"
+  "parquet_hash": "e129f39df52a407d9666b8bc0a07530b376a32f012dd76e1c9fbd3e6acebfaf5",
+  "parquet_size_bytes": 10315,
+  "hash_alg": "sha256"
  },
  "rs_onco_ca125": {
   "label": "Disease Response (GCIG)",
@@ -4791,7 +4855,9 @@
     "role": null
    }
   },
-  "parquet_hash": "bd280100dd82a91e68bc0dfe1337fe06e3e79b2c718867f680e0d7e0f0cd8d7d"
+  "parquet_hash": "bd280100dd82a91e68bc0dfe1337fe06e3e79b2c718867f680e0d7e0f0cd8d7d",
+  "parquet_size_bytes": 5687,
+  "hash_alg": "sha256"
  },
  "rs_onco_imwg": {
   "label": "Disease Response (IMWG)",
@@ -4901,7 +4967,9 @@
     "role": null
    }
   },
-  "parquet_hash": "718320501d441808034e5b928d38b989147cc13b2dbe7b5aeb5c525ae004d04c"
+  "parquet_hash": "718320501d441808034e5b928d38b989147cc13b2dbe7b5aeb5c525ae004d04c",
+  "parquet_size_bytes": 7098,
+  "hash_alg": "sha256"
  },
  "rs_onco_irecist": {
   "label": "Disease Response (iRECIST) for Oncology",
@@ -5023,7 +5091,9 @@
     "role": null
    }
   },
-  "parquet_hash": "7c10b6df0a918cd91b6e5916b7348a436f0c707272c1f19ebd754283dc793d0f"
+  "parquet_hash": "7c10b6df0a918cd91b6e5916b7348a436f0c707272c1f19ebd754283dc793d0f",
+  "parquet_size_bytes": 9950,
+  "hash_alg": "sha256"
  },
  "rs_onco_lymphoma": {
   "label": "Disease Response (Lymphoma Lugano 2014)",
@@ -5133,7 +5203,9 @@
     "role": null
    }
   },
-  "parquet_hash": "eccc404818007eb57bc10587fcd7453d8a887cf8ae0ae80b90f7209074f32400"
+  "parquet_hash": "eccc404818007eb57bc10587fcd7453d8a887cf8ae0ae80b90f7209074f32400",
+  "parquet_size_bytes": 7435,
+  "hash_alg": "sha256"
  },
  "rs_onco": {
   "label": "Disease Response for Oncology",
@@ -5255,7 +5327,9 @@
     "role": null
    }
   },
-  "parquet_hash": "da6ddaf267a10ab1b1db892e09892c71ae20a83323c6f9356aa491fdaff26b12"
+  "parquet_hash": "da6ddaf267a10ab1b1db892e09892c71ae20a83323c6f9356aa491fdaff26b12",
+  "parquet_size_bytes": 22728,
+  "hash_alg": "sha256"
  },
  "rs_onco_pcwg3": {
   "label": "Disease Response (PCWG3) for Oncology",
@@ -5347,7 +5421,9 @@
     "role": null
    }
   },
-  "parquet_hash": "3fca4eea1e629f957444b0f63d982e34e442e83d866dd88a88d2b66c2b0a70bf"
+  "parquet_hash": "3fca4eea1e629f957444b0f63d982e34e442e83d866dd88a88d2b66c2b0a70bf",
+  "parquet_size_bytes": 6428,
+  "hash_alg": "sha256"
  },
  "rs_onco_recist": {
   "label": "Disease Response (RECIST 1.1) for Oncology",
@@ -5439,7 +5515,9 @@
     "role": null
    }
   },
-  "parquet_hash": "e62ab925ee4aca112fa5f87e3133218d2f7013f1f04e29a785e9b47aad2048c7"
+  "parquet_hash": "e62ab925ee4aca112fa5f87e3133218d2f7013f1f04e29a785e9b47aad2048c7",
+  "parquet_size_bytes": 6001,
+  "hash_alg": "sha256"
  },
  "sc_ophtha": {
   "label": "Subject Characteristic for Ophthalmology",
@@ -5519,7 +5597,9 @@
     "role": null
    }
   },
-  "parquet_hash": "6fcbaf84ca9f1d5f72d8acec019400afc2f1b3f5de3966e31badd80e5ec4e98c"
+  "parquet_hash": "6fcbaf84ca9f1d5f72d8acec019400afc2f1b3f5de3966e31badd80e5ec4e98c",
+  "parquet_size_bytes": 8122,
+  "hash_alg": "sha256"
  },
  "sdg_db": {
   "label": "SDG",
@@ -5557,7 +5637,9 @@
     "role": null
    }
   },
-  "parquet_hash": "5a4761ab592a995c36389a287c0938af551cc727ce453129af573268643d1cb9"
+  "parquet_hash": "5a4761ab592a995c36389a287c0938af551cc727ce453129af573268643d1cb9",
+  "parquet_size_bytes": 2495,
+  "hash_alg": "sha256"
  },
  "smq_db": {
   "label": "Standardized MedDRA Queries",
@@ -5601,7 +5683,9 @@
     "role": null
    }
   },
-  "parquet_hash": "ac58e9c2d8bd17319ce7183456c4a1a588a43e69ed2b960ce3820e5530727e93"
+  "parquet_hash": "ac58e9c2d8bd17319ce7183456c4a1a588a43e69ed2b960ce3820e5530727e93",
+  "parquet_size_bytes": 3362,
+  "hash_alg": "sha256"
  },
  "suppae": {
   "label": "Supplemental Adverse Events",
@@ -5669,7 +5753,9 @@
     "role": null
    }
   },
-  "parquet_hash": "daab9c5a300261407b5ef55bcac7b234398b36b22eb1c1fb15e680ac5df16650"
+  "parquet_hash": "daab9c5a300261407b5ef55bcac7b234398b36b22eb1c1fb15e680ac5df16650",
+  "parquet_size_bytes": 6687,
+  "hash_alg": "sha256"
  },
  "suppce_vaccine": {
   "label": "Supplemental Qualifiers for Clinical Events for Vaccine",
@@ -5731,7 +5817,9 @@
     "role": null
    }
   },
-  "parquet_hash": "671000badf64ab120ad48c4c807069460a1c112f4fb045de7ed8f11f12c1e5d6"
+  "parquet_hash": "671000badf64ab120ad48c4c807069460a1c112f4fb045de7ed8f11f12c1e5d6",
+  "parquet_size_bytes": 3509,
+  "hash_alg": "sha256"
  },
  "suppdm": {
   "label": "Supplemental Demography",
@@ -5799,7 +5887,9 @@
     "role": null
    }
   },
-  "parquet_hash": "16e422739a8fdec75dfcf7d6992182582742a6fa55c2988e0e961a14b2141d1b"
+  "parquet_hash": "16e422739a8fdec75dfcf7d6992182582742a6fa55c2988e0e961a14b2141d1b",
+  "parquet_size_bytes": 6955,
+  "hash_alg": "sha256"
  },
  "suppdm_vaccine": {
   "label": "Supplemental Qualifiers for Demographics for Vaccine",
@@ -5861,7 +5951,9 @@
     "role": null
    }
   },
-  "parquet_hash": "ebddea0768926a01a65f2ae8778ac76e762e4ac4dcd531092fd8e8343811c0a7"
+  "parquet_hash": "ebddea0768926a01a65f2ae8778ac76e762e4ac4dcd531092fd8e8343811c0a7",
+  "parquet_size_bytes": 3414,
+  "hash_alg": "sha256"
  },
  "suppds": {
   "label": "Supplemental Disposition",
@@ -5923,7 +6015,9 @@
     "role": null
    }
   },
-  "parquet_hash": "db2b4328e2a89f6ee3b07b6cd0d8419e42fd72cf5406cdeab897f655c68bf712"
+  "parquet_hash": "db2b4328e2a89f6ee3b07b6cd0d8419e42fd72cf5406cdeab897f655c68bf712",
+  "parquet_size_bytes": 3561,
+  "hash_alg": "sha256"
  },
  "suppex_vaccine": {
   "label": "Supplemental Qualifiers for Exposures for Vaccine",
@@ -5985,7 +6079,9 @@
     "role": null
    }
   },
-  "parquet_hash": "e6546bbae047996a1503ea24fcc7c7dd166bbbb878ad50baf83a66011f48a9f3"
+  "parquet_hash": "e6546bbae047996a1503ea24fcc7c7dd166bbbb878ad50baf83a66011f48a9f3",
+  "parquet_size_bytes": 3548,
+  "hash_alg": "sha256"
  },
  "suppface_vaccine": {
   "label": "Supplemental Qualifiers for Findings About for Clinical Events for Vaccine",
@@ -6047,7 +6143,9 @@
     "role": null
    }
   },
-  "parquet_hash": "c81cad85fdc6a5a4dda024b1948a0f1300efad4dfb9253229bd12def48a54d3e"
+  "parquet_hash": "c81cad85fdc6a5a4dda024b1948a0f1300efad4dfb9253229bd12def48a54d3e",
+  "parquet_size_bytes": 3571,
+  "hash_alg": "sha256"
  },
  "suppis_vaccine": {
   "label": "Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine",
@@ -6115,7 +6213,9 @@
     "role": null
    }
   },
-  "parquet_hash": "ce54370abbe2f55b8873edbc507690ddc37acd0018f695c9eb87c4bf5a9b3396"
+  "parquet_hash": "ce54370abbe2f55b8873edbc507690ddc37acd0018f695c9eb87c4bf5a9b3396",
+  "parquet_size_bytes": 3777,
+  "hash_alg": "sha256"
  },
  "suppnv_neuro": {
   "label": "Supplemental for Neurological Assessment Dataset-neuro",
@@ -6183,7 +6283,9 @@
     "role": null
    }
   },
-  "parquet_hash": "2eb07b67722fe4bffd725c416458c864008f46bb9738dfe5e83722f4adc9fc04"
+  "parquet_hash": "2eb07b67722fe4bffd725c416458c864008f46bb9738dfe5e83722f4adc9fc04",
+  "parquet_size_bytes": 4287,
+  "hash_alg": "sha256"
  },
  "supprs_onco_ca125": {
   "label": "Supplemental Qualifiers for RS_ONCO_CA125",
@@ -6245,7 +6347,9 @@
     "role": null
    }
   },
-  "parquet_hash": "a7761305a7fa832ef71bc70f31ec1050c078bad19ee3f285da62358d745fe557"
+  "parquet_hash": "a7761305a7fa832ef71bc70f31ec1050c078bad19ee3f285da62358d745fe557",
+  "parquet_size_bytes": 3895,
+  "hash_alg": "sha256"
  },
  "supprs_onco_imwg": {
   "label": "Supplemental Qualifiers for RS_ONCO_IMWG",
@@ -6307,7 +6411,9 @@
     "role": null
    }
   },
-  "parquet_hash": "caaa01c00b3ae06bca3b822a85a35122e99efe0de0cfe1e6ea4707ed3100161a"
+  "parquet_hash": "caaa01c00b3ae06bca3b822a85a35122e99efe0de0cfe1e6ea4707ed3100161a",
+  "parquet_size_bytes": 3804,
+  "hash_alg": "sha256"
  },
  "supptr_onco": {
   "label": "Supplemental Tumor Results for Oncology",
@@ -6369,7 +6475,9 @@
     "role": null
    }
   },
-  "parquet_hash": "1cc6c1c68a5906e2095504dcff50cef33bcff235d5de18b1eae8e216d23a58d5"
+  "parquet_hash": "1cc6c1c68a5906e2095504dcff50cef33bcff235d5de18b1eae8e216d23a58d5",
+  "parquet_size_bytes": 30184,
+  "hash_alg": "sha256"
  },
  "sv": {
   "label": "Subject Visits",
@@ -6425,7 +6533,9 @@
     "role": null
    }
   },
-  "parquet_hash": "2c97a12df76a873ccfe8f5afe1a4ae9ff2cda483c68aa5a80aa10918378f6be3"
+  "parquet_hash": "2c97a12df76a873ccfe8f5afe1a4ae9ff2cda483c68aa5a80aa10918378f6be3",
+  "parquet_size_bytes": 26168,
+  "hash_alg": "sha256"
  },
  "tr_onco": {
   "label": "Tumor Results for Oncology",
@@ -6577,7 +6687,9 @@
     "role": null
    }
   },
-  "parquet_hash": "d103c851f4d161d01af2b4e76c5ec0ea33c869e863e574ce9f4ead3f68b70250"
+  "parquet_hash": "d103c851f4d161d01af2b4e76c5ec0ea33c869e863e574ce9f4ead3f68b70250",
+  "parquet_size_bytes": 164741,
+  "hash_alg": "sha256"
  },
  "tr_onco_recist": {
   "label": "Tumor Results (RECIST 1.1) for Oncology",
@@ -6699,7 +6811,9 @@
     "role": null
    }
   },
-  "parquet_hash": "a442553b34335c5ccbd2c54c73e0a58ec450fabda3779d84c3ded68dcec679b8"
+  "parquet_hash": "a442553b34335c5ccbd2c54c73e0a58ec450fabda3779d84c3ded68dcec679b8",
+  "parquet_size_bytes": 15693,
+  "hash_alg": "sha256"
  },
  "ts": {
   "label": "Trial Design",
@@ -6743,7 +6857,9 @@
     "role": null
    }
   },
-  "parquet_hash": "112541dedbff5ddfb560c154a2c667a4bba4d096e047e559530584cf94a4fc34"
+  "parquet_hash": "112541dedbff5ddfb560c154a2c667a4bba4d096e047e559530584cf94a4fc34",
+  "parquet_size_bytes": 4345,
+  "hash_alg": "sha256"
  },
  "tu_onco": {
   "label": "Tumor Identification for Oncology",
@@ -6859,7 +6975,9 @@
     "role": null
    }
   },
-  "parquet_hash": "594a97247a8193c7cbe9b8ddb8a322dd52c753988d4e768705d5089ff169d31e"
+  "parquet_hash": "594a97247a8193c7cbe9b8ddb8a322dd52c753988d4e768705d5089ff169d31e",
+  "parquet_size_bytes": 15041,
+  "hash_alg": "sha256"
  },
  "tu_onco_recist": {
   "label": "Tumor Identification (RECIST 1.1) for Oncology",
@@ -6963,7 +7081,9 @@
     "role": null
    }
   },
-  "parquet_hash": "6ffbbbf03b2e764cbeaf4c5b9cf17ef5ee9e723c5c2af06fba0f72efbc4b8b00"
+  "parquet_hash": "6ffbbbf03b2e764cbeaf4c5b9cf17ef5ee9e723c5c2af06fba0f72efbc4b8b00",
+  "parquet_size_bytes": 6654,
+  "hash_alg": "sha256"
  },
  "vs": {
   "label": "Vital Signs",
@@ -7115,7 +7235,9 @@
     "role": null
    }
   },
-  "parquet_hash": "14ef8e0ce9847db4126eca1d925479dda5e31f33636234a2eb50c6d702ada97f"
+  "parquet_hash": "14ef8e0ce9847db4126eca1d925479dda5e31f33636234a2eb50c6d702ada97f",
+  "parquet_size_bytes": 198009,
+  "hash_alg": "sha256"
  },
  "vs_metabolic": {
   "label": "Vital signs Dataset-metabolic",
@@ -7267,7 +7389,9 @@
     "role": null
    }
   },
-  "parquet_hash": "f643bf79be95d713ef6e3b8cf614f9a70b9d57b8e620c9eb37cc4da78c85ca5a"
+  "parquet_hash": "f643bf79be95d713ef6e3b8cf614f9a70b9d57b8e620c9eb37cc4da78c85ca5a",
+  "parquet_size_bytes": 22549,
+  "hash_alg": "sha256"
  },
  "vs_peds": {
   "label": "Vital signs Dataset-pediatrics",
@@ -7431,7 +7555,9 @@
     "role": null
    }
   },
-  "parquet_hash": "00aca25e961ff6e25e83b5d01a4a3a88ac1706e25050022bd752246344beb43b"
+  "parquet_hash": "00aca25e961ff6e25e83b5d01a4a3a88ac1706e25050022bd752246344beb43b",
+  "parquet_size_bytes": 14672,
+  "hash_alg": "sha256"
  },
  "vs_vaccine": {
   "label": "Vital Signs for Vaccine",
@@ -7577,6 +7703,8 @@
     "role": null
    }
   },
-  "parquet_hash": "541b4bfa96e188fc6eef6fa357fabeda36bf6a774425c34b885a7d2f9d75b094"
+  "parquet_hash": "541b4bfa96e188fc6eef6fa357fabeda36bf6a774425c34b885a7d2f9d75b094",
+  "parquet_size_bytes": 9418,
+  "hash_alg": "sha256"
  }
 }

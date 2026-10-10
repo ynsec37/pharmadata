@@ -196,9 +196,10 @@ def embed_labels(frame: pl.DataFrame, entry: DatasetMetaEntry, path: Path) -> No
     pq.write_table(tbl.cast(pa.schema(fields, metadata=schema_metadata)), path)
 
 
-def _parquet_hash(path: Path) -> str:
-    """SHA-256 of a parquet file's bytes."""
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def _parquet_digest(path: Path) -> tuple[str, int]:
+    """SHA-256 and byte size of a parquet file."""
+    data = path.read_bytes()
+    return hashlib.sha256(data).hexdigest(), len(data)
 
 
 def _load_existing_meta(out_dir: Path) -> dict[str, DatasetMetaEntry]:
@@ -218,7 +219,10 @@ def _update_collection_sources(collection: str, data: Path = DATA) -> None:
     sources = json.loads(sources_path.read_text(encoding="utf-8"))
     coll = json.loads(coll_path.read_text(encoding="utf-8"))
     coll["sources"] = {
-        name: {"sha256": entry["sha256"]}
+        name: {
+            "sha256": entry["sha256"],
+            "size_bytes": entry.get("size_bytes"),
+        }
         for name, entry in sources.items()
         if isinstance(entry, dict) and "sha256" in entry
     }
@@ -262,7 +266,10 @@ def build_collection(
         shipped_parquet = out_dir / f"{name}.parquet"
         frame = pl.read_parquet(raw_parquet)
         embed_labels(frame, entry, shipped_parquet)
-        entry["parquet_hash"] = _parquet_hash(shipped_parquet)
+        digest, size = _parquet_digest(shipped_parquet)
+        entry["parquet_hash"] = digest
+        entry["parquet_size_bytes"] = size
+        entry["hash_alg"] = "sha256"
         written += 1
         rebuilt += 1
     if only is not None and written == 0:

@@ -5,196 +5,260 @@
  "example": "dm",
  "sources": {
   "ae": {
-   "sha256": "dae58611f970a2bed9071999da3c390548c66d58a1e5430472a935aadc887c17"
+   "sha256": "dae58611f970a2bed9071999da3c390548c66d58a1e5430472a935aadc887c17",
+   "size_bytes": 22760
   },
   "ae_ophtha": {
-   "sha256": "99c0e29bf17b2be8d1f3caf057d36764b77b8d05661e5b08e8c3b8466bbf3280"
+   "sha256": "99c0e29bf17b2be8d1f3caf057d36764b77b8d05661e5b08e8c3b8466bbf3280",
+   "size_bytes": 22981
   },
   "ag_neuro": {
-   "sha256": "284a4ce3c81dd52be4edfcdbedfdd015600e124ca52d3a974b730b9a005b2652"
+   "sha256": "284a4ce3c81dd52be4edfcdbedfdd015600e124ca52d3a974b730b9a005b2652",
+   "size_bytes": 1174
   },
   "be": {
-   "sha256": "73d829c21685be4832369cfe98059a6a5f94b7631cf21df66fc7c4fc0a845d11"
+   "sha256": "73d829c21685be4832369cfe98059a6a5f94b7631cf21df66fc7c4fc0a845d11",
+   "size_bytes": 1235
   },
   "ce_vaccine": {
-   "sha256": "73c6c98144ef6b94108d8d18ec8d9aa2ba982034691dfbb427bb292e11a56add"
+   "sha256": "73c6c98144ef6b94108d8d18ec8d9aa2ba982034691dfbb427bb292e11a56add",
+   "size_bytes": 2056
   },
   "cm": {
-   "sha256": "802f02ac9ebce1029f61ad4e6435e64161076636d8eac2a31980fc8b50382eaa"
+   "sha256": "802f02ac9ebce1029f61ad4e6435e64161076636d8eac2a31980fc8b50382eaa",
+   "size_bytes": 37133
   },
   "dm": {
-   "sha256": "36364acc1d1e16fc72d6b28d04a9677df2375f543a46abe75d609de9835176fb"
+   "sha256": "36364acc1d1e16fc72d6b28d04a9677df2375f543a46abe75d609de9835176fb",
+   "size_bytes": 8097
   },
   "dm_metabolic": {
-   "sha256": "66aeb8561a5220689fc204009957a17c94a131ce3776e38f78bda85f704a4500"
+   "sha256": "66aeb8561a5220689fc204009957a17c94a131ce3776e38f78bda85f704a4500",
+   "size_bytes": 1106
   },
   "dm_neuro": {
-   "sha256": "107a360c6023730da95b87473bcc18b1c883d3deff031c397edfc0b9879ad063"
+   "sha256": "107a360c6023730da95b87473bcc18b1c883d3deff031c397edfc0b9879ad063",
+   "size_bytes": 1758
   },
   "dm_peds": {
-   "sha256": "57ba4a595b3053e4296985a3b1c53960c594f09b3c8ac0c08e23e5d62e0bf288"
+   "sha256": "57ba4a595b3053e4296985a3b1c53960c594f09b3c8ac0c08e23e5d62e0bf288",
+   "size_bytes": 1127
   },
   "dm_vaccine": {
-   "sha256": "a4f3fdb7f9bc9385039d04618a7adaf512b473b855b9d28d8a20ead49ca7ea0f"
+   "sha256": "a4f3fdb7f9bc9385039d04618a7adaf512b473b855b9d28d8a20ead49ca7ea0f",
+   "size_bytes": 1081
   },
   "ds": {
-   "sha256": "130a453b53afe5cb43c1bc61f77149243c6ffdafd1c002911125ff3bedd47383"
+   "sha256": "130a453b53afe5cb43c1bc61f77149243c6ffdafd1c002911125ff3bedd47383",
+   "size_bytes": 8577
   },
   "eg": {
-   "sha256": "4c75fff5b7ec94a21ab53985ca1d533b137fdfc5d73dfe5f0869846b1855106c"
+   "sha256": "4c75fff5b7ec94a21ab53985ca1d533b137fdfc5d73dfe5f0869846b1855106c",
+   "size_bytes": 105535
   },
   "ex": {
-   "sha256": "0a99a99542e2745a089bb8fcfac7315b38dbc1b6cedd004ff8fa83b4bf469982"
+   "sha256": "0a99a99542e2745a089bb8fcfac7315b38dbc1b6cedd004ff8fa83b4bf469982",
+   "size_bytes": 5344
   },
   "ex_ophtha": {
-   "sha256": "b1ac1c152a61cf8f7d4c3e7bcdc0074ef1f970e28dff9885480b39a84c2f9501"
+   "sha256": "b1ac1c152a61cf8f7d4c3e7bcdc0074ef1f970e28dff9885480b39a84c2f9501",
+   "size_bytes": 5569
   },
   "ex_vaccine": {
-   "sha256": "4cade24b96b134606323e280de6b09e4dd9d841d2c851b987f09f0c560d69610"
+   "sha256": "4cade24b96b134606323e280de6b09e4dd9d841d2c851b987f09f0c560d69610",
+   "size_bytes": 884
   },
   "face_vaccine": {
-   "sha256": "1daf576fed8392ac0674189ecac99bc49494875d2d55bc4a779c23d205164954"
+   "sha256": "1daf576fed8392ac0674189ecac99bc49494875d2d55bc4a779c23d205164954",
+   "size_bytes": 3832
   },
   "is_ada": {
-   "sha256": "a47d94ea0b1b6edde8810103c39c174facb18e4126bd706336c284761b7016ed"
+   "sha256": "a47d94ea0b1b6edde8810103c39c174facb18e4126bd706336c284761b7016ed",
+   "size_bytes": 6182
   },
   "is_vaccine": {
-   "sha256": "db819b7fadefd0154b5b64c739eef7e74e49cb88f74fc685d243d491d2b8c2e9"
+   "sha256": "db819b7fadefd0154b5b64c739eef7e74e49cb88f74fc685d243d491d2b8c2e9",
+   "size_bytes": 1276
   },
   "lb": {
-   "sha256": "8232e53921256f4ec4f73ed61fbb65883197f8c87695ceb1635d392d36c6710d"
+   "sha256": "8232e53921256f4ec4f73ed61fbb65883197f8c87695ceb1635d392d36c6710d",
+   "size_bytes": 277542
   },
   "lb_metabolic": {
-   "sha256": "572c16de6838208c08493dda19780ac6839741b28582b86d5fc10fe9e80b7020"
+   "sha256": "572c16de6838208c08493dda19780ac6839741b28582b86d5fc10fe9e80b7020",
+   "size_bytes": 6356
   },
   "lb_neuro": {
-   "sha256": "76b832c654ce00153f5cd86d28a06f526d4c85556c2efb314b0126127c64b4d4"
+   "sha256": "76b832c654ce00153f5cd86d28a06f526d4c85556c2efb314b0126127c64b4d4",
+   "size_bytes": 4141
   },
   "lb_onco_pcwg3": {
-   "sha256": "e5c3b66377aa4260e936437782f7dc4b96399b8f9677171fe8b16935c6055304"
+   "sha256": "e5c3b66377aa4260e936437782f7dc4b96399b8f9677171fe8b16935c6055304",
+   "size_bytes": 1547
   },
   "mb": {
-   "sha256": "f566dcdeaa3716e5fb5b11f815d547246d5823f7d79bd49480a07dbfebadc1fa"
+   "sha256": "f566dcdeaa3716e5fb5b11f815d547246d5823f7d79bd49480a07dbfebadc1fa",
+   "size_bytes": 1502
   },
   "mh": {
-   "sha256": "ae608fda49ffd714018cd3eb15137d7ce90398ec3aab187c3180711a6993b2be"
+   "sha256": "ae608fda49ffd714018cd3eb15137d7ce90398ec3aab187c3180711a6993b2be",
+   "size_bytes": 32955
   },
   "ms": {
-   "sha256": "a7ab0295ac219384894a6e4de9c54b99e19dfbb5a855f224051db2caf20e7af3"
+   "sha256": "a7ab0295ac219384894a6e4de9c54b99e19dfbb5a855f224051db2caf20e7af3",
+   "size_bytes": 1935
   },
   "nv_neuro": {
-   "sha256": "c5c48444402c07092abb462ffb0def029362945bc90ecd7fc8e697bc5792cf37"
+   "sha256": "c5c48444402c07092abb462ffb0def029362945bc90ecd7fc8e697bc5792cf37",
+   "size_bytes": 3006
   },
   "oe_ophtha": {
-   "sha256": "a1bb65a21a98b77bf183cfc6db5ff3197066f152c492aef1ebae8ba305394931"
+   "sha256": "a1bb65a21a98b77bf183cfc6db5ff3197066f152c492aef1ebae8ba305394931",
+   "size_bytes": 146203
   },
   "pc": {
-   "sha256": "b7cb1fb8d3471c7327d2b01175759af4d5a0177cc28082643c2f9c50dbdd4193"
+   "sha256": "b7cb1fb8d3471c7327d2b01175759af4d5a0177cc28082643c2f9c50dbdd4193",
+   "size_bytes": 56685
   },
   "pp": {
-   "sha256": "140d9ca048bb17b808eae46adb97f2ec59bdba1a666ab9cc316626f92e8e8cc1"
+   "sha256": "140d9ca048bb17b808eae46adb97f2ec59bdba1a666ab9cc316626f92e8e8cc1",
+   "size_bytes": 19632
   },
   "qs_metabolic": {
-   "sha256": "f05a607532855aacf76adbf52fbdf2cae230a5006be7138fcfed255cf3472061"
+   "sha256": "f05a607532855aacf76adbf52fbdf2cae230a5006be7138fcfed255cf3472061",
+   "size_bytes": 6237
   },
   "qs_ophtha": {
-   "sha256": "e22e9c192b861fae8a515f78bdbac0923ed4ebfbbc2fec5fb7b529879db0d8f9"
+   "sha256": "e22e9c192b861fae8a515f78bdbac0923ed4ebfbbc2fec5fb7b529879db0d8f9",
+   "size_bytes": 3446
   },
   "rs_onco": {
-   "sha256": "6409c82f382af451bfb0d2be22c7a5cf19c15595c609224396d4749f78cd4067"
+   "sha256": "6409c82f382af451bfb0d2be22c7a5cf19c15595c609224396d4749f78cd4067",
+   "size_bytes": 9537
   },
   "rs_onco_ca125": {
-   "sha256": "5bdcd015dcf888770b8acf0e43260c76eeaf83aa12c22117f44cc2c529a6ad6a"
+   "sha256": "5bdcd015dcf888770b8acf0e43260c76eeaf83aa12c22117f44cc2c529a6ad6a",
+   "size_bytes": 1265
   },
   "rs_onco_imwg": {
-   "sha256": "f0467d37b49b23780b78bd91243fb1ef2325096c4440f542f326d10449aa9e15"
+   "sha256": "f0467d37b49b23780b78bd91243fb1ef2325096c4440f542f326d10449aa9e15",
+   "size_bytes": 1434
   },
   "rs_onco_irecist": {
-   "sha256": "ca8c7a512def8e1dfa423b527cf4286ed84f0f2b29548d4f12a5e33fcf10f16b"
+   "sha256": "ca8c7a512def8e1dfa423b527cf4286ed84f0f2b29548d4f12a5e33fcf10f16b",
+   "size_bytes": 2597
   },
   "rs_onco_lymphoma": {
-   "sha256": "7d39ab1fa67aa899e121e58b2e4034da097016bb0382f0b1e15449b16e043507"
+   "sha256": "7d39ab1fa67aa899e121e58b2e4034da097016bb0382f0b1e15449b16e043507",
+   "size_bytes": 1430
   },
   "rs_onco_pcwg3": {
-   "sha256": "74117d5b193c2752c580ad010828969b13a56662ca2af08eb38bc543c03910c8"
+   "sha256": "74117d5b193c2752c580ad010828969b13a56662ca2af08eb38bc543c03910c8",
+   "size_bytes": 1377
   },
   "rs_onco_recist": {
-   "sha256": "008fdd0db0081a2a4b72934696aa92a2e88b8c68cc55067a4e72bc5859c1b777"
+   "sha256": "008fdd0db0081a2a4b72934696aa92a2e88b8c68cc55067a4e72bc5859c1b777",
+   "size_bytes": 1165
   },
   "sc_ophtha": {
-   "sha256": "f8b349e706077fb1b20abf4bc1196ccc0709d6167bd6255d54e1308805a9ca4b"
+   "sha256": "f8b349e706077fb1b20abf4bc1196ccc0709d6167bd6255d54e1308805a9ca4b",
+   "size_bytes": 2394
   },
   "sdg_db": {
-   "sha256": "27b0cba3a2921cac8a9fc18528f6ae608e25898958b398ff554eb20e0624f72b"
+   "sha256": "27b0cba3a2921cac8a9fc18528f6ae608e25898958b398ff554eb20e0624f72b",
+   "size_bytes": 539
   },
   "smq_db": {
-   "sha256": "df27ac21ef5dfcfc5bf78479749e92e9afe92f753ef79b1c21409aa6919e71bd"
+   "sha256": "df27ac21ef5dfcfc5bf78479749e92e9afe92f753ef79b1c21409aa6919e71bd",
+   "size_bytes": 1031
   },
   "suppae": {
-   "sha256": "730130f2cf648d45e20028a980d3f61030ca3b991968083aa45b3b9b9edc1ed0"
+   "sha256": "730130f2cf648d45e20028a980d3f61030ca3b991968083aa45b3b9b9edc1ed0",
+   "size_bytes": 2142
   },
   "suppce_vaccine": {
-   "sha256": "7d065e9a2c60dd84de42a0aeda9573180a0b71e49fa3b20282598a8ad09fc5b0"
+   "sha256": "7d065e9a2c60dd84de42a0aeda9573180a0b71e49fa3b20282598a8ad09fc5b0",
+   "size_bytes": 521
   },
   "suppdm": {
-   "sha256": "e7d730ce0ba047daf6724a527b305a499e1f48827998b65f7c9877db9b772dd7"
+   "sha256": "e7d730ce0ba047daf6724a527b305a499e1f48827998b65f7c9877db9b772dd7",
+   "size_bytes": 2392
   },
   "suppdm_vaccine": {
-   "sha256": "0409bedaed59d1e2931d7974bdd9ee852550723d69acdc9a3799a53f817d68db"
+   "sha256": "0409bedaed59d1e2931d7974bdd9ee852550723d69acdc9a3799a53f817d68db",
+   "size_bytes": 499
   },
   "suppds": {
-   "sha256": "35e3aec5ba851f34a9641f572df46b0066ae3a2b89e1e60de8a920ad9300d3f4"
+   "sha256": "35e3aec5ba851f34a9641f572df46b0066ae3a2b89e1e60de8a920ad9300d3f4",
+   "size_bytes": 553
   },
   "suppex_vaccine": {
-   "sha256": "9dfbac883535656a9ba423c51af71f7ddfdfd139e7d369a88db04a51ea6e69df"
+   "sha256": "9dfbac883535656a9ba423c51af71f7ddfdfd139e7d369a88db04a51ea6e69df",
+   "size_bytes": 523
   },
   "suppface_vaccine": {
-   "sha256": "59f553da4e4e89a2c7b994a39a21359b8ec51db761f121548b18174578579151"
+   "sha256": "59f553da4e4e89a2c7b994a39a21359b8ec51db761f121548b18174578579151",
+   "size_bytes": 548
   },
   "suppis_vaccine": {
-   "sha256": "c314f56637e2be206ffb1ca008d831e58f5404f67d0865f5b3ed14114256b0c1"
+   "sha256": "c314f56637e2be206ffb1ca008d831e58f5404f67d0865f5b3ed14114256b0c1",
+   "size_bytes": 607
   },
   "suppnv_neuro": {
-   "sha256": "7168532921ed82e55bb6529aca7a635b01b64d1a7b4c84673ea0e9355dbd187e"
+   "sha256": "7168532921ed82e55bb6529aca7a635b01b64d1a7b4c84673ea0e9355dbd187e",
+   "size_bytes": 850
   },
   "supprs_onco_ca125": {
-   "sha256": "9063ea9206ecd750a0b60ea3f0c6424132b0e5f8147f1a5ed86ede63b63e58e8"
+   "sha256": "9063ea9206ecd750a0b60ea3f0c6424132b0e5f8147f1a5ed86ede63b63e58e8",
+   "size_bytes": 955
   },
   "supprs_onco_imwg": {
-   "sha256": "1375e0675695311f4c25730440582460ebc0b83d240372902f3292a0e0477e72"
+   "sha256": "1375e0675695311f4c25730440582460ebc0b83d240372902f3292a0e0477e72",
+   "size_bytes": 803
   },
   "supptr_onco": {
-   "sha256": "391f5ee56ca4af214701ff263da4d5cacf7b4d2eb1b613ccd9c45a239fb17d4f"
+   "sha256": "391f5ee56ca4af214701ff263da4d5cacf7b4d2eb1b613ccd9c45a239fb17d4f",
+   "size_bytes": 8695
   },
   "sv": {
-   "sha256": "ed6c6c53e3d97799c07cc3893b264842c5bca22ddb03179423681ef89dbf4f5d"
+   "sha256": "ed6c6c53e3d97799c07cc3893b264842c5bca22ddb03179423681ef89dbf4f5d",
+   "size_bytes": 10052
   },
   "tr_onco": {
-   "sha256": "6c5c9e691c91a23faa41a9a52579143593216cc5460b75fd5358c295e159cac0"
+   "sha256": "6c5c9e691c91a23faa41a9a52579143593216cc5460b75fd5358c295e159cac0",
+   "size_bytes": 57915
   },
   "tr_onco_recist": {
-   "sha256": "d1e6e323b2e79fc42c397ee3119ed8418e0435f5b876bbe54205f8f282c1fd4e"
+   "sha256": "d1e6e323b2e79fc42c397ee3119ed8418e0435f5b876bbe54205f8f282c1fd4e",
+   "size_bytes": 5648
   },
   "ts": {
-   "sha256": "750ee8c09708e058f16838fbc044d581ebf0d4e12866e761ea6f68d8684a2405"
+   "sha256": "750ee8c09708e058f16838fbc044d581ebf0d4e12866e761ea6f68d8684a2405",
+   "size_bytes": 1615
   },
   "tu_onco": {
-   "sha256": "bec3400297d33f22b521c09aa2cde1851e1bcc92049f4f856830232695a8d159"
+   "sha256": "bec3400297d33f22b521c09aa2cde1851e1bcc92049f4f856830232695a8d159",
+   "size_bytes": 6336
   },
   "tu_onco_recist": {
-   "sha256": "7cd0dc5df7d04cf98959ad2cf9ab55a5fb1afc6fb7e0fe12a6fbb84c75bbef32"
+   "sha256": "7cd0dc5df7d04cf98959ad2cf9ab55a5fb1afc6fb7e0fe12a6fbb84c75bbef32",
+   "size_bytes": 1197
   },
   "vs": {
-   "sha256": "374ffe09a317e3d917e55485f014f2bc5d418296cfaec866b362d3dfa609f595"
+   "sha256": "374ffe09a317e3d917e55485f014f2bc5d418296cfaec866b362d3dfa609f595",
+   "size_bytes": 102999
   },
   "vs_metabolic": {
-   "sha256": "9bbaaa09ca8b4e97c8dc7571f0d17abdfd239fc9d50feb2366f65fdaee987ce2"
+   "sha256": "9bbaaa09ca8b4e97c8dc7571f0d17abdfd239fc9d50feb2366f65fdaee987ce2",
+   "size_bytes": 7836
   },
   "vs_peds": {
-   "sha256": "09dbab3610a93946d254654faf56e86565a64e1541253d45519075093474d096"
+   "sha256": "09dbab3610a93946d254654faf56e86565a64e1541253d45519075093474d096",
+   "size_bytes": 3931
   },
   "vs_vaccine": {
-   "sha256": "545c22056970e35a7d94ddcea61c392d7c2b55d35e7d88b18f17a149c37caf74"
+   "sha256": "545c22056970e35a7d94ddcea61c392d7c2b55d35e7d88b18f17a149c37caf74",
+   "size_bytes": 1746
   }
  }
 }
