@@ -21,7 +21,13 @@ print(f"Rows: {meta.number_rows:,}  Columns: {meta.number_columns}")
 <summary>Show variable specs</summary>
 
 ```{python}
-pharmaverseadam.meta('adsl_vaccine').specs
+#| echo: false
+import polars as pl
+
+_specs = pharmaverseadam.meta('adsl_vaccine').specs
+pl.Config.set_tbl_rows(_specs.height)
+pl.Config.set_fmt_str_lengths(100)
+_specs
 ```
 
 </details>
