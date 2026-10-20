@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2
+
+Refresh the shipped ``pharmaverseadam`` datasets from upstream: ADSL gains two
+columns. Dataset tests now derive their expectations from the shipped data, so
+future refreshes need no test edits.
+
 ## 0.2.1
 
 Record ``parquet_size_bytes`` and ``hash_alg`` alongside ``parquet_hash`` in
