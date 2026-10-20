@@ -8,7 +8,7 @@ title: adlb
 
 ## Laboratory Analysis
 
-Structure: `One or more records per subject per analysis parameter per analysis timepoint`
+Structure: `One or more records per subject per analysis parameter per analysis visit`
 
 ```{python}
 from pharmadata import pharmaverseadam

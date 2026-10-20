@@ -33,13 +33,13 @@ title: Datasets
 | [adpc](pharmaverseadam/adpc.html) | Pharmacokinetic Concentrations | 4,479 | 128 |
 | [adpp](pharmaverseadam/adpp.html) | Pharmacokinetic Parameters | 2,688 | 79 |
 | [adppk](pharmaverseadam/adppk.html) | Population Pharmacokinetic | 3,522 | 61 |
-| [adrs_onco](pharmaverseadam/adrs_onco.html) | Tumor Response Analysis | 3,694 | 79 |
-| [adsl](pharmaverseadam/adsl.html) | Subject Level Analysis | 306 | 55 |
-| [adsl_vaccine](pharmaverseadam/adsl_vaccine.html) | Subject Level Analysis for Vaccine | 2 | 46 |
+| [adrs_onco](pharmaverseadam/adrs_onco.html) | Tumor Response Analysis | 3,694 | 80 |
+| [adsl](pharmaverseadam/adsl.html) | Subject Level Analysis | 306 | 57 |
+| [adsl_vaccine](pharmaverseadam/adsl_vaccine.html) | Subject Level Analysis for Vaccine | 2 | 48 |
 | [adtpet_neuro](pharmaverseadam/adtpet_neuro.html) | Tau PET Scan Analysis Dataset | 34 | 46 |
-| [adtr_onco](pharmaverseadam/adtr_onco.html) | Tumor Results Analysis for Oncology | 181 | 99 |
+| [adtr_onco](pharmaverseadam/adtr_onco.html) | Tumor Results Analysis for Oncology | 181 | 100 |
 | [adtte_onco](pharmaverseadam/adtte_onco.html) | Time to Event Analysis for Oncology | 512 | 20 |
-| [advfq_ophtha](pharmaverseadam/advfq_ophtha.html) | Visual Function Questionnaire Analysis | 28,798 | 89 |
+| [advfq_ophtha](pharmaverseadam/advfq_ophtha.html) | Visual Function Questionnaire Analysis | 972 | 93 |
 | [advs](pharmaverseadam/advs.html) | Vital Signs Analysis | 65,032 | 105 |
 | [advs_metabolic](pharmaverseadam/advs_metabolic.html) | Vital Signs Analysis for Metabolic | 760 | 101 |
 | [advs_peds](pharmaverseadam/advs_peds.html) | Vital Signs Analysis for Pediatrics | 546 | 80 |

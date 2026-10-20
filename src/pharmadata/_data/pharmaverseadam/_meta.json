@@ -1089,13 +1089,13 @@
     "role": null
    }
   },
-  "parquet_hash": "8d6bda68daaf5b05c2fcfcb93f1ddccd60b82341f8fcb70d084a210299a9bca5",
-  "parquet_size_bytes": 130009,
+  "parquet_hash": "bc7c4a8895a8d0221e8c935f559d572b7da220649191c80a1243f4a80770c485",
+  "parquet_size_bytes": 130219,
   "hash_alg": "sha256"
  },
  "adapet_neuro": {
   "label": "Amyloid PET Scan Analysis Dataset",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 83,
   "columns": {
    "STUDYID": {
@@ -1829,8 +1829,8 @@
     "role": null
    }
   },
-  "parquet_hash": "70e0030ac0e8d5f6c9f9ad52d5f5b2d7a1c78b60d27b1c396c8dc197216c320e",
-  "parquet_size_bytes": 197479,
+  "parquet_hash": "73b13fb1201b97d79068d2ba4c3ccfda0e68b1b9af2c54af2058dd8a6f08e6b5",
+  "parquet_size_bytes": 197349,
   "hash_alg": "sha256"
  },
  "adce_vaccine": {
@@ -2761,7 +2761,7 @@
  },
  "adcoeq_metabolic": {
   "label": "Questionnaires Analysis for Metabolic",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 1110,
   "columns": {
    "STUDYID": {
@@ -3939,7 +3939,7 @@
  },
  "adex": {
   "label": "Exposure Analysis",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis start date",
   "n_rows": 6315,
   "columns": {
    "STUDYID": {
@@ -5505,7 +5505,7 @@
  },
  "adlb": {
   "label": "Laboratory Analysis",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 83652,
   "columns": {
    "STUDYID": {
@@ -6205,7 +6205,7 @@
  },
  "adlb_metabolic": {
   "label": "Laboratory Analysis for Metabolic",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 371,
   "columns": {
    "STUDYID": {
@@ -6771,7 +6771,7 @@
  },
  "adlbhy": {
   "label": "Analysis of Lab Hy's Law",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 251,
   "columns": {
    "STUDYID": {
@@ -7559,7 +7559,7 @@
  },
  "adnv_neuro": {
   "label": "Nervous System Analysis Dataset",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 30,
   "columns": {
    "STUDYID": {
@@ -8449,8 +8449,8 @@
     "role": null
    }
   },
-  "parquet_hash": "c3b32fbb2fac9d16c1e4b36f8373837568500ecfd1535e2e6eb1ecaeb78b03e0",
-  "parquet_size_bytes": 366278,
+  "parquet_hash": "cc3607be560bbfb66f1f247890a083982a3c4622112bddac177a549653f4e81e",
+  "parquet_size_bytes": 367106,
   "hash_alg": "sha256"
  },
  "adpc": {
@@ -9233,7 +9233,7 @@
  },
  "adpp": {
   "label": "Pharmacokinetic Parameters",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 2688,
   "columns": {
    "STUDYID": {
@@ -10087,13 +10087,13 @@
     "role": null
    }
   },
-  "parquet_hash": "ad815d2c56855f95a2e8d5512183b827690856361a16cb0143d8415ccc19859c",
-  "parquet_size_bytes": 145573,
+  "parquet_hash": "0a8900b4e7e5d49f8c2727b7a823dd50bb2c26be42cd374accc6c0c08f628a09",
+  "parquet_size_bytes": 146413,
   "hash_alg": "sha256"
  },
  "adrs_onco": {
   "label": "Tumor Response Analysis",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 3694,
   "columns": {
    "STUDYID": {
@@ -10569,10 +10569,16 @@
     "type": "String",
     "mandatory": null,
     "role": null
+   },
+   "BRTHDTC": {
+    "label": "Date/Time of Birth",
+    "type": "String",
+    "mandatory": null,
+    "role": null
    }
   },
-  "parquet_hash": "5d740c5e9fa8c1de3f99e201f913033833e439b20f7d997b060b47b4a8f9b6ad",
-  "parquet_size_bytes": 65420,
+  "parquet_hash": "9b092d0d751325ffb941e3171663c20ad4f6ba2e55d3fae2157bd3aee9c9b36d",
+  "parquet_size_bytes": 68408,
   "hash_alg": "sha256"
  },
  "adsl": {
@@ -10909,10 +10915,22 @@
     "type": "String",
     "mandatory": null,
     "role": null
+   },
+   "ARMNRS": {
+    "label": "Reason Arm and/or Actual Arm is Null",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMUD": {
+    "label": "Description of Unplanned Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
    }
   },
-  "parquet_hash": "3a4b18463b3847a68e6bcaea6e8ab7822cfeb952bf17b2ff93cc536f55692be3",
-  "parquet_size_bytes": 47437,
+  "parquet_hash": "d0b0262abc8c870a36589ce12e6c949f37d295d78a5358ec6851b111830d8506",
+  "parquet_size_bytes": 48182,
   "hash_alg": "sha256"
  },
  "adsl_vaccine": {
@@ -11195,15 +11213,27 @@
     "type": "Date",
     "mandatory": "No",
     "role": null
+   },
+   "ARMNRS": {
+    "label": "Reason Arm and/or Actual Arm is Null",
+    "type": "String",
+    "mandatory": null,
+    "role": null
+   },
+   "ACTARMUD": {
+    "label": "Description of Unplanned Actual Arm",
+    "type": "String",
+    "mandatory": null,
+    "role": null
    }
   },
-  "parquet_hash": "de8f28e9b1555795343e1ead0247d7c036b412072ced1ddd1da18eab05266a63",
-  "parquet_size_bytes": 16542,
+  "parquet_hash": "fd60f28f3256c48ec2e80c51e21f0e08cf02f454dd76af4e80ec17fcd052f4f1",
+  "parquet_size_bytes": 17142,
   "hash_alg": "sha256"
  },
  "adtpet_neuro": {
   "label": "Tau PET Scan Analysis Dataset",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 34,
   "columns": {
    "STUDYID": {
@@ -11489,7 +11519,7 @@
  },
  "adtr_onco": {
   "label": "Tumor Results Analysis for Oncology",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
   "n_rows": 181,
   "columns": {
    "STUDYID": {
@@ -12085,15 +12115,21 @@
     "type": "String",
     "mandatory": null,
     "role": null
+   },
+   "BRTHDTC": {
+    "label": "Date/Time of Birth",
+    "type": "String",
+    "mandatory": null,
+    "role": null
    }
   },
-  "parquet_hash": "4fb7302057ca6eb733d7518c3db090e13a5766266a56e4f53d188a858bcae76b",
-  "parquet_size_bytes": 41208,
+  "parquet_hash": "5cae2ab8bb27f861a41fe24805522180d8df47df0122a276a13713e6dbfcb740",
+  "parquet_size_bytes": 41629,
   "hash_alg": "sha256"
  },
  "adtte_onco": {
   "label": "Time to Event Analysis for Oncology",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
+  "structure": "One or more records per subject per analysis parameter per analysis date",
   "n_rows": 512,
   "columns": {
    "STUDYID": {
@@ -12223,8 +12259,8 @@
  },
  "advfq_ophtha": {
   "label": "Visual Function Questionnaire Analysis",
-  "structure": "One or more records per subject per analysis parameter per analysis timepoint",
-  "n_rows": 28798,
+  "structure": "One or more records per subject per analysis parameter per analysis visit",
+  "n_rows": 972,
   "columns": {
    "STUDYID": {
     "label": "Study Identifier",
@@ -12582,7 +12618,7 @@
    },
    "AVISITN": {
     "label": "Analysis Visit (N)",
-    "type": "String",
+    "type": "Float64",
     "mandatory": "No",
     "role": "Timing Variables for BDS Datasets"
    },
@@ -12610,6 +12646,24 @@
     "mandatory": "No",
     "role": null
    },
+   "PARCAT3": {
+    "label": "Parameter Category 3",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARCAT4": {
+    "label": "Parameter Category 4",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
+   "PARCAT5": {
+    "label": "Parameter Category 5",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
+   },
    "AVAL": {
     "label": "Analysis Value",
     "type": "Float64",
@@ -12621,6 +12675,12 @@
     "type": "String",
     "mandatory": "No",
     "role": "Analysis Parameter Variables for BDS Datasets"
+   },
+   "BASETYPE": {
+    "label": "Baseline Type",
+    "type": "String",
+    "mandatory": "No",
+    "role": null
    },
    "BASE": {
     "label": "Baseline Value",
@@ -12761,8 +12821,8 @@
     "role": null
    }
   },
-  "parquet_hash": "d333d17215e3496d630bcc97b029aaf0d74934dac799a4462337f948ceeee958",
-  "parquet_size_bytes": 272623,
+  "parquet_hash": "3fee8773802b108258f79190c7d0e029adcb935e7c4b73c88584304c7914269e",
+  "parquet_size_bytes": 45628,
   "hash_alg": "sha256"
  },
  "advs": {
