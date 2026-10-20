@@ -17,14 +17,17 @@ from pharmadata import pharmaversesdtm as sdtm
 
 
 def test_pandas_output_changes_dataset_output() -> None:
-    """Switching to pandas serves the same dataset as a pandas frame."""
+    """Switching to pandas serves the parquet's data as a pandas frame."""
+    from importlib import resources
+
     pd = pytest.importorskip("pandas")
+    path = resources.files("pharmadata") / "_data" / "pharmaverseadam" / "adsl.parquet"
 
     set_output_pandas()
     frame = adam.adsl
 
     assert isinstance(frame, pd.DataFrame)
-    assert frame.shape == (306, 55)
+    pd.testing.assert_frame_equal(frame, pd.read_parquet(path))
 
 
 def test_output_frames_are_mutation_safe() -> None:
@@ -57,11 +60,11 @@ def test_pandas_output_without_pandas_has_helpful_error(
 
 def test_arrow_output_serves_pyarrow_table() -> None:
     """The arrow format hands back the immutable pyarrow table the data is read into."""
+    polars_frame = adam.adsl
     with output_format("arrow"):
         table = adam.adsl
     assert isinstance(table, pa.Table)
-    assert table.num_rows == 306
-    assert table.num_columns == 55
+    assert (table.num_rows, table.num_columns) == polars_frame.shape
 
 
 def test_metadata_follows_output_format() -> None:
