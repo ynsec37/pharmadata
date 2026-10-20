@@ -383,11 +383,13 @@ def main(
         changes = None
     else:
         changes = changed_map
-    # --check always validates every collection; otherwise only collections
-    # with changed raw data are validated (the rest have an empty raw/ dir).
+    # Validate only collections with changed raw data: in an incremental build
+    # the rest have an empty raw/ dir. When changes is None or empty (no
+    # _changed.json, or an empty change list), every collection is validated.
+    # --check only skips the build step below.
     validate_collections = (
         list(collections)
-        if args.check or changes is None
+        if changes is None or not changes
         else [c for c in collections if changes.get(c)]
     )
     if validate_collections:
