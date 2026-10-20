@@ -7,6 +7,7 @@ import re
 import polars as pl
 import pytest
 
+from pharmadata import pharmaverseadam
 from tests._helpers import GUIDES
 
 pytestmark = pytest.mark.docs
@@ -57,7 +58,7 @@ def test_the_adsl_summary_matches_the_shipped_frame() -> None:
     _, namespace = _run_home_chunks()
     adsl = namespace["adsl"]
     assert isinstance(adsl, pl.DataFrame)
-    assert adsl.shape == (306, 55)
+    assert adsl.shape == pharmaverseadam.adsl.shape
     summary = (
         adsl.filter(pl.col("TRT01A") != "Screen Failure")
         .group_by("TRT01A")

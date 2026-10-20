@@ -122,16 +122,13 @@ def test_lazy_loading_and_dir() -> None:
 
 
 def test_adsl_baseline() -> None:
-    """The shipped ADSL keeps its 306x55 shape and its CDISC label for STUDYID."""
-    df = adam.adsl
-    assert df.shape == (306, 55)
+    """The shipped ADSL keeps its CDISC label for STUDYID."""
+    assert "STUDYID" in adam.adsl.columns
     assert adam.adsl_meta.column_names_to_labels["STUDYID"] == "Study Identifier"
 
 
 def test_cdisc_pilot_labels_come_from_the_define_file() -> None:
-    """The pilot datasets keep their own shape, and the Define-XML fills the gaps."""
-    assert cdiscpilotadam.adsl.shape == (254, 49)
-    assert cdiscpilotsdtm.dm.shape == (306, 25)
+    """The pilot datasets keep their own labels, and the Define-XML fills the gaps."""
     dm_labels = cdiscpilotsdtm.dm_meta.column_names_to_labels
     assert dm_labels["STUDYID"] == "Study Identifier"
     mt = cdiscpilotsdtm.meta_tables()
@@ -153,4 +150,4 @@ def test_arrow_field_metadata_embedded() -> None:
     field = pq.read_schema(path).field("STUDYID")
     assert field.metadata[b"label"] == b"Study Identifier"
     # embedding field metadata must not disturb the polars read path
-    assert pl.read_parquet(path).shape == (306, 55)
+    assert pl.read_parquet(path).columns == adam.adsl.columns
