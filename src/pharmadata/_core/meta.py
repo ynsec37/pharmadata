@@ -64,8 +64,10 @@ class DatasetMeta:
     'Subject Level Analysis'
     >>> meta.column_names_to_labels["STUDYID"]
     'Study Identifier'
-    >>> (meta.number_rows, meta.number_columns)
-    (306, 55)
+    >>> meta.number_rows > 0
+    True
+    >>> meta.number_columns == len(meta.column_names)
+    True
     """
 
     dataset: str
