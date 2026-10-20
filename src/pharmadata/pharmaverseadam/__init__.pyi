@@ -219,7 +219,7 @@ adapet_neuro: Final[DataFrame]
 """Amyloid PET Scan Analysis Dataset
 
 83 rows x 49 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -528,7 +528,7 @@ adcoeq_metabolic: Final[DataFrame]
 """Questionnaires Analysis for Metabolic
 
 1110 rows x 85 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -741,7 +741,7 @@ adex: Final[DataFrame]
 """Exposure Analysis
 
 6315 rows x 92 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis start date.
 
 Variables:
 
@@ -1027,7 +1027,7 @@ adlb: Final[DataFrame]
 """Laboratory Analysis
 
 83652 rows x 115 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -1152,7 +1152,7 @@ adlb_metabolic: Final[DataFrame]
 """Laboratory Analysis for Metabolic
 
 371 rows x 43 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -1263,7 +1263,7 @@ adlbhy: Final[DataFrame]
 """Analysis of Lab Hy's Law
 
 251 rows x 14 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -1410,7 +1410,7 @@ adnv_neuro: Final[DataFrame]
 """Nervous System Analysis Dataset
 
 30 rows x 43 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -1714,7 +1714,7 @@ adpp: Final[DataFrame]
 """Pharmacokinetic Parameters
 
 2688 rows x 79 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -1872,8 +1872,8 @@ adppk_meta: Final[DatasetMeta]
 adrs_onco: Final[DataFrame]
 """Tumor Response Analysis
 
-3694 rows x 79 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+3694 rows x 80 columns.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -1956,12 +1956,13 @@ Variables:
 - `RSDTC` (String): Date/Time of Assessment
 - `RSSEQ` (Int32): Sequence Number
 - `DTHDTF` (String): Date of Death Imputation Flag
+- `BRTHDTC` (String): Date/Time of Birth
 """
 adrs_onco_meta: Final[DatasetMeta]
 adsl: Final[DataFrame]
 """Subject Level Analysis
 
-306 rows x 55 columns.
+306 rows x 57 columns.
 Structure: One record per subject.
 
 Variables:
@@ -2021,12 +2022,14 @@ Variables:
 - `DTHCAUS` (String): Cause of Death
 - `DTHCGR1` (String): Cause of Death Reason 1
 - `BRTHDTC` (String): Date/Time of Birth
+- `ARMNRS` (String): Reason Arm and/or Actual Arm is Null
+- `ACTARMUD` (String): Description of Unplanned Actual Arm
 """
 adsl_meta: Final[DatasetMeta]
 adsl_vaccine: Final[DataFrame]
 """Subject Level Analysis for Vaccine
 
-2 rows x 46 columns.
+2 rows x 48 columns.
 
 Variables:
 
@@ -2076,13 +2079,15 @@ Variables:
 - `INVNAM` (String): Investigator Name
 - `VAX01DT` (Date): Vaccination Date 01
 - `VAX02DT` (Date): Vaccination Date 02
+- `ARMNRS` (String): Reason Arm and/or Actual Arm is Null
+- `ACTARMUD` (String): Description of Unplanned Actual Arm
 """
 adsl_vaccine_meta: Final[DatasetMeta]
 adtpet_neuro: Final[DataFrame]
 """Tau PET Scan Analysis Dataset
 
 34 rows x 46 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -2137,8 +2142,8 @@ adtpet_neuro_meta: Final[DatasetMeta]
 adtr_onco: Final[DataFrame]
 """Tumor Results Analysis for Oncology
 
-181 rows x 99 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+181 rows x 100 columns.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -2241,13 +2246,14 @@ Variables:
 - `LSEXP` (String): Lesion IDs Expected
 - `LSASS` (String): Lesion IDs Assessed
 - `DTHDTF` (String): Date of Death Imputation Flag
+- `BRTHDTC` (String): Date/Time of Birth
 """
 adtr_onco_meta: Final[DatasetMeta]
 adtte_onco: Final[DataFrame]
 """Time to Event Analysis for Oncology
 
 512 rows x 20 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+Structure: One or more records per subject per analysis parameter per analysis date.
 
 Variables:
 
@@ -2276,8 +2282,8 @@ adtte_onco_meta: Final[DatasetMeta]
 advfq_ophtha: Final[DataFrame]
 """Visual Function Questionnaire Analysis
 
-28798 rows x 89 columns.
-Structure: One or more records per subject per analysis parameter per analysis timepoint.
+972 rows x 93 columns.
+Structure: One or more records per subject per analysis parameter per analysis visit.
 
 Variables:
 
@@ -2340,13 +2346,17 @@ Variables:
 - `ADT` (Date): Analysis Date
 - `ADY` (Float64): Analysis Relative Day
 - `AVISIT` (String): Analysis Visit
-- `AVISITN` (String): Analysis Visit (N)
+- `AVISITN` (Float64): Analysis Visit (N)
 - `PARAM` (String): Parameter
 - `PARAMCD` (String): Parameter Code
 - `PARCAT1` (String): Parameter Category 1
 - `PARCAT2` (String): Parameter Category 2
+- `PARCAT3` (String): Parameter Category 3
+- `PARCAT4` (String): Parameter Category 4
+- `PARCAT5` (String): Parameter Category 5
 - `AVAL` (Float64): Analysis Value
 - `AVALC` (String): Analysis Value (C)
+- `BASETYPE` (String): Baseline Type
 - `BASE` (Float64): Baseline Value
 - `CHG` (Float64): Change from Baseline
 - `PCHG` (Float64): Percent Change from Baseline
