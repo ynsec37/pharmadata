@@ -37,3 +37,13 @@ table th,
 table td {
   text-align: left !important;
 }
+
+/* marimo portals its dialogs (e.g. the table Export panel) to <body>, where
+   Bootstrap's 12-column `.grid` utility overrides Tailwind's implicit
+   single-column grid and squeezes the dialog into a narrow strip. Restore
+   the one-column flow that Tailwind's `grid` provides. */
+[role="dialog"].grid {
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+  grid-auto-rows: auto !important;
+}
