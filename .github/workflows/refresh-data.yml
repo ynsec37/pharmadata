@@ -89,7 +89,7 @@ jobs:
 
       - name: Open a pull request with the changes
         if: steps.changes.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "chore(data): refresh datasets from upstream"
           branch: refresh/upstream-data
